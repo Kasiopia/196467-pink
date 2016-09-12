@@ -2,11 +2,184 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>HTML Academy: Пинк</title>
+	<title>Pink - Главная</title>
+	<meta name="description" content="Путешествия с Pink">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+		<nav class="main-nav">
+			<h1 class="big-headline">PINK</h1>
+			<button class="nav-toggle">X</button>
+			<ul class="main-nav-list">
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<a href="photo.html">Фотографии</a>
+				</li>
+				<li>
+					<a href="form.html">Конкурс</a>
+				</li>
+				<li>
+					<a href="academy.html">HTML Academy</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="main-logo">
+			<img src="img/main-logo.png" alt="приложение pink" width="320" height="314">
+		</section>
 
-	<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+		<section class="download-app">
+			<a class="btn btn-app" download>Скачать приложение</a>
+			<div class="spec">
+				<a class="spec__link" href="#">
+					<img src="img/logo-ios.png" alt="ios" width="47" height="56">
+				</a>
+				<a class="spec__link" href="#">
+					<img src="img/logo-android.png" alt="android" width="43" height="47">
+				</a>
+				<a class="spec__link" href="#">
+					<img src="img/logo-windows-phone.png" alt="windows-phone" width="44" height="41">
+				</a>
+			</div>
+		</section>
 
+		<section class="offer">
+			<h2 class="vissualy-hidden">Наше предложение</h2>
+			<p>
+				Устали от серости мегаполиса?
+			</p>
+			<p>
+				Нам есть, что вам предложить!
+			</p>
+			<ul class="offer-list">
+				<li>
+					<h3 class="headline">Поднимает настроение</h3>
+					<p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+				</li>
+				<li>
+					<h3 class="headline">Меняет мир вокруг</h3>
+					<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+				</li>
+				<li>
+					<h3 class="headline">Заводит новых друзей</h3>
+					<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+				</li>
+			</ul>
+			<img src="img/offer.jpg" alt="всем привет" width="157" height="320">
+		</section>
+
+		<article class="slider-recall">
+			<input type="radio" id="btn-1" name="toggle" checked="">
+			<input type="radio" id="btn-2" name="toggle">
+			<input type="radio" id="btn-3" name="toggle">
+			<div class="slider-controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+			</div>
+			<div class="slides">
+				<h2 class="main-headline slider-recall-author">Николай Петров</h2>
+				<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</div>
+			<div class="slides" style="display: none;">
+				<h2 class="main-headline slider-recall-author">Николай Петров</h2>
+				<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</div>
+			<div class="slides" style="display: none;">
+				<h2 class="main-headline slider-recall-author">Николай Петров</h2>
+				<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</div>
+		</article>
+
+		<article class="tariff hit">
+			<input type="radio" id="btn-1__tariff" name="toggle__tariff">
+			<input type="radio" id="btn-2__tariff" name="toggle__tariff" checked="">
+			<input type="radio" id="btn-3__tariff" name="toggle__tariff">
+			<div class="slider-controls slider-controls__tariff">
+				<label for="btn-1__tariff"></label>
+				<label for="btn-2__tariff"></label>
+				<label for="btn-3__tariff"></label>
+			</div>
+			<div class="slides slides__tariff">
+				<h2 class="main-headline main-headline__tariff">Стандарт</h2>
+				<b class="price__tariff">3,99 usd</b>
+				<ul class="price-list">
+					<li class="prist-list__features">
+						<p>Розовый фильтр</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Смайлики</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Комментарии</p>
+						<img src="img/not-check.png" alt="отсутсвует" width="27" height="26">
+					</li>
+				</ul>
+			</div>
+			<div class="slides slides__tariff" style="display: none;">
+				<h2 class="main-headline main-headline__tariff">Стандарт</h2>
+				<b class="price__tariff">3,99 usd</b>
+				<ul class="price-list">
+					<li class="prist-list__features">
+						<p>Розовый фильтр</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Смайлики</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Комментарии</p>
+						<img src="img/not-check.png" alt="отсутсвует" width="27" height="26">
+					</li>
+				</ul>
+			</div>
+			<div class="slides slides__tariff" style="display: none;">
+				<h2 class="main-headline main-headline__tariff">Стандарт</h2>
+				<b class="price__tariff">3,99 usd</b>
+				<ul class="price-list">
+					<li class="prist-list__features">
+						<p>Розовый фильтр</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Смайлики</p>
+						<img src="img/check.png" alt="в наличии" width="31" height="21">
+					</li>
+					<li class="prist-list__features">
+						<p>Комментарии</p>
+						<img src="img/not-check.png" alt="отсутсвует" width="27" height="26">
+					</li>
+				</ul>
+			</div>
+		</article>
+
+	</main>
+	<footer>
+
+		<section class="our-contacts">
+			<h2>Остались вопросы? Свяжитесь с нами!</h2>
+			<h3>Звоните:</h3>
+			<a href="tel:+78125556666">+7 (812) 555-66-66</a>
+			<h3>Пишите:</h3>
+			<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+			<h3>Приезжайте в гости:</h3>
+			<a href="https://goo.gl/maps/HLzrDs5cRFM2">ул. Большая Конюшенная, 19/8</a>
+		</section>
+
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2930336017267!2d30.321431057952413!3d59.939010498372625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473693145920" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+
+	</footer>
+	<script></script>
 </body>
 </html>

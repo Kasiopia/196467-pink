@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Pink - Form Call</title>
+	<meta name="description" content="Путешествия с Pink">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="main-nav">
+			<h1 class="big-headline">PINK</h1>
+			<button class="nav-toggle">X</button>
+			<ul class="main-nav-list">
+				<li>
+					<a href="index.html">Главная</a>
+				</li>
+				<li>
+					<a href="photo.html">Фотографии</a>
+				</li>
+				<li>
+					<a href="#">Конкурс</a>
+				</li>
+				<li>
+					<a href="academy.html">HTML Academy</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form class="form-competition" action="#" method="post">
+
+			<h2 class="main-headline">Конкурс на самое безбашеное путешествие с Пинк</h2>
+
+			<section class="contacts">
+				<p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+				<label for="second name">Фамилия:</label>
+				<input type="text" name="second name" placeholder="Укажите фамилию">
+				<label for="name">Имя:</label>
+				<input type="text" name="name" placeholder="Введите ваше имя">
+				<label for="patronymic">Отчество:</label>
+				<input type="text" name="patronymic" placeholder="Ну и отчество тоже">
+			</section>
+
+			<section class="progress">
+				<p>Ваши безбашенные достижения в путешествии</p>
+				<ul>
+					<li>
+						<input type="checkbox" name="firm1" id="ch1" value="Сделал селфи с акулой" checked="">
+						<label for="ch1">Сделал селфи с акулой</label>
+					</li>
+					<li>
+						<input type="checkbox" name="firm1" id="ch2" value="Обгорел на пляже" checked="">
+						<label for="ch2">Обгорел на пляже</label>
+					</li>
+					<li>
+						<input type="checkbox" name="firm1" id="ch3" value="Видел Чака Норриса">
+						<label for="ch3">Видел Чака Норриса</label>
+					</li>
+					<li>
+						<input type="checkbox" name="firm1" id="ch4" value="Накупил сувениров">
+						<label for="ch4">Накупил сувениров</label>
+					</li>
+					<li>
+						<input type="checkbox" name="firm1" id="ch5" value="Удержал башню" checked="">
+						<label for="ch5">Удержал башню</label>
+					</li>
+					<li>
+						<input type="checkbox" name="firm1" id="ch6" value="Разгромил отель">
+						<label for="ch6">Разгромил отель</label>
+					</li>
+				</ul>
+			</section>
+
+			<section class="mode-notification">
+				<label for="tel">Номерок телефончика</label>
+				<input type="tel" name="phone" id="tel" placeholder="Номер, пожалуйста">
+				<label for="email">Адресок почты</label>
+				<input type="email" name="email" id="email" placeholder="Введите почту">
+			</section>
+
+			<section class="application">
+				<p>С каким приложением путешествовали?</p>
+				<input type="radio" name="ios" id="rd1" value="ios" checked="">
+				<label for="rd1"></label>
+				<input type="radio" name="android" id="rd2" value="android">
+				<label for="rd2"></label>
+				<input type="radio" name="windows phone" id="rd3" value="windows phone">
+				<label for="rd3"></label>
+			</section>
+
+			<section class="recall">
+				<p>Опишите свои эмоции</p>
+				<textarea name="recall" id="recall" cols="50" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+			</section>
+
+			<button class="btn btn-recall">Отправить форму</button>
+			<span>* — обязательные поля</span>
+		</form>
+	</main>
+	<footer>
+		<div class="container">
+			<p class="footer-logo">
+				<img src="img/logo.png" alt="pink" width="147" height="40">
+			</p>
+			<p class="social">
+				<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+				<a class="social-btn social-btn-inst" href="#"></a>
+				<a class="social-btn social-btn-fb" href="#"></a>
+				<a class="social-btn social-btn-ytb" href="#"></a>
+			</p>
+			<p class="footer-copyright">
+				<b class="copyright-title">Разработано</b>
+				<a class="btn copyright-btn" href="https://htmlacademy.ru"></a>
+			</p>
+		</div>
+	</footer>
+	<script></script>
+</body>
+</html>
