@@ -9,187 +9,238 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header class="main-header">
 		<nav class="main-nav">
-			<h1 class="big-headline">PINK</h1>
+			<div class="logo">
+				<h1 class="logo__text"><a>Pink</a></h1>
+			</div>
 			<button class="nav-toggle">X</button>
-			<ul class="main-nav-list">
-				<li>
-					<a href="index.html">Главная</a>
+			<ul class="main-nav__items">
+				<li class="main-nav__user-items">
+					<a href="#">Главная</a>
 				</li>
-				<li>
-					<a href="#">Фотографии</a>
+				<li class="main-nav__user-items">
+					<a href="photo.html">Фотографии</a>
 				</li>
-				<li>
+				<li class="main-nav__user-items">
 					<a href="form.html">Конкурс</a>
 				</li>
-				<li>
+				<li class="main-nav__user-items">
 					<a href="academy.html">HTML Academy</a>
 				</li>
 			</ul>
+			<div class="page-title page-title--fon">
+				<h2 class="page-title__first">Фотографии пользователей</h2>
+			</div>
 		</nav>
 	</header>
 	<main>
-		<h2 class="main-headline">Фотографии пользователей</h2>
 
-		<article class="block-users">
-			<p>Взгляните на фотографии, которые выкладывают пользователи!</p>
-			<p>Видите, как не хватает ваших?</p>
-		</article>
+		<div class="page-description">
+			<div class="container">
+				<p class="page-decription__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
+				<p class="page-decription__text">Видите, как не хватает ваших?</p>
+			</div>
+		</div>
 
-		<article class="photo photo__day">
-			<figure>
-				<img src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Анна</a>
-					<time data-time="">(5 минут назад)</time>
-					<p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">215</span>
+		<article class="photo photo--day">
+			<div class="container">
+				<figure>
+					<img class="photo-users" src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
+					<figcaption>
+						<a class="photo__author" href="#">Анна</a>
+						<time class="photo__time" data-time="">(5 минут назад)</time>
+						<p class="photo__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">215</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/car.jpg" alt="попался" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Левон</a>
-					<time data-time="">(5 часов назад)</time>
-					<p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">356</span>
+			<div class="container">
+				<figure>
+					<img class="photo-users" src="img/car.jpg" alt="попался" width="320" height="137">
+					<figcaption>
+						<a class="photo__author" href="#">Левон</a>
+						<time class="photo__time" data-time="">(5 часов назад)</time>
+						<p class="photo__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">356</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/drum-set.jpg" alt="барабанная установка" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Антон</a>
-					<time data-time="">(12 часов назад)</time>
-					<p>Соседи будут рады!</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">666</span>
+			<div class="container">
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/drum-set.jpg" alt="барабанная установка" width="320" height="137">
+					<figcaption class="blog-article__desc">
+						<a class="photo__author" href="#">Антон</a>
+						<time class="photo__time" data-time="">(12 часов назад)</time>
+						<p class="photo__title">Соседи будут рады!</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">666</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/skyscraper.jpg" alt="небоскреб" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Борис</a>
-					<time data-time="">(20 часов назад)</time>
-					<p>Здесь могла быть ваша цитата о высоком и вечном.</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">215</span>
+			<div class="container">
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/skyscraper.jpg" alt="небоскреб" width="320" height="137">
+					<figcaption class="blog-article__desc">
+						<a class="photo__author" href="#">Борис</a>
+						<time class="photo__time" data-time="">(20 часов назад)</time>
+						<p class="photo__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">215</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/festival.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Сергей</a>
-					<time data-time="">(25 часов назад)</time>
-					<p>Самая кубанская в мире!</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">4</span>
+			<div class="container">
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/festival.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
+					<figcaption class="blog-article__desc">
+						<a class="photo__author" href="#">Сергей</a>
+						<time class="photo__time" data-time="">(25 часов назад)</time>
+						<p class="photo__title">Самая кубанская в мире!</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">4</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/no-snow.jpg" alt="снега нет" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Максим</a>
-					<time data-time="">(40 часов назад)</time>
-					<p>Где снег-то?</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">150</span>
+			<div class="container">
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/no-snow.jpg" alt="снега нет" width="320" height="137">
+					<figcaption class="blog-article__desc">
+						<a class="photo__author" href="#">Максим</a>
+						<time class="photo__time" data-time="">(40 часов назад)</time>
+						<p class="photo__title">Где снег-то?</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">150</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
-			<figure>
-				<img src="img/aircraft.jpg" alt="вид из самолета" width="320" height="137">
-				<figcaption>
-					<a class="photo__author">Надежда</a>
-					<time data-time="">(45 часов назад)</time>
-					<p>Всем GM и взаимные лайки!</p>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">2560</span>
+			<div class="container">
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/aircraft.jpg" alt="вид из самолета" width="320" height="137">
+					<figcaption class="blog-article__desc">
+						<a class="photo__author" href="#">Надежда</a>
+						<time class="photo__time" data-time="">(45 часов назад)</time>
+						<p class="photo__title">Всем GM и взаимные лайки!</p>
+					</figcaption>
+				</figure>
+				<div class="social-like">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">2560</span>
+				</div>
 			</div>
 		</article>
 
-		<section class="appeal">
-			<p>Затмите их всех!</p>
-			<p>Выкладывайте все, что накопилось в телефоне!</p>
+		<section class="block-appeals">
+			<div class="container">
+				<p class="block-appeals__text">Затмите их всех!</p>
+				<p class="block-appeals__text">Выкладывайте все, что накопилось в телефоне!</p>
+			</div>
 		</section>
 
-		<section>
-			<form class="form-add-photo" action="" method="post">
-				<img src="img/way" alt="путь в никуда" width="280" height="374">
-				<div class="photo-options">
-					<a class="photo-options__brightness" href="#"></a>
-					<a class="photo-options__contrast" href="#"></a>
-					<a class="photo-options__cut" href="#"></a>
-				</div>
-				<div class="photo-options-toggle">
-					<hr class="toggle-line">
-				</div>
-				<div class="action">
-					<button class="btn btn-post">Запостить</button>
-					<button class="btn btn-cansel">Отмена</button>
-				</div>
-			</form>
+		<section class="block-download">
+			<div class="container">
+				<form class="form form--gray" action="" method="post">
+					<div class="block-download-wrapper"> <!-- пустая обертка -->
+						<img class="block-download__img" src="img/way.jpg" alt="путь в никуда" width="280" height="374">
+					</div>
+					<div class="photo-options">
+						<a class="photo-options__brightness" href="#"></a>
+						<a class="photo-options__contrast" href="#"></a>
+						<a class="photo-options__cut" href="#"></a>
+					</div>
+					<div class="manual-setting-wrapper"> <!-- пустая обертка -->
+						<div class="range-controls active range-controls--brightness">
+							<div class="range-controls__scale">
+								<div class="range-controls__bar">
+								</div>
+							</div>
+							<div class="range-controls__toggle">
+							</div>
+						</div>
+						<div class="range-controls range-controls--contrast" style="display: none;">
+							<div class="range-controls__scale">
+								<div class="range-controls__bar">
+								</div>
+							</div>
+							<div class="range-controls__toggle">
+							</div>
+						</div>
+						<div class="range-controls range-controls--cut" style="display: none;">
+							<div class="range-controls__scale">
+								<div class="range-controls__bar">
+								</div>
+							</div>
+							<div class="range-controls__toggle">
+							</div>
+						</div>
+					</div>
+					<div class="action">
+						<button class="btn btn-post" type="submit">Запостить</button>
+						<button class="btn btn-cansel" type="button">Отмена</button>
+					</div>
+				</form>
+			</div>
 		</section>
 
 	</main>
-	<footer>
+	<footer class="main-footer main-footer--other">
 		<div class="container">
-			<p class="footer-logo">
-				<img src="img/logo.png" alt="pink" width="147" height="40">
-			</p>
-			<p class="social">
+			<div class="logo logo--footer">
+				<img class="logo__img" src="img/logo.png" alt="очки" width="60" height="40">
+				<h1 class="logo__text"><a>Pink</a></h1>
+			</div>
+			<div class="social">
 				<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-				<a class="social-btn social-btn-inst" href="#"></a>
-				<a class="social-btn social-btn-fb" href="#"></a>
-				<a class="social-btn social-btn-ytb" href="#"></a>
-			</p>
-			<p class="footer-copyright">
-				<b class="copyright-title">Разработано</b>
-				<a class="btn copyright-btn" href="https://htmlacademy.ru"></a>
-			</p>
+				<a class="social__btn social-btn--inst" href="#"></a>
+				<a class="social__btn social-btn--fb" href="#"></a>
+				<a class="social__btn social-btn--ytb" href="#"></a>
+			</div>
+			<div class="footer-copyright">
+				<b class="footer-copyright__title">Разработано</b>
+				<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
+			</div>
 		</div>
 	</footer>
+
 	<script></script>
 </body>
 </html>
