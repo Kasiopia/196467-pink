@@ -10,13 +10,13 @@
 </head>
 <body>
 	<header class="main-header">
-		<nav class="main-nav"> <!-- будет контейнером -->
+		<nav class="main-header__nav"> <!-- будет контейнером -->
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
 			<button type="submit" class="nav-toggle">X</button>
 			<ul class="menu">
-				<li class="menu__link link_menu--active">
+				<li class="menu__link menu__link--active">
 					<a href="index.html">Главная</a>
 				</li>
 				<li class="menu__link">
@@ -29,109 +29,114 @@
 					<a href="academy.html">HTML Academy</a>
 				</li>
 			</ul>
-			<div class="intro">
-				<h2 class="intro__headline">Конкурс на самое безбашеное путешествие с Пинк</h2>
-			</div>
 		</nav>
-	</header>
-	<main>
-
-		<section class="form-block">
+		<div class="main-header__text">
 			<div class="container">
-				<form class="form" action="#" method="post">
-					<section class="form-block>
-						<div class="page-decription">  <!-- вопрос на консл, к них общий белый фон, не могу вынести , и все таки он может быть заголовком для формы и описания страницы? -->
-							<p class="page-decription__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
-						</div>
-						<label class="form__label-text" for="second-name">Фамилия:</label>
-						<input class="form__input-text" type="text" name="second name" placeholder="Укажите фамилию">
-						<label class="form__label-text" for="name">Имя:</label>
-						<input class="form__input-text" type="text" name="name" placeholder="Введите ваше имя">
-						<label class="form__label-text" for="patronymic">Отчество:</label>
-						<input class="form__input-text" type="text" name="patronymic" placeholder="Ну и отчество тоже">
-					</section>
-
-					<section class="form-block form-block--gray">
-						<div class="container">
-							<h2 class="form-block__headline">Ваши безбашенные достижения в путешествии</h2>
-
-							<input type="checkbox" name="firm1" id="ch1" checked="">
-							<label class="form__label-checkbox" for="ch1">Сделал селфи с акулой</label>
-
-							<input type="checkbox" name="firm2" id="ch2" checked="">
-							<label class="form__label-checkbox" for="ch2">Обгорел на пляже</label>
-
-							<input type="checkbox" name="firm3" id="ch3">
-							<label class="form__label-checkbox" for="ch3">Видел Чака Норриса</label>
-
-							<input type="checkbox" name="firm4" id="ch4">
-							<label class="form__label-checkbox" for="ch4">Накупил сувениров</label>
-
-							<input type="checkbox" name="firm5" id="ch5" checked="">
-							<label class="form__label-checkbox" for="ch5">Удержал башню</label>
-
-							<input type="checkbox" name="firm6" id="ch6">
-							<label class="form__label-checkbox" for="ch6">Разгромил отель</label>
-
-						</div>
-					</section>
-
-					<section class="form-block">
-						<div class="container">
-							<label class="form__label-text" for="tel">Номерок телефончика</label>
-							<input class="form__input-text" type="tel" name="phone" id="tel" placeholder="Номер, пожалуйста">
-							<label class="form__label-text" for="email">Адресок почты</label>
-							<input class="form__input-text" type="email" name="email" id="email" placeholder="Введите почту">
-						</div>
-					</section>
-
-					<section class="form-block form-block--gray">
-						<div class="container">
-							<h2 class="form-block__headline">С каким приложением путешествовали?</h2>
-							<input type="radio" name="application" id="rd1" value="ios" checked="">
-							<label class="form__label-radio" for="rd1"></label>
-							<input type="radio" name="application" id="rd2" value="android">
-							<label class="form__label-radio" for="rd2"></label>
-							<input type="radio" name="application" id="rd3" value="windows phone">
-							<label class="form__label-radio" for="rd3"></label>
-						</div>
-					</section>
-
-					<section class="form-block">
-						<div class="container">
-							<label class="form__label-textarea" for="recall">Опишите свои эмоции</label>
-							<textarea class="form__input-textarea" name="recall" id="recall" cols="50" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-						</div>
-					</section>
-
-					<div class="container">
-						<button class="btn btn--submit">Отправить форму</button>
-						<span class="form__attention">* — обязательные поля</span>
-					</div>
-				</form>
-			</div>
-		</section>
-
-	</main>
-	<footer class="main-footer main-footer--other">
-		<div class="container">
-			<div class="logo logo--footer">
-				<img class="logo__img" src="img/logo.png" alt="очки" width="60" height="40">
-				<h1 class="logo__text"><a>Pink</a></h1>
-			</div>
-			<div class="social">
-				<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-				<a class="social__btn social-btn--inst" href="#"></a>
-				<a class="social__btn social-btn--fb" href="#"></a>
-				<a class="social__btn social-btn--ytb" href="#"></a>
-			</div>
-			<div class="footer-copyright">
-				<b class="footer-copyright__title">Разработано</b>
-				<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
+				<div class="intro">
+					<h2 class="intro__headline">Конкурс на самое безбашеное путешествие с Пинк</h2>
+				</div>
 			</div>
 		</div>
-	</footer>
+	</header>
+	<main>
+		<section class="page-decription">
+			<div class="container">
+				<p class="page-decription__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+			</div>
+		</section>
+		<form class="form" action="#" method="post">
+			<section class="form-block">
+				<div class="container">
+					<label class="form__label-text" for="second-name">Фамилия:</label>
+					<input class="form__input-text" id="second-name" type="text" name="second-name" placeholder="Укажите фамилию">
+					<label class="form__label-text" for="name">Имя:</label>
+					<input class="form__input-text" id="name" type="text" name="name" placeholder="Введите ваше имя">
+					<label class="form__label-text" for="patronymic">Отчество:</label>
+					<input class="form__input-text" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+				</div>
+			</section>
 
-	<script></script>
+			<section class="form-block form-block--gray">
+				<div class="container">
+					<h2 class="form-block__headline">Ваши безбашенные достижения в путешествии</h2>
+
+					<input type="checkbox" name="firm1" id="ch1" checked="">
+					<label class="form__label-checkbox" for="ch1">Сделал селфи с акулой</label>
+
+					<input type="checkbox" name="firm2" id="ch2" checked="">
+					<label class="form__label-checkbox" for="ch2">Обгорел на пляже</label>
+
+					<input type="checkbox" name="firm3" id="ch3">
+					<label class="form__label-checkbox" for="ch3">Видел Чака Норриса</label>
+
+					<input type="checkbox" name="firm4" id="ch4">
+					<label class="form__label-checkbox" for="ch4">Накупил сувениров</label>
+
+					<input type="checkbox" name="firm5" id="ch5" checked="">
+					<label class="form__label-checkbox" for="ch5">Удержал башню</label>
+
+					<input type="checkbox" name="firm6" id="ch6">
+					<label class="form__label-checkbox" for="ch6">Разгромил отель</label>
+
+				</div>
+			</section>
+
+			<section class="form-block">
+				<div class="container">
+					<label class="form__label-text" for="tel">Номерок телефончика</label>
+					<input class="form__input-text" type="tel" name="phone" id="tel" placeholder="Номер, пожалуйста">
+					<label class="form__label-text" for="email">Адресок почты</label>
+					<input class="form__input-text" type="email" name="email" id="email" placeholder="Введите почту">
+				</div>
+			</section>
+
+			<section class="form-block form-block--gray">
+				<div class="container">
+					<h2 class="form-block__headline">С каким приложением путешествовали?</h2>
+					<input type="radio" name="application" id="rd1" value="ios" checked="">
+					<label class="form__label-radio" for="rd1"></label>
+					<input type="radio" name="application" id="rd2" value="android">
+					<label class="form__label-radio" for="rd2"></label>
+					<input type="radio" name="application" id="rd3" value="windows phone">
+					<label class="form__label-radio" for="rd3"></label>
+				</div>
+			</section>
+
+			<section class="form-block">
+				<div class="container">
+					<label class="form__label-textarea" for="recall">Опишите свои эмоции</label>
+					<textarea class="form__input-textarea" name="recall" id="recall" cols="50" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+				</div>
+			</section>
+
+			<div class="container">
+				<button class="btn btn--submit">Отправить форму</button>
+				<span class="form__attention">* — обязательные поля</span>
+			</div>
+		</form>
+	</div>
+</section>
+
+</main>
+<footer class="main-footer main-footer--other">
+	<div class="container">
+		<div class="logo logo--footer">
+			<img class="logo__img" src="img/logo.png" alt="очки" width="60" height="40">
+			<h1 class="logo__text"><a>Pink</a></h1>
+		</div>
+		<div class="social">
+			<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+			<a class="social-btn social-btn--inst" href="#"></a>
+			<a class="social-btn social-btn--fb" href="#"></a>
+			<a class="social-btn social-btn--ytb" href="#"></a>
+		</div>
+		<div class="footer-copyright">
+			<b class="footer-copyright__title">Разработано</b>
+			<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
+		</div>
+	</div>
+</footer>
+
+<script></script>
 </body>
 </html>
