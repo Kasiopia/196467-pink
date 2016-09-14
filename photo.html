@@ -10,27 +10,27 @@
 </head>
 <body>
 	<header class="main-header">
-		<nav class="main-nav">
+		<nav class="main-nav"><!-- будет контейнером -->
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
-			<button class="nav-toggle">X</button>
-			<ul class="main-nav__items">
-				<li class="main-nav__user-items">
-					<a href="#">Главная</a>
+			<button type="submit" class="nav-toggle">X</button>
+			<ul class="menu">
+				<li class="menu__link link_menu--active">
+					<a href="index.htl">Главная</a>
 				</li>
-				<li class="main-nav__user-items">
-					<a href="photo.html">Фотографии</a>
+				<li class="menu__link">
+					<a href="#">Фотографии</a>
 				</li>
-				<li class="main-nav__user-items">
+				<li class="menu__link">
 					<a href="form.html">Конкурс</a>
 				</li>
-				<li class="main-nav__user-items">
+				<li class="menu__link">
 					<a href="academy.html">HTML Academy</a>
 				</li>
 			</ul>
-			<div class="page-title page-title--fon">
-				<h2 class="page-title__first">Фотографии пользователей</h2>
+			<div class="intro">
+				<h2 class="intro__headline">Фотографии пользователей</h2>
 			</div>
 		</nav>
 	</header>
@@ -44,28 +44,28 @@
 		</div>
 
 		<article class="photo photo--day">
-			<div class="container">
-				<figure>
-					<img class="photo-users" src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
-					<figcaption>
+			<figure class="blog-article">
+				<img class="blog-article_img" src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
+				<figcaption class="blog-article__desc">
+					<div class="container"> <!--  тут поставил контейер из за background в 280 px -->
 						<a class="photo__author" href="#">Анна</a>
 						<time class="photo__time" data-time="">(5 минут назад)</time>
 						<p class="photo__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">215</span>
-				</div>
+					</div>
+				</figcaption>
+			</figure>
+			<div class="social-like">
+				<i class="social-like__icon"></i>
+				<span class="social-like__link">Нравится:</span>
+				<span class="social-like__count">215</span>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo-users" src="img/car.jpg" alt="попался" width="320" height="137">
-					<figcaption>
+				<figure class="blog-article">
+					<img class="blog-article_img" src="img/car.jpg" alt="попался" width="320" height="137">
+					<figcaption class="blog-article__desc">
 						<a class="photo__author" href="#">Левон</a>
 						<time class="photo__time" data-time="">(5 часов назад)</time>
 						<p class="photo__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -176,46 +176,40 @@
 			</div>
 		</section>
 
-		<section class="block-download">
+		<section class="upload-block">
 			<div class="container">
 				<form class="form form--gray" action="" method="post">
-					<div class="block-download-wrapper"> <!-- пустая обертка -->
-						<img class="block-download__img" src="img/way.jpg" alt="путь в никуда" width="280" height="374">
+					<div class="upload-block-wrapper">
+						<img class="upload-block__img" src="img/way.jpg" alt="путь в никуда" width="280" height="374">
 					</div>
 					<div class="photo-options">
 						<a class="photo-options__brightness" href="#"></a>
 						<a class="photo-options__contrast" href="#"></a>
 						<a class="photo-options__cut" href="#"></a>
 					</div>
-					<div class="manual-setting-wrapper"> <!-- пустая обертка -->
-						<div class="range-controls active range-controls--brightness">
+					<div class="manual-setting-wrapper">
+						<div class="range-controls range-controls--active range-controls--brightness">
 							<div class="range-controls__scale">
-								<div class="range-controls__bar">
-								</div>
-							</div>
-							<div class="range-controls__toggle">
+								<div class="range-controls__bar"></div>
+								<div class="range-controls__toggle"></div>
 							</div>
 						</div>
 						<div class="range-controls range-controls--contrast" style="display: none;">
 							<div class="range-controls__scale">
-								<div class="range-controls__bar">
-								</div>
-							</div>
-							<div class="range-controls__toggle">
+								<div class="range-controls__bar"></div>
+								<div class="range-controls__toggle"></div>
 							</div>
 						</div>
 						<div class="range-controls range-controls--cut" style="display: none;">
 							<div class="range-controls__scale">
-								<div class="range-controls__bar">
-								</div>
-							</div>
-							<div class="range-controls__toggle">
+								<div class="range-controls__bar"></div>
+								<div class="range-controls__toggle"></div>
 							</div>
 						</div>
 					</div>
 					<div class="action">
-						<button class="btn btn-post" type="submit">Запостить</button>
-						<button class="btn btn-cansel" type="button">Отмена</button>
+						<button class="btn btn--post" type="submit">Запостить</button>
+						<button class="btn btn--cansel" type="button">Отмена</button>
 					</div>
 				</form>
 			</div>
