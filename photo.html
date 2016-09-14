@@ -10,14 +10,14 @@
 </head>
 <body>
 	<header class="main-header">
-		<nav class="main-header__nav"><!-- будет контейнером -->
+		<nav class="main-header__nav">
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
 			<button type="submit" class="nav-toggle">X</button>
 			<ul class="menu">
 				<li class="menu__link menu__link--active">
-					<a href="index.htl">Главная</a>
+					<a href="index.html">Главная</a>
 				</li>
 				<li class="menu__link">
 					<a href="#">Фотографии</a>
@@ -30,48 +30,47 @@
 				</li>
 			</ul>
 		</nav>
-		<div class="main-header__text">
+		<div class="intro">
 			<div class="container">
-				<div class="intro">
-					<h2 class="intro__headline">Фотографии пользователей</h2>
-				</div>
+				<h2 class="intro__headline">Фотографии пользователей</h2>
 			</div>
 		</div>
 	</header>
 	<main>
-
-		<div class="page-description">
+		<section class="page-description">
 			<div class="container">
 				<p class="page-decription__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
 				<p class="page-decription__text">Видите, как не хватает ваших?</p>
 			</div>
-		</div>
+		</section>
 
 		<article class="photo photo--day">
-			<figure class="blog-article">
-				<img class="blog-article_img" src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
-				<figcaption class="blog-article__desc">
-					<div class="container"> <!--  тут поставил контейер из за background в 280 px -->
+			<figure>
+				<img class="photo__picture" src="img/jump.jpg" alt="прыжок с парашутом" width="320" height="137">
+				<figcaption>
+					<div class="container"> <!--  тут поставил контейер из за background в первом блоке в 280 px -->
 						<a class="photo__author" href="#">Анна</a>
-						<time class="photo__time" data-time="">(5 минут назад)</time>
+						<time class="photo__time" datatime="">(5 минут назад)</time>
 						<p class="photo__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
 					</div>
 				</figcaption>
 			</figure>
 			<div class="social-like">
-				<i class="social-like__icon"></i>
-				<span class="social-like__link">Нравится:</span>
-				<span class="social-like__count">215</span>
+				<div class="container">
+					<i class="social-like__icon"></i>
+					<span class="social-like__link">Нравится:</span>
+					<span class="social-like__count">215</span>
+				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/car.jpg" alt="попался" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/car.jpg" alt="попался" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Левон</a>
-						<time class="photo__time" data-time="">(5 часов назад)</time>
+						<time class="photo__time" datatime="">(5 часов назад)</time>
 						<p class="photo__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
 					</figcaption>
 				</figure>
@@ -85,11 +84,11 @@
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/drum-set.jpg" alt="барабанная установка" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/drum-set.jpg" alt="барабанная установка" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Антон</a>
-						<time class="photo__time" data-time="">(12 часов назад)</time>
+						<time class="photo__time" datatime="">(12 часов назад)</time>
 						<p class="photo__title">Соседи будут рады!</p>
 					</figcaption>
 				</figure>
@@ -103,11 +102,11 @@
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/skyscraper.jpg" alt="небоскреб" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/skyscraper.jpg" alt="небоскреб" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Борис</a>
-						<time class="photo__time" data-time="">(20 часов назад)</time>
+						<time class="photo__time" datatime="">(20 часов назад)</time>
 						<p class="photo__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
 					</figcaption>
 				</figure>
@@ -121,11 +120,11 @@
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/festival.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/festival.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Сергей</a>
-						<time class="photo__time" data-time="">(25 часов назад)</time>
+						<time class="photo__time" datatime="">(25 часов назад)</time>
 						<p class="photo__title">Самая кубанская в мире!</p>
 					</figcaption>
 				</figure>
@@ -139,11 +138,11 @@
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/no-snow.jpg" alt="снега нет" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/no-snow.jpg" alt="снега нет" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Максим</a>
-						<time class="photo__time" data-time="">(40 часов назад)</time>
+						<time class="photo__time" datatime="">(40 часов назад)</time>
 						<p class="photo__title">Где снег-то?</p>
 					</figcaption>
 				</figure>
@@ -157,11 +156,11 @@
 
 		<article class="photo">
 			<div class="container">
-				<figure class="blog-article">
-					<img class="blog-article_img" src="img/aircraft.jpg" alt="вид из самолета" width="320" height="137">
-					<figcaption class="blog-article__desc">
+				<figure>
+					<img class="photo__picture" src="img/aircraft.jpg" alt="вид из самолета" width="320" height="137">
+					<figcaption>
 						<a class="photo__author" href="#">Надежда</a>
-						<time class="photo__time" data-time="">(45 часов назад)</time>
+						<time class="photo__time" datatime="">(45 часов назад)</time>
 						<p class="photo__title">Всем GM и взаимные лайки!</p>
 					</figcaption>
 				</figure>
@@ -180,47 +179,41 @@
 			</div>
 		</section>
 
-		<section class="upload-block">
+		<section class="upload-block upload-block--gray">
 			<div class="container">
-				<form class="form form--gray" action="" method="post">
-					<div class="upload-block-wrapper">
-						<img class="upload-block__img" src="img/way.jpg" alt="путь в никуда" width="280" height="374">
+				<form class="form-upload" action="#" method="post">
+					<div class="form-upload__image-wrapper">
+						<img class="form-upload__image" src="img/way.jpg" alt="путь в никуда" width="280" height="374">
 					</div>
-					<div class="photo-options">
-						<a class="photo-options__brightness" href="#"></a>
-						<a class="photo-options__contrast" href="#"></a>
-						<a class="photo-options__cut" href="#"></a>
+					<div class="form-upload__photo-options">
+						<a class="form-upload__brightness" href="#"></a>
+						<a class="form-upload__contrast" href="#"></a>
+						<a class="form-upload__cut" href="#"></a>
 					</div>
-					<div class="manual-setting-wrapper">
+					<div class="form-upload__manual-options">
 						<div class="range-controls range-controls--active range-controls--brightness">
-							<div class="range-controls__scale">
-								<div class="range-controls__bar"></div>
-								<div class="range-controls__toggle"></div>
-							</div>
+							<div class="range-controls__bar"></div>
+							<div class="range-controls__toggle"></div>
 						</div>
 						<div class="range-controls range-controls--contrast" style="display: none;">
-							<div class="range-controls__scale">
-								<div class="range-controls__bar"></div>
-								<div class="range-controls__toggle"></div>
-							</div>
+							<div class="range-controls__bar"></div>
+							<div class="range-controls__toggle"></div>
 						</div>
 						<div class="range-controls range-controls--cut" style="display: none;">
-							<div class="range-controls__scale">
-								<div class="range-controls__bar"></div>
-								<div class="range-controls__toggle"></div>
-							</div>
+							<div class="range-controls__bar"></div>
+							<div class="range-controls__toggle"></div>
 						</div>
 					</div>
-					<div class="action">
+					<div class="form-upload__actions">
 						<button class="btn btn--post" type="submit">Запостить</button>
-						<button class="btn btn--cansel" type="button">Отмена</button>
+						<button class="btn btn--cancel" type="button">Отмена</button>
 					</div>
 				</form>
 			</div>
 		</section>
 
 	</main>
-	<footer class="main-footer main-footer--other">
+	<footer class="main-footer">
 		<div class="container">
 			<div class="logo logo--footer">
 				<img class="logo__img" src="img/logo.png" alt="очки" width="60" height="40">
