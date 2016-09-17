@@ -1,7 +1,18 @@
 .main-header {
-	padding-top: 259px;
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat top center;
-	min-height: 462px;
+	position: relative;
+	min-height: 804px;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
+
+	&--index::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 258px;
+		height: 286px;
+		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
+		z-index: 10;
+	}
 }
 
 .main-header__nav {
