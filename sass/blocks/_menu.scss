@@ -1,0 +1,23 @@
+.menu {
+	background: #283645;
+}
+
+.menu__link {
+
+	&-active {
+
+	}
+	& a {
+		@include a-link;
+		font-size: 18px;
+		line-height: 32px;
+		padding: 18px 0;
+		font-weight: bold;
+		text-align: center;
+		color: $primary-bg;
+		border-top: solid 1px #485461;
+		border-bottom: solid 1px #000101;
+	}
+}
+
+

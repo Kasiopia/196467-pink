@@ -1,8 +1,9 @@
 body {
-	font-family: : $font-stack;
+	font-family: $font-stack;
 	color: $primary-color;
-	background: $green;
-	min-width: 320px;
+	background: $primary-bg;
+	width: 320px;
+	margin: 0 auto;
 	font-size: $primary-f-size;
 	line-height: $primary-l-height;
 	font-weight: $primary-f-width;

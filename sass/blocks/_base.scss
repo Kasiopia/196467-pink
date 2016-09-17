@@ -1,0 +1,51 @@
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+section {
+	position: relative;
+}
+
+ul {
+	list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+input,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	position: relative;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+}
+
+button,
+select {
+	text-transform: none;
+	cursor: pointer;
+}
+
+.visually-hidden {
+	display: none;
+}

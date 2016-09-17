@@ -1,17 +1,38 @@
-// библиотека
-@import "blocks/**";
-
-// библиотека
-@import "global/**";
-
-// библиотека styleguide
-@import "styleguide/**";
 
 // файл стилей по умолчанию
-@import "_normalize";
+@import "_normalize.scss";
 
 // переменные
-@import "_variables";
+@import "_variables.scss";
 
 // примеси
-@import "_mixins";
+@import "_mixins.scss";
+
+//библиотека blocks
+@import "blocks/_base.scss";
+@import "blocks/_communication.scss";
+@import "blocks/_download-app.scss";
+@import "blocks/_intro.scss";
+@import "blocks/_logo.scss";
+@import "blocks/_main-footer.scss";
+@import "blocks/_main-header.scss";
+@import "blocks/_map.scss";
+@import "blocks/_menu.scss";
+@import "blocks/_offer.scss";
+@import "blocks/_offer-items.scss";
+@import "blocks/_price.scss";
+@import "blocks/_price-table.scss";
+@import "blocks/_slide.scss";
+@import "blocks/_slider.scss";
+@import "blocks/_spec.scss";
+
+
+//библиотека global
+@import "global/_container.scss";
+@import "global/_fonts.scss";
+@import "global/_forms.scss";
+@import "global/_typography.scss";
+
+//библиотека styleguide
+@import "styleguide/_btn.scss";
+

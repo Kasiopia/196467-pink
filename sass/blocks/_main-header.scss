@@ -1,0 +1,19 @@
+.main-header {
+	padding-top: 259px;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat top center;
+	min-height: 462px;
+}
+
+.main-header__nav {
+	position: relative;
+}
+
+.main-header__nav .logo{
+	text-align: left;
+}
+
+.nav-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
