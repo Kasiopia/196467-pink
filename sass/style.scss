@@ -1,3 +1,17 @@
-body {
-	background: white;
-}
+// библиотека
+@import "blocks/**";
+
+// библиотека
+@import "global/**";
+
+// библиотека styleguide
+@import "styleguide/**";
+
+// файл стилей по умолчанию
+@import "_normalize";
+
+// переменные
+@import "_variables";
+
+// примеси
+@import "_mixins";
