@@ -14,7 +14,7 @@
 .slider__controls {
 	position: absolute;
 	z-index: 60;
-	bottom: 30%;
+	bottom: 20%;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -42,7 +42,7 @@
 #btn-2:checked~.slider__controls label[for="btn-2"],
 #btn-3:checked~.slider__controls label[for="btn-3"] {
 	background: $primary-bg;
-	border: solid 3px $menu-color;
+	border: solid 3px $primary-color;
 }
 
 #btn-1:checked~.slider__wrappper .slide:nth-child(1),
@@ -53,13 +53,11 @@
 
 .slide__title {
 	margin: 10px auto;
-	font-size: 18px;
-	line-height: 30px;
+	@include style-font(18px, 30px, bold);
 	color: #000;
 }
 
 .slide__text {
-	font-size: 18px;
-	line-height: 30px;
-	color: $menu-color;
+	@include style-font(18px, 30px, normal);
+	color: $primary-color;
 }

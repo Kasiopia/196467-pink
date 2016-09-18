@@ -1,8 +1,7 @@
-.main-header {
+.main-header.main-header--index {
 	position: relative;
 	min-height: 804px;
 	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
-
 	&--index::after {
 		content: "";
 		position: absolute;
@@ -47,6 +46,7 @@
 .navbar-toggle .navbar-toggle__icon-bar {
 	background: $primary-bg;
 }
+
 .navbar-toggle .navbar-toggle__icon-bar {
 	display: block;
 	width: 22px;
@@ -55,30 +55,50 @@
 }
 
 .menu {
-	background: $menu-color;
+	background: $primary-color;
 }
 
 .menu__link {
-
 	&:hover {
-		background: lighten($menu-color, 10%);
+		background: lighten($primary-color, 10%);
 	}
-
 	&:active {
-		background: darken($menu-color, 50%);
+		background: darken($primary-color, 50%);
 	}
-
+	&--active {
+		/*что то написать */
+	}
 }
 
 .menu__link a {
-		@include a-link;
-		font-size: 18px;
-		line-height: 32px;
-		padding: 18px 0;
-		font-weight: bold;
-		text-align: center;
-		color: $primary-bg;
-		border-top: solid 1px #485461;
-		border-bottom: solid 1px #000101;
-	}
+	@include a-link;
+	@include style-font(18px, 32px, bold);
+	padding: 18px 0;
+	text-align: center;
+	color: $primary-bg;
+	border-top: solid 1px #485461;
+	border-bottom: solid 1px #000101;
+}
 
+/* page-photo*/
+.main-header {
+	position: relative;
+	min-height: 496px;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center 266px;
+}
+
+.intro {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+
+.intro__headline {
+	padding-bottom: 30px;
+	color: $primary-bg;
+	@include style-font(24px, 1.4, lighter);
+}

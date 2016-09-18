@@ -1,11 +1,23 @@
 .logo {
-	background: #283645;
+	background: $primary-color;
 	border-bottom: solid 1px #000101;
 }
 
 .logo__text {
 	padding: 18px 0 18px 20px;
-	font-size: 25px;
-	line-height: 25px;
+	@include style-font(25px, 25px, bold);
 	color: $primary-bg;
 }
+
+.logo__img {
+
+}
+
+.logo.logo--footer {
+	padding: 50px 0 5px;
+	color: $primary-color;
+	background: $primary-bg;
+	text-align: center;
+	border-bottom: none;
+}
+

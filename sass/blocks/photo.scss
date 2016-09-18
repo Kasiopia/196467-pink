@@ -1,0 +1,16 @@
+.photo {
+	position: relative;
+
+	&--day {
+		content: "Панорама дня";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 140px;
+		height: 36px;
+		text-align: center;
+		background: #d22856;
+		color: $primary-bg;
+	}
+}
+

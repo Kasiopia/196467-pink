@@ -3,3 +3,9 @@
 	text-transform: uppercase;
 	text-decoration: none;
 }
+
+@mixin style-font($f-size, $l-height, $f-weight) {
+	font-size: $f-size;
+	line-height: $l-height;
+	font-weight: $f-weight;
+}

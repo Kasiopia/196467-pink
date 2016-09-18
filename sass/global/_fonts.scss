@@ -4,8 +4,6 @@ body {
 	background: $primary-bg;
 	width: 320px;
 	margin: 0 auto;
-	font-size: $primary-f-size;
-	line-height: $primary-l-height;
-	font-weight: $primary-f-width;
-	font-style: $primary-f-style;
+	@include style-font(14px, 24px, normal);
+	font-style: normal;
 }

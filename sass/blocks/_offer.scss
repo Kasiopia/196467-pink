@@ -7,10 +7,8 @@
 .offer__slogan {
 	margin: 20px auto;
 	padding-bottom: 26px;
-	font-size: 24px;
-	line-height: 24px;
-	font-weight: lighter;
-	color: #283645;
+	@include style-font(24px, 1.4, lighter);
+	color: $primary-color;
 }
 
 .offer-items {
@@ -38,12 +36,9 @@
 
 .offer-item__headline {
 	margin: 10px auto;
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: bold;
+	@include style-font(18px, 24px, bold);
 }
 
 .offer-item__description {
-	font-size: 14px;
-	line-height: 24px;
+	@include style-font(14px, 24px, normal);
 }
