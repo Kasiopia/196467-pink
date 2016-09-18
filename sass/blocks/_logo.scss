@@ -1,12 +1,11 @@
 .logo {
 	background: #283645;
+	border-bottom: solid 1px #000101;
 }
 
 .logo__text {
-	margin-left: 20px;
-	padding: 18px 0;
+	padding: 18px 0 18px 20px;
 	font-size: 25px;
 	line-height: 25px;
 	color: $primary-bg;
-	border-bottom: solid 1px #000101;
 }

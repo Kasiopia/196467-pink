@@ -11,11 +11,16 @@
 <body>
 	<header class="main-header main-header--index">
 		<nav class="main-header__nav">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
+				<span class="navbar-toggle__sr-only">Toggle navigation</span>
+				<span class="navbar-toggle__icon-bar"></span>
+				<span class="navbar-toggle__icon-bar"></span>
+				<span class="navbar-toggle__icon-bar"></span>
+			</button>
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
-			<button type="button" class="nav-toggle">X</button>
-			<ul class="menu">
+			<ul class="menu" id="#navbar-collapse">
 				<li class="menu__link menu__link--active">
 					<a href="#">Главная</a>
 				</li>
