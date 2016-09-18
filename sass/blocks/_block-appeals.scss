@@ -1,0 +1,9 @@
+.block-appeals {
+	padding: 40px 0;
+}
+
+.block-appeals__text {
+	@include style-font(14px, 30px, normal);
+	text-align: center;
+	color: $primary-color;
+}

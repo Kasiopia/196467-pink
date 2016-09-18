@@ -5,7 +5,7 @@
 
 .logo__text {
 	padding: 18px 0 18px 20px;
-	@include style-font(25px, 25px, bold);
+	@include style-font(26px, 26px, normal);
 	color: $primary-bg;
 }
 
