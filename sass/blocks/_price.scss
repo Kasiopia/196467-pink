@@ -1,0 +1,112 @@
+.price {
+	min-height: 380px;
+	position: relative;
+	text-align: center;
+	background: #f2f2f2;
+}
+
+.price input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.price__controls {
+	position: absolute;
+	z-index: 60;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 120px;
+	height: 20px;
+}
+
+.price__controls label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 8px;
+	vertical-align: top;
+	background: #bec2c7;
+	border: solid 3px #f2f2f2;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#btn-price-1:checked~.price__controls label[for="btn-price-1"],
+#btn-price-2:checked~.price__controls label[for="btn-price-2"],
+#btn-price-3:checked~.price__controls label[for="btn-price-3"] {
+	background: $primary-bg;
+	border: solid 3px $menu-color;
+}
+
+.price-table {
+	border-collapse: collapse;
+	background: $primary-bg;
+}
+
+th.price-table__cell {
+	background: $menu-color;
+	border-right: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+}
+
+td.price-table__cell {
+	border-right: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.price-table__cell {
+	padding: 10px 0;
+	&--hit::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 74px;
+		height: 73px;
+		background: url("../img/bg-hit-tablet.svg") no-repeat top center;
+	}
+}
+
+.price-table__cell-title {
+	margin: 10px auto;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	color: $primary-bg;
+}
+
+.price-table__cell-cost {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: lighter;
+	text-align: center;
+	color: #f1f2f3;
+}
+
+.price-table__cell-headline {
+	position: relative;
+	padding-left: 22px;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: left;
+	color: $menu-color;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 27px;
+		height: 26px;
+		background: url("../img/icon-no.svg") no-repeat top center;
+	}
+	&--on::after {
+		width: 31px;
+		height: 21px;
+		background: url("../img/icon-yes.svg") no-repeat top center;
+	}
+}

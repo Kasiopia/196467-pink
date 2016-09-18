@@ -1,0 +1,12 @@
+.btn {
+	margin-bottom: 32px;
+	padding: 18px 0;
+	font-size: 18px;
+	line-height: 24px;
+	@include a-link;
+	&--app {
+		color: $primary-bg;
+		border: solid 3px $primary-bg;
+		border-radius: 30px;
+	}
+}
