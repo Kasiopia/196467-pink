@@ -4,16 +4,12 @@
 }
 
 .logo__text {
-	padding: 18px 0 18px 20px;
-	@include style-font(26px, 26px, normal);
+	padding: 18px 20px 18px;
+	@include style-font(30px, 26px, normal);
 	color: $primary-bg;
 }
 
-.logo__img {
-
-}
-
-.logo.logo--footer {
+.logo--footer {
 	padding: 50px 0 5px;
 	color: $primary-color;
 	background: $primary-bg;

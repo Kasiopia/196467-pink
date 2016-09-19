@@ -6,7 +6,7 @@
 	padding-bottom: 36px;
 	background: $primary-bg;
 
-	&--gray{
+	&--gray {
 		padding-bottom: 10px;
 		background: #f2f2f2;
 	}
@@ -42,14 +42,9 @@
 .form__input-checkbox {
 	display: none;
 	&:checked+.form__label-checkbox::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 10px;
+		@include position-container(0, 0, 10px, auto);
 		width: 22px;
 		height: 16px;
-		margin: auto;
 		z-index: 10;
 		background: url(../img/icon-yes.svg) no-repeat center;
 	}
@@ -64,14 +59,9 @@
 	color: $primary-color;
 	cursor: pointer;
 	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
+		@include position-container(0, 0, 0, auto);
 		width: 35px;
 		height: 35px;
-		margin: auto;
 		background: $primary-bg;
 		border: 2px solid #e5e5e5;
 		border-radius: 5px;
@@ -82,14 +72,9 @@
 .form__input-radio {
 	display: none;
 	&:checked+.form__label-radio::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 14px;
+		@include position-container(0, 0, 14px, auto);
 		width: 16px;
 		height: 16px;
-		margin: auto;
 		z-index: 10;
 		background: url(../img/icon-map-marker.svg) no-repeat center;
 	}
@@ -104,14 +89,9 @@
 	color: $primary-color;
 	cursor: pointer;
 	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
+		@include position-container(0, 0, 0, auto);
 		width: 39px;
 		height: 39px;
-		margin: auto;
 		background: $primary-bg;
 		border: 2px solid #e5e5e5;
 		border-radius: 50%;
@@ -138,22 +118,26 @@
 	border-radius: 5px;
 	border: 2px solid #e5e5e5;
 	outline: none;
+}
 
-	&::-webkit-input-placeholder { /* Safari и Chrome */
-		color: $primary-color;
-	}
+::-webkit-input-placeholder { /* Safari и Chrome */
+	color: $primary-color;
+	opacity: 1;
+}
 
-	&::-moz-placeholder {  /* Firefox 19+ */
-		color: $primary-color;
-	}
+&::-moz-placeholder {  /* Firefox 19+ */
+	color: $primary-color;
+	opacity: 1;
+}
 
-	&:-moz-placeholder { /* Firefox 18- */
-		color: $primary-color;
-	}
+&:-moz-placeholder { /* Firefox 18- */
+	color: $primary-color;
+	opacity: 1;
+}
 
-	&:-ms-input-placeholder {
-		color: $primary-color;
-	}
+&:-ms-input-placeholder {
+	color: $primary-color;
+	opacity: 1;
 }
 
 .form__attention {

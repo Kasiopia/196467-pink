@@ -17,12 +17,7 @@
 	padding-top: 20px;
 	background: #f2f2f2;
 	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
+		@include position-container(auto, 0, 0, 0);
 		width: 157px;
 		height: 308px;
 		background: url(../img/iphone-screen-mobile@1x.png) no-repeat bottom center;

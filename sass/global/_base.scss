@@ -1,3 +1,12 @@
+body {
+	font-family: $font-stack;
+	color: $primary-color;
+	background: $primary-bg;
+	min-width: 320px;
+	@include style-font(14px, 24px, normal);
+	font-style: normal;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -43,6 +52,11 @@ section {
 button {
 	text-transform: none;
 	cursor: pointer;
+}
+
+.container {
+	width: 280px;
+	margin: 0 auto;
 }
 
 .vissualy-hidden {

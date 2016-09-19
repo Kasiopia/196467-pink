@@ -12,12 +12,8 @@
 }
 
 .slider__controls {
-	position: absolute;
+	@include position-container(auto, 20%, 0, 0);
 	z-index: 60;
-	bottom: 20%;
-	left: 0;
-	right: 0;
-	margin: auto;
 	width: 120px;
 	height: 20px;
 }

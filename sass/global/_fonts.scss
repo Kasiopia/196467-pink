@@ -1,9 +1,0 @@
-body {
-	font-family: $font-stack;
-	color: $primary-color;
-	background: $primary-bg;
-	width: 320px;
-	margin: 0 auto;
-	@include style-font(14px, 24px, normal);
-	font-style: normal;
-}

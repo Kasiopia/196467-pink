@@ -1,13 +1,11 @@
 .photo {
 	position: relative;
-	margin-bottom: 20px;
-	background: #f2f2f2;
+	width: 320px;
+	margin: 0 auto 20px;
+	background: $primary-bg;
 
 	&--day::after {
-		content: "Панорама дня";
-		position: absolute;
-		top: 0;
-		right: 0;
+		@include position-container(0, auto, auto, 0);
 		width: 140px;
 		height: 36px;
 		text-align: center;
@@ -17,11 +15,15 @@
 }
 
 .photo__picture {
-	margin-bottom: 19px;
+	display: block;
+	width: 320px;
+	margin: 0 auto;
 }
 
-figcaption {
+.photo-text {
+	padding-top: 19px;
 	padding-left: 18px;
+	background: #f2f2f2;
 }
 
 .photo__author {
@@ -46,7 +48,8 @@ figcaption {
 }
 
 .social-like {
-	padding: 9px 0 19px 18px;
+	background: #f2f2f2;
+	padding: 9px 0 19px;
 }
 
 .social-like__icon {

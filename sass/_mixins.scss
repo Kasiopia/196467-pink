@@ -9,3 +9,13 @@
 	line-height: $l-height;
 	font-weight: $f-weight;
 }
+
+@mixin position-container($top, $bottom, $left, $right) {
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+}

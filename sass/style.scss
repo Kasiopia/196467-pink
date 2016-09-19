@@ -9,7 +9,6 @@
 @import "_mixins.scss";
 
 //библиотека blocks
-@import "blocks/_base.scss";
 @import "blocks/_download-app.scss";
 @import "blocks/_offer.scss";
 @import "blocks/_logo.scss";
@@ -23,10 +22,9 @@
 @import "blocks/_upload-block.scss";
 
 //библиотека global
-@import "global/_container.scss";
-@import "global/_fonts.scss";
 @import "global/_forms.scss";
 @import "global/_typography.scss";
+@import "global/_base.scss";
 
 //библиотека styleguide
 @import "styleguide/_btn.scss";

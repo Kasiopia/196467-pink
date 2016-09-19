@@ -5,18 +5,12 @@
 	<title>Pink - Photo-Gallery</title>
 	<meta name="description" content="Путешествия с Pink">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<nav class="main-header__nav">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
-				<span class="navbar-toggle__sr-only">Toggle navigation</span>
-				<span class="navbar-toggle__icon-bar"></span>
-				<span class="navbar-toggle__icon-bar"></span>
-				<span class="navbar-toggle__icon-bar"></span>
-			</button>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true"></button>
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
@@ -50,129 +44,113 @@
 		</section>
 
 		<article class="photo photo--day">
-			<figure>
-				<img class="photo__picture" src="img/panorama-mobile@1x.jpg" alt="прыжок с парашутом" width="320" height="137">
-				<figcaption>
-					<div class="container">
-						<a class="photo__author" href="#">Анна</a>
-						<time class="photo__time" datetime="2016-09-15T00:05">(5 минут назад)</time>
-						<p class="photo__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+			<img class="photo__picture" src="img/panorama-mobile@1x.jpg" alt="прыжок с парашутом" width="320" height="137">
+			<div class="container">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Анна</a>
+					<time class="photo__time" datetime="2016-09-15T00:05">(5 минут назад)</time>
+					<p class="photo__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">215</span>
 					</div>
-				</figcaption>
-			</figure>
-			<div class="social-like">
-				<div class="container">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">215</span>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-1-mobile@1x.jpg" alt="попался" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Левон</a>
-						<time class="photo__time" datetime="2016-09-15T05:00">(5 часов назад)</time>
-						<p class="photo__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">356</span>
+				<img class="photo__picture" src="img/photo-1-mobile@1x.jpg" alt="попался" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Левон</a>
+					<time class="photo__time" datetime="2016-09-15T05:00">(5 часов назад)</time>
+					<p class="photo__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">356</span>
+					</div>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-2-mobile@1x.jpg" alt="барабанная установка" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Антон</a>
-						<time class="photo__time" datetime="2016-09-15T12:00">(12 часов назад)</time>
-						<p class="photo__title">Соседи будут рады!</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">666</span>
+				<img class="photo__picture" src="img/photo-2-mobile@1x.jpg" alt="барабанная установка" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Антон</a>
+					<time class="photo__time" datetime="2016-09-15T12:00">(12 часов назад)</time>
+					<p class="photo__title">Соседи будут рады!</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">666</span>
+					</div>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-3-mobile@1x.jpg" alt="небоскреб" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Борис</a>
-						<time class="photo__time" datetime="2016-09-15T20:00">(20 часов назад)</time>
-						<p class="photo__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">215</span>
+				<img class="photo__picture" src="img/photo-3-mobile@1x.jpg" alt="небоскреб" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Борис</a>
+					<time class="photo__time" datetime="2016-09-15T20:00">(20 часов назад)</time>
+					<p class="photo__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">215</span>
+					</div>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-4-mobile@1x.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Сергей</a>
-						<time class="photo__time" datetime="2016-08-15T01:00">(25 часов назад)</time>
-						<p class="photo__title">Самая кубанская в мире!</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">4</span>
+				<img class="photo__picture" src="img/photo-4-mobile@1x.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Сергей</a>
+					<time class="photo__time" datetime="2016-08-15T01:00">(25 часов назад)</time>
+					<p class="photo__title">Самая кубанская в мире!</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">4</span>
+					</div>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-5-mobile@1x.jpg" alt="снега нет" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Максим</a>
-						<time class="photo__time" datetime="2016-08-15T16:00">(40 часов назад)</time>
-						<p class="photo__title">Где снег-то?</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">150</span>
+				<img class="photo__picture" src="img/photo-5-mobile@1x.jpg" alt="снега нет" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Максим</a>
+					<time class="photo__time" datetime="2016-08-15T16:00">(40 часов назад)</time>
+					<p class="photo__title">Где снег-то?</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">150</span>
+					</div>
 				</div>
 			</div>
 		</article>
 
 		<article class="photo">
 			<div class="container">
-				<figure>
-					<img class="photo__picture" src="img/photo-6-mobile@1x.jpg" alt="вид из самолета" width="320" height="137">
-					<figcaption>
-						<a class="photo__author" href="#">Надежда</a>
-						<time class="photo__time" datetime="2016-08-15T21:00">(45 часов назад)</time>
-						<p class="photo__title">Всем GM и взаимные лайки!</p>
-					</figcaption>
-				</figure>
-				<div class="social-like">
-					<i class="social-like__icon"></i>
-					<span class="social-like__link">Нравится:</span>
-					<span class="social-like__count">2560</span>
+				<img class="photo__picture" src="img/photo-6-mobile@1x.jpg" alt="вид из самолета" width="320" height="137">
+				<div class="photo-text">
+					<a class="photo__author" href="#">Надежда</a>
+					<time class="photo__time" datetime="2016-08-15T21:00">(45 часов назад)</time>
+					<p class="photo__title">Всем GM и взаимные лайки!</p>
+					<div class="social-like">
+						<i class="social-like__icon"></i>
+						<span class="social-like__link">Нравится:</span>
+						<span class="social-like__count">2560</span>
+					</div>
 				</div>
 			</div>
 		</article>
