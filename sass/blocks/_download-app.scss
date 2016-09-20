@@ -1,0 +1,19 @@
+.download-app {
+	padding-top: 28px;
+	background: #1d2631;
+	text-align: center;
+}
+
+.spec {
+	padding: 32px 0;
+}
+
+.spec__link {
+	margin: auto 18px;
+}
+
+.spec__text {
+	margin-top: 24px;
+	@include style-font(14px, 24px, lighter);
+	color: $primary-bg;
+}

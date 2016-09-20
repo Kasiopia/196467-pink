@@ -1,0 +1,49 @@
+.communication {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.communication__headline {
+	margin-bottom: 35px;
+	@include style-font(24px, 1.4, lighter);
+	color: #616c77;
+}
+
+.communication__title {
+	color: $primary-color;
+	@include style-font(18px, 1.4, bold);
+}
+
+.communication__methods {
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+	@include style-font(24px, 1.4, lighter);
+	color: #d22856;
+}
+
+.social {
+	margin: 40px auto;
+	text-align: center;
+}
+
+.footer-copyright {
+	display: flex;
+	padding-top: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-copyright__title {
+	margin-right: 10px;
+	vertical-align: middle;
+	@include style-font(14px, 18px, normal);
+	color: $primary-color;
+}
+
+.footer-copyright__link {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	background: url("../img/htmlacademy.svg") no-repeat center;
+}

@@ -1,0 +1,72 @@
+.btn {
+	padding: 18px 0;
+	@include style-font(18px, 24px, normal);
+	@include a-link;
+	text-align: center;
+
+	&--app {
+		color: $primary-bg;
+		border: solid 3px $primary-bg;
+		border-radius: 30px;
+	}
+
+	&--submit {
+		width: 280px;
+		margin-bottom: 20px;
+		padding: 21px 0;
+		line-height: 30px;
+		background: #2aab6d;
+		color: $primary-bg;
+		border: none;
+		outline: none;
+	}
+
+	&--post {
+		width: 100%;
+		margin-bottom: 12px;
+		@include style-font(18px, 18px, bold);
+		color: #d22856;
+		background: #f2f2f2;
+		border-radius: 35px;
+		border: 2px solid #d22856;
+		outline: none;
+	}
+
+	&--cancel {
+		width: 100%;
+		margin-bottom: 12px;
+		@include style-font(18px, 18px, bold);
+		color: #dddfe0;
+		background: #f2f2f2;
+		border-radius: 35px;
+		border: 2px solid #dddfe0;
+		outline: none;
+	}
+}
+
+
+
+.social-btn {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	margin: auto 6px;
+	line-height: 46px;
+	background: $primary-bg;
+	border-radius: 50%;
+	border: 3px solid #e9ebec;
+	text-decoration: none;
+
+	&--tw {
+		background: url("../img/icon-twitter.svg") no-repeat center;
+	}
+
+	&--fb {
+		background: url("../img/icon-facebook.svg") no-repeat center;
+	}
+
+	&--ytb {
+		background: url("../img/icon-youtube.svg") no-repeat center;
+	}
+}
+

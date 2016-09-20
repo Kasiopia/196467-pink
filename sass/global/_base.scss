@@ -1,0 +1,64 @@
+body {
+	font-family: $font-stack;
+	color: $primary-color;
+	background: $primary-bg;
+	min-width: 320px;
+	@include style-font(14px, 24px, normal);
+	font-style: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+section {
+	position: relative;
+}
+
+ul {
+	list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+input,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+	position: relative;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+}
+
+button {
+	text-transform: none;
+	cursor: pointer;
+}
+
+.container {
+	width: 280px;
+	margin: 0 auto;
+}
+
+.vissualy-hidden {
+	display: none;
+}

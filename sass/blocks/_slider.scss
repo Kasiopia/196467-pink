@@ -1,0 +1,59 @@
+.slider {
+	position: relative;
+	min-height: 444px;
+	padding-top: 25px;
+	text-align: center;
+	background: $primary-bg;
+}
+
+.slider input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.slider__controls {
+	@include position-container(auto, 20%, 0, 0);
+	z-index: 60;
+	width: 120px;
+	height: 20px;
+}
+
+.slider__controls label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 8px;
+	vertical-align: top;
+	background: #bec2c7;
+	border: solid 3px $primary-bg;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slide {
+	display: none;
+}
+
+#btn-1:checked~.slider__controls label[for="btn-1"],
+#btn-2:checked~.slider__controls label[for="btn-2"],
+#btn-3:checked~.slider__controls label[for="btn-3"] {
+	background: $primary-bg;
+	border: solid 3px $primary-color;
+}
+
+#btn-1:checked~.slider__wrappper .slide:nth-child(1),
+#btn-2:checked~.slider__wrappper .slide:nth-child(2),
+#btn-3:checked~.slider__wrappper .slide:nth-child(3) {
+	display: block;
+}
+
+.slide__title {
+	margin: 10px auto;
+	@include style-font(18px, 30px, bold);
+	color: #000;
+}
+
+.slide__text {
+	@include style-font(18px, 30px, normal);
+	color: $primary-color;
+}

@@ -1,0 +1,31 @@
+
+// файл стилей по умолчанию
+@import "_normalize.scss";
+
+// переменные
+@import "_variables.scss";
+
+// примеси
+@import "_mixins.scss";
+
+//библиотека blocks
+@import "blocks/_download-app.scss";
+@import "blocks/_offer.scss";
+@import "blocks/_logo.scss";
+@import "blocks/_main-footer.scss";
+@import "blocks/_main-header.scss";
+@import "blocks/_price.scss";
+@import "blocks/_slider.scss";
+@import "blocks/_page-decription.scss";
+@import "blocks/_photo.scss";
+@import "blocks/_block-appeals.scss";
+@import "blocks/_upload-block.scss";
+
+//библиотека global
+@import "global/_forms.scss";
+@import "global/_typography.scss";
+@import "global/_base.scss";
+
+//библиотека styleguide
+@import "styleguide/_btn.scss";
+

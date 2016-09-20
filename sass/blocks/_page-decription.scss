@@ -1,0 +1,10 @@
+.page-description {
+	padding: 47px 0 20px;
+	background: $primary-bg;
+	text-align: center;
+}
+
+.page-description__text {
+	@include style-font(14px, 30px, normal);
+	color: $primary-color;
+}

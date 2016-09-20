@@ -1,0 +1,76 @@
+.upload-block {
+	background: #f2f2f2;
+}
+
+.form-upload__image-wrapper {
+	margin-bottom: 42px;
+}
+
+.form-upload__photo-options {
+	display: flex;
+	margin-bottom: 33px;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-upload__brightness {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	margin-right: 34px;
+	vertical-align: middle;
+	background: url("../img/icon-editor-crop.svg") no-repeat center;
+	cursor: pointer;
+}
+
+.form-upload__contrast {
+	display: inline-block;
+	width: 48px;
+	height: 43px;
+	margin-right: 40px;
+	vertical-align: middle;
+	background: url("../img/icon-editor-fill.svg") no-repeat center;
+	cursor: pointer;
+}
+
+.form-upload__cut {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	background: url("../img/icon-editor-contrast.svg") no-repeat center;
+	cursor: pointer;
+}
+
+.form-upload__manual-options {
+	margin-bottom: 34px;
+}
+
+.range-controls {
+	position: relative;
+}
+
+.range-controls__bar {
+	width: 240px;
+	height: 2px;
+	margin: 0 auto;
+	background: $primary-color;
+}
+
+.range-controls__toggle {
+	content: "";
+	position: absolute;
+	top: -6px;
+	right: 64px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid #cd2856;
+	background: #f2f2f2;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.form-upload__actions {
+	padding-bottom: 29px;
+}

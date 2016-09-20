@@ -5,25 +5,26 @@
 	<title>Pink - Form Call</title>
 	<meta name="description" content="Путешествия с Pink">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<nav class="main-header__nav">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
+				<span></span>
+			</button>
 			<div class="logo">
 				<h1 class="logo__text"><a>Pink</a></h1>
 			</div>
-			<button type="button" class="nav-toggle">X</button>
-			<ul class="menu">
+			<ul class="menu" id="#navbar-collapse">
 				<li class="menu__link menu__link--active">
 					<a href="index.html">Главная</a>
 				</li>
 				<li class="menu__link">
-					<a href="#">Фотографии</a>
+					<a href="photo.html">Фотографии</a>
 				</li>
 				<li class="menu__link">
-					<a href="form.html">Конкурс</a>
+					<a href="#">Конкурс</a>
 				</li>
 				<li class="menu__link">
 					<a href="academy.html">HTML Academy</a>
@@ -37,9 +38,9 @@
 		</div>
 	</header>
 	<main>
-		<section class="page-decription">
+		<section class="page-description">
 			<div class="container">
-				<p class="page-decription__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+				<p class="page-description__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
 			</div>
 		</section>
 		<form class="form" action="#" method="post">
@@ -58,22 +59,22 @@
 				<div class="container">
 					<h2 class="form-block__headline">Ваши безбашенные достижения в путешествии</h2>
 
-					<input type="checkbox" name="firm1" id="ch1" checked="">
+					<input class="form__input-checkbox" type="checkbox" name="firm1" id="ch1" checked="">
 					<label class="form__label-checkbox" for="ch1">Сделал селфи с акулой</label>
 
-					<input type="checkbox" name="firm2" id="ch2" checked="">
+					<input class="form__input-checkbox" type="checkbox" name="firm2" id="ch2" checked="">
 					<label class="form__label-checkbox" for="ch2">Обгорел на пляже</label>
 
-					<input type="checkbox" name="firm3" id="ch3">
+					<input class="form__input-checkbox" type="checkbox" name="firm3" id="ch3">
 					<label class="form__label-checkbox" for="ch3">Видел Чака Норриса</label>
 
-					<input type="checkbox" name="firm4" id="ch4">
+					<input class="form__input-checkbox" type="checkbox" name="firm4" id="ch4">
 					<label class="form__label-checkbox" for="ch4">Накупил сувениров</label>
 
-					<input type="checkbox" name="firm5" id="ch5" checked="">
+					<input class="form__input-checkbox" type="checkbox" name="firm5" id="ch5" checked="">
 					<label class="form__label-checkbox" for="ch5">Удержал башню</label>
 
-					<input type="checkbox" name="firm6" id="ch6">
+					<input class="form__input-checkbox" type="checkbox" name="firm6" id="ch6">
 					<label class="form__label-checkbox" for="ch6">Разгромил отель</label>
 
 				</div>
@@ -91,12 +92,12 @@
 			<section class="form-block form-block--gray">
 				<div class="container">
 					<h2 class="form-block__headline">С каким приложением путешествовали?</h2>
-					<input type="radio" name="application" id="rd1" value="ios" checked="">
-					<label class="form__label-radio" for="rd1"></label>
-					<input type="radio" name="application" id="rd2" value="android">
-					<label class="form__label-radio" for="rd2"></label>
-					<input type="radio" name="application" id="rd3" value="windows phone">
-					<label class="form__label-radio" for="rd3"></label>
+					<input class="form__input-radio" type="radio" name="application" id="rd1" value="ios" checked="">
+					<label class="form__label-radio" for="rd1">Pink для iOS</label>
+					<input class="form__input-radio" type="radio" name="application" id="rd2" value="android">
+					<label class="form__label-radio" for="rd2">Pink на Android</label>
+					<input class="form__input-radio" type="radio" name="application" id="rd3" value="windows phone">
+					<label class="form__label-radio" for="rd3">Windows Phone</label>
 				</div>
 			</section>
 
@@ -109,19 +110,19 @@
 
 			<div class="container">
 				<button class="btn btn--submit">Отправить форму</button>
-				<span class="form__attention">* — обязательные поля</span>
+				<p class="form__attention"><span>*</span> — обязательные поля</p>
 			</div>
 		</form>
 	</main>
 	<footer class="main-footer">
 		<div class="container">
 			<div class="logo logo--footer">
-				<img class="logo__img" src="img/logo.png" alt="очки" width="60" height="40">
-				<h1 class="logo__text"><a>Pink</a></h1>
+				<img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="очки" width="147" height="40">
+				<!-- <h1 class="logo__text"><a>Pink</a></h1> -->
 			</div>
 			<div class="social">
 				<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-				<a class="social-btn social-btn--inst" href="#"></a>
+				<a class="social-btn social-btn--tw" href="#"></a>
 				<a class="social-btn social-btn--fb" href="#"></a>
 				<a class="social-btn social-btn--ytb" href="#"></a>
 			</div>

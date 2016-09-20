@@ -1,0 +1,102 @@
+.main-header {
+	position: relative;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+	background-size: cover;
+	background-position-y: 252px;
+}
+
+.main-header--index {
+	position: relative;
+	min-height: 720px;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
+	background-size: cover;
+	&::after {
+		@include position-container(auto, 0, 0, 0);
+		width: 258px;
+		height: 286px;
+		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
+		z-index: 10;
+	}
+}
+
+.intro {
+	min-height: 171px;
+}
+
+.intro__headline {
+	padding: 36px 0;
+	text-align: center;
+	color: $primary-bg;
+	@include style-font(24px, 1.4, lighter);
+}
+
+.main-header__nav {
+	position: relative;
+}
+
+.navbar-toggle {
+	position: absolute;
+	top: 0;
+	right: 18px;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+}
+
+.navbar-toggle>span {
+	position: relative;
+	width: 50px;
+	height: 4px;
+	background: $primary-bg;
+	transition: background .3s .5s;
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: $primary-bg;
+		transform-origin: 50% 50%;
+		transition: top .3s .3s,transform .3s;
+	}
+	&::before {
+		top: 10px;
+	}
+
+}
+
+.menu {
+	background: $primary-color;
+}
+
+.menu__link {
+	&:hover {
+		background: lighten($primary-color, 10%);
+	}
+	&:active {
+		background: darken($primary-color, 50%);
+	}
+	&--active {
+		/*что то написать */
+	}
+}
+
+.menu__link a {
+	@include a-link;
+	@include style-font(18px, 32px, bold);
+	padding: 18px 0;
+	text-align: center;
+	color: $primary-bg;
+	border-top: solid 1px #485461;
+	border-bottom: solid 1px #000101;
+}
