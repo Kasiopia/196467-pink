@@ -19,9 +19,12 @@
 	}
 }
 
-.intro__headline {
+.intro {
 	min-height: 171px;
-	padding-top: 36px;
+}
+
+.intro__headline {
+	padding: 36px 0;
 	text-align: center;
 	color: $primary-bg;
 	@include style-font(24px, 1.4, lighter);
@@ -32,29 +35,42 @@
 }
 
 .navbar-toggle {
+	position: absolute;
+	top: 0;
+	right: 18px;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+}
+
+.navbar-toggle>span {
 	position: relative;
-	display: block;
 	width: 50px;
 	height: 4px;
-	float: right;
-	margin-top: 17px;
-	margin-right: 15px;
 	background: $primary-bg;
-	border: none;
-	outline: none;
+	transition: background .3s .5s;
+	&::after,
 	&::before {
-		@include position-container(auto, -10px, 0, auto);
-		width: 50px;
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 100%;
 		height: 4px;
 		background: $primary-bg;
-		z-index: 20;
+		transform-origin: 50% 50%;
+		transition: top .3s .3s,transform .3s;
 	}
-	&::after {
-		@include position-container(auto, -20px, 0, auto);
-		width: 50px;
-		height: 4px;
-		background: $primary-bg;
-		z-index: 20;
+	&::before {
+		top: 10px;
 	}
 
 }
