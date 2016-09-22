@@ -49,11 +49,11 @@
 
 .slide__title {
 	margin: 10px auto;
-	@include style-font(18px, 30px, bold);
+	@include style-font(18px, 30px, bold, "OpenSansBold");
 	color: #000;
 }
 
 .slide__text {
-	@include style-font(18px, 30px, normal);
+	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
 }

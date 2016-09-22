@@ -5,20 +5,20 @@
 
 .communication__headline {
 	margin-bottom: 35px;
-	@include style-font(24px, 1.4, lighter);
-	color: #616c77;
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
+	color: $primary-color;
 }
 
 .communication__title {
 	color: $primary-color;
-	@include style-font(18px, 1.4, bold);
+	@include style-font(18px, 1.4, bold, "OpenSansBold");
 }
 
 .communication__methods {
 	display: block;
 	margin-bottom: 20px;
 	text-decoration: none;
-	@include style-font(24px, 1.4, lighter);
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: #d22856;
 }
 
@@ -37,7 +37,7 @@
 .footer-copyright__title {
 	margin-right: 10px;
 	vertical-align: middle;
-	@include style-font(14px, 18px, normal);
+	@include style-font(14px, 18px, normal, "OpenSans");
 	color: $primary-color;
 }
 

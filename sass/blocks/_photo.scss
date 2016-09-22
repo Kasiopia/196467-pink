@@ -29,7 +29,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
-	@include style-font(14px, 24px, bold);
+	@include style-font(14px, 24px, bold, "OpenSansBold");
 	color: $primary-color;
 }
 
@@ -37,12 +37,12 @@
 	display: inline-block;
 	padding-left: 4px;
 	vertical-align: middle;
-	@include style-font(12px, 24px, lighter);
+	@include style-font(12px, 24px, lighter, "OpenSansLight");
 	color: #5e6873;
 }
 
 .photo-text__title {
-	@include style-font(14px, 24px, normal);
+	@include style-font(14px, 24px, normal, "OpenSans");
 	color: $primary-color;
 }
 
@@ -64,7 +64,7 @@
 	display: inline-block;
 	padding-left: 19px;
 	vertical-align: middle;
-	@include style-font(12px, 24px, normal);
+	@include style-font(12px, 24px, normal, "OpenSans");
 	color: #d22856;
 	cursor: pointer;
 }
@@ -73,7 +73,7 @@
 	display: inline-block;
 	padding-left: 4px;
 	vertical-align: middle;
-	@include style-font(12px, 24px, normal);
+	@include style-font(12px, 24px, normal, "OpenSans");
 	color: #d22856;
 	cursor: pointer;
 }

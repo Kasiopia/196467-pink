@@ -1,9 +1,8 @@
 body {
-	font-family: $font-stack;
 	color: $primary-color;
 	background: $primary-bg;
 	min-width: 320px;
-	@include style-font(14px, 24px, normal);
+	@include style-font(14px, 24px, normal,"OpenSans");
 	font-style: normal;
 }
 
@@ -55,8 +54,7 @@ button {
 }
 
 .container {
-	width: 280px;
-	margin: 0 auto;
+	@include container();
 }
 
 .vissualy-hidden {

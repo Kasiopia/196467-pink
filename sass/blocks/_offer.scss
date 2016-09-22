@@ -1,39 +1,107 @@
 .offer {
 	padding-top: 26px;
 	text-align: center;
-	background: $primary-bg;
+	background: $primary-bg url("../img/offers.png") no-repeat bottom center ;
+	background-size: cover;
 }
 
-.offer__slogan {
-	margin: 20px auto;
-	padding-bottom: 26px;
-	@include style-font(24px, 1.4, lighter);
+.offer-header__slogan {
+	margin-bottom: 20px;
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: $primary-color;
+
+	@media ($tablet-widths) {
+		margin-bottom: 0;
+		@include style-font(40px, 1, lighter, "OpenSansLight");
+		&:nth-of-type(2) {
+			width: 351px;
+			margin: 0 auto 30px;
+		}
+	}
 }
+
+
 
 .offer-items {
 	position: relative;
-	min-height: 698px;
-	padding-top: 20px;
-	background: #f2f2f2;
+	padding: 20px 0 334px;
 	&::after {
 		@include position-container(auto, 0, 0, 0);
 		width: 157px;
 		height: 308px;
 		background: url(../img/iphone-screen-mobile@1x.png) no-repeat bottom center;
 		z-index: 10;
+	}
+
+	@media ($tablet-widths) {
+		margin-bottom: 60px;
+		padding-bottom: 0px;
+		&::after {
+			@include position-container(0, 0, 47px, auto);
 		}
+	}
 }
 
 .offer-item {
+	position: relative;
 	margin-bottom: 10px;
+	z-index: 100;
+
+	@media ($tablet-widths) {
+		display: flex;
+		flex-wrap: wrap;
+		width: 308px;
+		margin-left: auto;
+		text-align: left;
+	}
 }
 
 .offer-item__headline {
 	margin: 10px auto;
-	@include style-font(18px, 24px, bold);
+	@include style-font(18px, 24px, bold, "OpenSansBold");
+
+	@media ($tablet-widths) {
+		margin: 10px 0;
+	}
 }
 
 .offer-item__description {
-	@include style-font(14px, 24px, normal);
+	@include style-font(14px, 24px, normal, "OpenSans");
+}
+
+
+.offer-footer {
+	display: none;
+
+	&__headline {
+		@include style-font(30px, 36px, bold, "OpenSansBold");
+		color: #000;
+	}
+
+	&__text {
+		@include style-font(14px, 24px, normal, "OpenSans");
+		color: $primary-color;
+	}
+
+	&__link {
+		@include style-font(14px, 24px, normal, "OpenSans");
+		color: #d22856;
+	}
+
+	@media ($tablet-widths) {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		width: 308px;
+		margin-left: auto;
+		padding-top: 40px;
+		text-align: left;
+		background: $primary-bg;
+
+		&::after {
+			content: "";
+			@include position-container(0, 0, 20px, 0);
+			background: url("../img/icon-editor-diagram-fill.svg") no-repeat center;
+		}
+	}
 }

@@ -1,6 +1,6 @@
 .btn {
 	padding: 18px 0;
-	@include style-font(18px, 24px, normal);
+	@include style-font(18px, 24px, normal, "OpenSans");
 	@include a-link;
 	text-align: center;
 
@@ -24,7 +24,7 @@
 	&--post {
 		width: 100%;
 		margin-bottom: 12px;
-		@include style-font(18px, 18px, bold);
+		@include style-font(18px, 18px, bold, "OpenSansBold");
 		color: #d22856;
 		background: #f2f2f2;
 		border-radius: 35px;
@@ -35,7 +35,7 @@
 	&--cancel {
 		width: 100%;
 		margin-bottom: 12px;
-		@include style-font(18px, 18px, bold);
+		@include style-font(18px, 18px, bold, "OpenSansBold");
 		color: #dddfe0;
 		background: #f2f2f2;
 		border-radius: 35px;

@@ -5,7 +5,7 @@
 
 .logo__text {
 	padding: 18px 20px 18px;
-	@include style-font(30px, 26px, normal);
+	@include style-font(30px, 26px, normal, "OpenSans");
 	color: $primary-bg;
 }
 

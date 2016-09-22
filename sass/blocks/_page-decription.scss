@@ -5,6 +5,6 @@
 }
 
 .page-description__text {
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	color: $primary-color;
 }

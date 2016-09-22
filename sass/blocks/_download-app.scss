@@ -14,6 +14,6 @@
 
 .spec__text {
 	margin-top: 24px;
-	@include style-font(14px, 24px, lighter);
+	@include style-font(14px, 24px, lighter, "OpenSansLight");
 	color: $primary-bg;
 }

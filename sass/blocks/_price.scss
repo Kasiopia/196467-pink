@@ -88,12 +88,12 @@ td.price-table__cell {
 
 .price-table__cell-title {
 	margin: 10px auto;
-	@include style-font(18px, 30px, bold);
+	@include style-font(18px, 30px, bold, "OpenSansBold");
 	color: $primary-bg;
 }
 
 .price-table__cell-cost {
-	@include style-font(24px, 30px, lighter);
+	@include style-font(24px, 30px, lighter, "OpenLight");
 	text-align: center;
 	color: #f1f2f3;
 }
@@ -102,7 +102,7 @@ td.price-table__cell {
 	position: relative;
 	padding-left: 22px;
 	text-align: left;
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	&::before,
 	&::after {

@@ -17,6 +17,11 @@
 		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
 		z-index: 10;
 	}
+	&::after {
+		@media ($tablet-widths) {
+			right: -96px;
+		}
+	}
 }
 
 .intro {
@@ -27,7 +32,7 @@
 	padding: 36px 0;
 	text-align: center;
 	color: $primary-bg;
-	@include style-font(24px, 1.4, lighter);
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 }
 
 .main-header__nav {
@@ -93,7 +98,7 @@
 
 .menu__link a {
 	@include a-link;
-	@include style-font(18px, 32px, bold);
+	@include style-font(18px, 32px, bold, "OpenSansBold");
 	padding: 18px 0;
 	text-align: center;
 	color: $primary-bg;
