@@ -2,10 +2,39 @@
 	padding-top: 28px;
 	background: #1d2631;
 	text-align: center;
+
+	&__headline {
+		display: none;
+	}
+
+	@media ($tablet-widths) {
+		margin-top: -372px;
+		margin-right: auto;
+		padding-top: 0;
+		background: transparent;
+		z-index: 60;
+	}
 }
+
+
+.download-app__headline {
+	display: none;
+	@include style-font(40px, 1.4, lighter, "OpenSansLight");
+	text-align: center;
+	color: $primary-bg;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
+}
+
 
 .spec {
 	padding: 32px 0;
+
+	@media ($tablet-widths) {
+		width: 300px;
+	}
 }
 
 .spec__link {

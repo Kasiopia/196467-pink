@@ -1,22 +1,3 @@
-.download-app {
-	@media ($tablet-widths) {
-		background: transparent;
-		z-index: 60;
-		margin-top: -320px;
-	}
-}
-
-.download-app__headline {
-	display: none;
-	@include style-font(40px, 1.4, lighter, "OpenSansLight");
-	text-align: center;
-	color: $primary-bg;
-
-	@media ($tablet-widths) {
-		display: block;
-	}
-}
-
 .block-appeals {
 	padding: 40px 0;
 }

@@ -1,5 +1,5 @@
 .offer {
-	padding-top: 26px;
+	padding-top: 45px;
 	text-align: center;
 	background: $primary-bg url("../img/offers.png") no-repeat bottom center ;
 	background-size: cover;
@@ -28,7 +28,7 @@
 	&::after {
 		@include position-container(auto, 0, 0, 0);
 		width: 157px;
-		height: 308px;
+		height: 320px;
 		background: url(../img/iphone-screen-mobile@1x.png) no-repeat bottom center;
 		z-index: 10;
 	}
@@ -48,8 +48,6 @@
 	z-index: 100;
 
 	@media ($tablet-widths) {
-		display: flex;
-		flex-wrap: wrap;
 		width: 308px;
 		margin-left: auto;
 		text-align: left;
@@ -71,37 +69,45 @@
 
 
 .offer-footer {
+	position: relative;
 	display: none;
+	padding: 103px 0;
+	text-align: left;
+	background: $primary-bg;
 
 	&__headline {
+		padding-right: 135px;
 		@include style-font(30px, 36px, bold, "OpenSansBold");
 		color: #000;
 	}
 
 	&__text {
+		padding: 10px 0 10px;
 		@include style-font(14px, 24px, normal, "OpenSans");
 		color: $primary-color;
 	}
 
 	&__link {
+		display: block;
 		@include style-font(14px, 24px, normal, "OpenSans");
 		color: #d22856;
 	}
 
-	@media ($tablet-widths) {
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
+	&__wrapper {
 		width: 308px;
 		margin-left: auto;
-		padding-top: 40px;
 		text-align: left;
-		background: $primary-bg;
+	}
 
-		&::after {
-			content: "";
-			@include position-container(0, 0, 20px, 0);
-			background: url("../img/icon-editor-diagram-fill.svg") no-repeat center;
-		}
+	&__wrapper::after {
+		width: 253px;
+		height: 253px;
+		@include position-container(0, 0, 47px, auto);
+		background: url("../img/icon-editor-diagram-fill.svg") no-repeat center;
+		z-index: 10;
+	}
+
+	@media ($tablet-widths) {
+		display: block;
 	}
 }

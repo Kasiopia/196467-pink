@@ -7,17 +7,21 @@
 
 .main-header--index {
 	position: relative;
-	min-height: 720px;
+	min-height: 721px;
 	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
 	background-size: cover;
+
+	@media ($tablet-widths) {
+		min-height: 984px;
+	}
+
 	&::after {
 		@include position-container(auto, 0, 0, 0);
 		width: 258px;
 		height: 286px;
 		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
 		z-index: 10;
-	}
-	&::after {
+
 		@media ($tablet-widths) {
 			right: -96px;
 		}

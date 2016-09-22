@@ -4,6 +4,11 @@
 	@include a-link;
 	text-align: center;
 
+
+	@media ($tablet-widths) {
+		width: 300px;
+	}
+
 	&--app {
 		color: $primary-bg;
 		border: solid 3px $primary-bg;
@@ -42,6 +47,8 @@
 		border: 2px solid #dddfe0;
 		outline: none;
 	}
+
+
 }
 
 
