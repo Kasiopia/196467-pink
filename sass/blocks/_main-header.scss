@@ -33,7 +33,7 @@
 		z-index: 10;
 
 		@media ($tablet-widths) {
-			@include position-container(auto, 0, auto, 0);
+			@include position-container(auto, 0, 0, -171px);
 			width: 470px;
 			height: 521px;
 			background-size: 100%;

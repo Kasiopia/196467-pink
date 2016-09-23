@@ -35,6 +35,17 @@
 		border-radius: 35px;
 		border: 2px solid #d22856;
 		outline: none;
+
+
+		@media ($tablet-widths) {
+			width: 100%;
+			margin-bottom: 24px;
+		}
+
+		@media ($desktop-widths) {
+			width: 183px;
+			margin-bottom: 0;
+		}
 	}
 
 	&--cancel {
@@ -46,6 +57,16 @@
 		border-radius: 35px;
 		border: 2px solid #dddfe0;
 		outline: none;
+
+		@media ($tablet-widths) {
+			width: 100%;
+			margin-bottom: 0px;
+		}
+
+		@media ($desktop-widths) {
+			width: 183px;
+			margin-bottom: 0px;
+		}
 	}
 
 

@@ -12,6 +12,11 @@
 		padding: 40px 23px;
 		@include style-font(40px, 1.1, lighter, "OpenSansLight");
 	}
+
+	@media ($desktop-widths) {
+		padding: 40px 108px;
+		@include style-font(50px, 1.1, lighter, "OpenSansLight");
+	}
 }
 
 .communication-items {
