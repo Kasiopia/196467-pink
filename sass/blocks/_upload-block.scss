@@ -1,4 +1,5 @@
 .upload-block {
+	text-align: center;
 	background: #f2f2f2;
 }
 
@@ -48,6 +49,15 @@
 
 .range-controls {
 	position: relative;
+}
+
+.range-controls--contrast,
+.range-controls--cut {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
 }
 
 .range-controls__bar {
