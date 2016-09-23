@@ -2,7 +2,14 @@
 	position: relative;
 	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
 	background-size: cover;
-	background-position-y: 252px;
+
+	@media ($tablet-widths) {
+		min-height: 984px;
+	}
+
+	@media ($desktop-widths) {
+		min-height: 853px;
+	}
 }
 
 .main-header--index {
@@ -12,6 +19,10 @@
 
 	@media ($tablet-widths) {
 		min-height: 984px;
+	}
+
+	@media ($desktop-widths) {
+		min-height: 853px;
 	}
 
 	&::after {
@@ -32,24 +43,31 @@
 
 .main-header__nav {
 	position: relative;
+	background: $primary-color;
+
+	@media ($desktop-widths) {
+		background: rgba(21, 29, 36, 0.1);
+	}
 }
 
+.main-header__wrapper {
+	display: flex;
+	padding: 28px 0;
+	justify-content: space-between;
+}
 
 .navbar-toggle {
-	position: absolute;
-	top: 0;
-	right: 18px;
-	display: -webkit-flex;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 60px;
 	height: 60px;
-	padding: 0;
-	background: transparent;
 	border: 0;
 	cursor: pointer;
 	outline: 0;
+	background: transparent;
+
+	@media ($desktop-widths) {
+		display: none;
+	}
 }
 
 .navbar-toggle>span {
@@ -76,15 +94,20 @@
 }
 
 .menu {
+	position: absolute;
+	top: 110px;
+	left: 0;
+	display: block;
+	width: 100%;
 	background: $primary-color;
-}
 
-.menu__link {
-	&:hover {
-		background: lighten($primary-color, 10%);
-	}
-	&:active {
-		background: darken($primary-color, 50%);
+	@media ($desktop-widths) {
+		position: static;
+		width: 790px;
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		background: transparent;
 	}
 }
 
@@ -96,6 +119,12 @@
 	color: $primary-bg;
 	border-top: solid 1px #485461;
 	border-bottom: solid 1px #000101;
+
+	@media ($desktop-widths) {
+		margin-left: 81px;
+		@include style-font(18px, 18px, normal, "OpenSans");
+		border: none;
+	}
 }
 
 .intro {
