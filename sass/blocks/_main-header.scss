@@ -6,9 +6,8 @@
 }
 
 .main-header--index {
-	position: relative;
 	min-height: 721px;
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
 	background-size: cover;
 
 	@media ($tablet-widths) {
@@ -23,25 +22,18 @@
 		z-index: 10;
 
 		@media ($tablet-widths) {
-			right: -96px;
+			@include position-container(auto, 0, auto, 0);
+			width: 470px;
+			height: 521px;
+			background-size: 100%;
 		}
 	}
-}
-
-.intro {
-	min-height: 171px;
-}
-
-.intro__headline {
-	padding: 36px 0;
-	text-align: center;
-	color: $primary-bg;
-	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 }
 
 .main-header__nav {
 	position: relative;
 }
+
 
 .navbar-toggle {
 	position: absolute;
@@ -81,7 +73,6 @@
 	&::before {
 		top: 10px;
 	}
-
 }
 
 .menu {
@@ -95,9 +86,6 @@
 	&:active {
 		background: darken($primary-color, 50%);
 	}
-	&--active {
-		/*что то написать */
-	}
 }
 
 .menu__link a {
@@ -109,3 +97,15 @@
 	border-top: solid 1px #485461;
 	border-bottom: solid 1px #000101;
 }
+
+.intro {
+	min-height: 171px;
+}
+
+.intro__headline {
+	padding: 36px 0;
+	text-align: center;
+	color: $primary-bg;
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
+}
+

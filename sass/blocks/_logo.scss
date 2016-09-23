@@ -1,16 +1,27 @@
 .logo {
 	background: $primary-color;
-	border-bottom: solid 1px #000101;
 }
 
 .logo__text {
 	padding: 18px 20px 18px;
 	@include style-font(30px, 26px, normal, "OpenSans");
 	color: $primary-bg;
+
+	@media ($tablet-widths) {
+		display: none;;
+	}
+}
+
+.logo__img {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
 }
 
 .logo--footer {
-	padding: 50px 0 5px;
+	padding: 0px;
 	color: $primary-color;
 	background: $primary-bg;
 	text-align: center;
