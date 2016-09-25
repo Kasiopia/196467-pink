@@ -4,6 +4,14 @@ body {
 	min-width: 320px;
 	@include style-font(14px, 24px, normal,"OpenSans");
 	font-style: normal;
+
+	@media ($tablet-widths) {
+		min-width: 700px;
+	}
+
+	@media ($desktop-widths) {
+		min-width: 1200px;
+	}
 }
 
 img {

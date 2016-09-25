@@ -11,6 +11,21 @@
 	}
 }
 
+
+.upload-block .container {
+	width: 100%;
+}
+
+.upload-block .container {
+	@media ($tablet-widths) {
+		width: 620px;
+	}
+
+	@media ($desktop-widths) {
+		width: 940px;
+	}
+}
+
 .form-upload {
 	margin-bottom: 42px;
 
@@ -27,6 +42,15 @@
 
 .form-upload__left-block {
 	padding: 57px 0px;
+	@media ($tablet-widths) {
+		width: 300px;
+	}
+}
+
+.form-upload__image {
+	@media ($tablet-widths) {
+		width: 100%;
+	}
 }
 
 .form-upload__right-block {
@@ -116,6 +140,8 @@
 	margin: auto;
 	display: block;
 	z-index: 50;
+	padding-bottom: 34px;
+	border-bottom: 1px solid #dddfe0;
 
 	@media ($tablet-widths) {
 		position: relative;
