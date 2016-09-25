@@ -8,23 +8,20 @@
 	color: $primary-bg;
 
 	@media ($tablet-widths) {
-		display: none;;
-	}
-}
-
-.logo__img {
-	display: none;
-
-	@media ($tablet-widths) {
-		display: block;
+		display: none;
 	}
 }
 
 .logo--footer {
+	margin: 0 auto;
 	padding: 0px;
 	color: $primary-color;
 	background: $primary-bg;
 	text-align: center;
 	border-bottom: none;
+
+	@media ($tablet-widths) {
+		margin: 0;
+	}
 }
 

@@ -41,9 +41,11 @@
 }
 
 .form-upload__left-block {
-	padding: 57px 0px;
+	padding: 20px 0px 42px;
+
 	@media ($tablet-widths) {
 		width: 300px;
+		padding: 57px 0px;
 	}
 }
 
@@ -69,16 +71,26 @@
 	}
 }
 
+.form-upload__inner {
+	border-bottom: 1px solid #dddfe0;
+
+	@media ($tablet-widths) {
+		border-bottom: none;
+	}
+}
+
 .form-upload__options-wrapper {
 	position: relative;
 	display: flex;
-	padding-bottom: 40px;
-	margin-bottom: 33px;
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 75px;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
 
 	@media ($tablet-widths) {
+		width: 100%;
 		padding-bottom: 0;
 		justify-content: space-between;
 		border-bottom: none;
@@ -132,20 +144,15 @@
 }
 
 .range-controls--active {
-	position: absolute;
-	top: auto;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
+	@include position-container(auto, 36px, 0, 0);
+	content: none;
 	display: block;
 	z-index: 50;
-	padding-bottom: 34px;
-	border-bottom: 1px solid #dddfe0;
 
 	@media ($tablet-widths) {
 		position: relative;
 		margin: 0;
+		bottom: 0;
 	}
 }
 
@@ -180,10 +187,14 @@
 }
 
 .form-upload__actions {
-	padding-bottom: 29px;
+	width: 300px;
+	margin: 0 auto;
+	padding: 38px 0;
 
 	@media ($desktop-widths) {
 		display: flex;
+		width: 100%;
+		padding: 0;
 		padding-bottom: 0;
 		justify-content: space-between;
 	}

@@ -88,12 +88,28 @@
 		vertical-align: top;
 		padding: 10px 20px 10px 0px;
 	}
+
+	&--icon::after {
+		@media ($tablet-widths) {
+			width: 60px;
+			height: 60px;
+			@include position-container(0, auto, auto, 0);
+			background: #e5e5e5 url(../img/phone.svg) no-repeat center;
+			z-index: 20;
+			cursor: pointer;
+		}
+	}
+
+	&--icon-email::after {
+		@media ($tablet-widths) {
+			background: #e5e5e5 url(../img/mail.svg) no-repeat center;
+		}
+	}
 }
 
 .form-block__input-text {
-	position: relative;
 	width: 100%;
-	padding: 14.5px 0px 14.5px 21px;
+	padding: 14px 0px 14px 21px;
 	box-sizing: border-box;
 	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
@@ -107,19 +123,6 @@
 		flex-shrink: 1;
 		width: 100%;
 	}
-
-	&--icon::after {
-		width: 60px;
-		height: 60px;
-		@include position-container(0, 0, auto, 0);
-		background: url(../img/phone.svg) no-repeat center;
-		z-index: 20;
-		cursor: pointer;
-	}
-
-	&--icon-email::after {
-		background: url(../img/mail.svg) no-repeat center;
-	}
 }
 
 .form-block__contact-items {
@@ -129,6 +132,7 @@
 }
 
 .form-block__contact-item {
+	position: relative;
 	width: 100%;
 
 	@media ($desktop-widths) {

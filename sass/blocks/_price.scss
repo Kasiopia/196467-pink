@@ -29,6 +29,14 @@
 	}
 }
 
+th.price-table__cell:first-child {
+
+
+	@media ($tablet-widths) {
+		opacity: 0;
+	}
+}
+
 th.price-table__cell {
 	position: relative;
 	background: $primary-color;
@@ -39,6 +47,7 @@ th.price-table__cell {
 td.price-table__cell {
 	border-right: 1px solid #e5e5e5;
 	border-left: 1px solid #e5e5e5;
+	border-top: 2px solid #e5e5e5;
 	border-bottom: 2px solid #e5e5e5;
 }
 
@@ -113,8 +122,6 @@ td.price-table__cell {
 	}
 }
 
-
-
 .price-table__cell-title {
 	margin: 10px auto;
 	@include style-font(18px, 30px, bold, "OpenSansBold");
@@ -133,6 +140,11 @@ td.price-table__cell {
 	text-align: left;
 	@include style-font(14px, 30px, normal, "OpenSans");
 	color: $primary-color;
+
+	@media ($tablet-widths) {
+		font-size: 0px;
+	}
+
 	&::before,
 	&::after {
 		@include position-container(0, 0, auto, 19px);
@@ -140,10 +152,16 @@ td.price-table__cell {
 		height: 3px;
 		background-color: #f25b26;
 		transform: rotate(45deg);
+
+		@media ($tablet-widths) {
+			@include position-container(0, 0, 0, 0);
+		}
 	}
+
 	&::after {
 		transform: rotate(-45deg);
 	}
+
 	&--on::before {
 		width: 13px;
 		height: 22px;
@@ -151,8 +169,38 @@ td.price-table__cell {
 		background-color: rgba(255, 255, 255, 0);
 		border-right: 4px solid #3dc644;
 		border-bottom: 4px solid #3dc644;
+		@media ($tablet-widths) {
+			@include position-container(0, 0, 0, 0);
+		}
 	}
+
 	&--on:after {
 		display: none;
+	}
+}
+
+td.price-table__cell:first-child .price-table__cell-headline {
+	&::after,
+	&::before {
+		content: none;
+	}
+
+	@media ($tablet-widths) {
+		display: block;
+		padding-left: 15px;
+		font-size: 14px;
+	}
+
+	@media ($desktop-widths) {
+		padding-left: 24px;
+		font-size: 18px;
+	}
+}
+
+tr .price-table__cell:first-child {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
 	}
 }

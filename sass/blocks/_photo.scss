@@ -4,27 +4,59 @@
 	background: $primary-bg;
 
 	&--day::after {
-		@include position-container(0, auto, auto, 0);
+		@include position-container(0, auto, auto, 6.25%);
 		width: 140px;
 		height: 36px;
 		text-align: center;
 		background: #d22856;
 		color: $primary-bg;
+
+		@media ($tablet-widths) {
+			@include position-container(57px, auto, auto, 6.25%);
+		}
 	}
 }
 
 .photo__picture {
+	width: 100%;
+}
+
+.photo-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.photo-item {
+	width: 300px;
+	margin-bottom: 20px;
+
+	&--day {
+		width: 100%;
+	}
+
+	@media ($desktop-widths) {
+		margin-bottom: 54px;
+	}
+}
+
+.photo-item__picture {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
 }
 
-.photo-text {
-	padding: 19px 18px 0;
+.photo-item__text {
+	position: relative;
+	padding: 19px 18px;
 	background: #f2f2f2;
+
+	@media ($tablet-widths) {
+		padding: 32px 27px;
+	}
 }
 
-.photo-text__author {
+.photo-item__author {
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
@@ -32,7 +64,7 @@
 	color: $primary-color;
 }
 
-.photo-text__time {
+.photo-item__time {
 	display: inline-block;
 	padding-left: 4px;
 	vertical-align: middle;
@@ -40,14 +72,40 @@
 	color: #5e6873;
 }
 
-.photo-text__title {
+.photo-item__title {
 	@include style-font(14px, 24px, normal, "OpenSans");
 	color: $primary-color;
 }
 
 .social-like {
+	display: flex;
+	padding-top: 9px;
+	justify-content: flex-end;
+	align-items: center;
 	background: #f2f2f2;
-	padding: 9px 0 19px;
+	flex-direction: row-reverse;
+
+	@media ($tablet-widths) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&--day {
+		@media ($tablet-widths) {
+			@include position-container(27px, auto, auto, 27px);
+			width: 135px;
+			justify-content: space-around;
+			background: transparent;
+		}
+	}
+}
+
+.social-like__block {
+	margin-left: 20px;
+
+	@media ($tablet-widths) {
+		margin-left: 0px;
+	}
 }
 
 .social-like__icon {
@@ -61,7 +119,6 @@
 
 .social-like__link {
 	display: inline-block;
-	padding-left: 19px;
 	vertical-align: middle;
 	@include style-font(12px, 24px, normal, "OpenSans");
 	color: #d22856;
