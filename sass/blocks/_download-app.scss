@@ -1,42 +1,59 @@
 .download-app {
-	padding-top: 28px;
+	margin: auto;
+	padding: 28px 20px 0px;
 	background: #1d2631;
 	text-align: center;
 
-	&__headline {
-		display: none;
+	@media ($tablet-widths) {
+		position: relative;
+		display: flex;
+		max-width: 940px;
+		min-height: 500px;
+		padding: 121px 40px;
+		background: transparent;
+		z-index: 20;
 	}
 
-	@media ($tablet-widths) {
-		position: absolute;
-		top: -586px;
-		left: 30px;
-		z-index: 60;
-		background: transparent;
+	@media ($desktop-widths) {
+		max-width: 1200px;
+		padding: 121px 130px;
 	}
 }
 
+.download-app__wrapper {
+	@media ($tablet-widths) {
+		flex-basis: 50%;
+		flex-shrink: 0;
+		flex-grow: 0;
+		max-width: 50%;
+	}
+
+	@media ($desktop-widths) {
+		flex-basis: 32%;
+		flex-shrink: 0;
+		flex-grow: 0;
+		max-width: 32%;
+	}
+}
 
 .download-app__headline {
 	display: none;
-	@include style-font(40px, 1.4, lighter, "OpenSansLight");
-	text-align: center;
-	color: $primary-bg;
 
 	@media ($tablet-widths) {
 		display: block;
-		width: 200px;
-		padding: 22px 50px;
+		margin-bottom: 33px;
+		@include style-font(50px, 1.4, lighter, "OpenSansLight");
+		color: $primary-bg;
+	}
+
+	@media ($desktop-widths) {
+		font-size: 50px;
 	}
 }
 
 
 .spec {
 	padding: 32px 0;
-
-	@media ($tablet-widths) {
-		width: 300px;
-	}
 }
 
 .spec__link {
@@ -44,7 +61,12 @@
 }
 
 .spec__text {
-	margin-top: 24px;
+	margin-top: 13px;
 	@include style-font(14px, 24px, lighter, "OpenSansLight");
 	color: $primary-bg;
+
+	@media ($tablet-widths) {
+		margin-top: 24px;
+		font-size: 18px;
+	}
 }

@@ -1,6 +1,7 @@
 .price {
 	padding: 100px 0;
 	text-align: center;
+	background: #f2f2f2;
 
 	@media ($tablet-widths) {
 		padding: 100px 40px;
@@ -20,7 +21,6 @@
 	width: calc(300% - 94px);
 	border-collapse: collapse;
 	box-sizing: border-box;
-	background: $primary-bg;
 	transition: all 0.5s;
 
 	@media ($tablet-widths) {
@@ -61,8 +61,8 @@ th.price-table__cell {
 }
 
 .price-table__cell {
-	background: #f2f2f2;
 	padding: 10px 0;
+	background: $primary-bg;
 	border: 1px solid #e5e5e5;
 
 	@media ($tablet-widths) {

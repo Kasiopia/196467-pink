@@ -10,9 +10,15 @@
 	}
 
 	&--app {
+		margin: 0 auto;
+		@include style-font(18px, 18px, normal, "OpenSansBold");
 		color: $primary-bg;
 		border: solid 3px $primary-bg;
 		border-radius: 30px;
+
+		@media ($tablet-widths) {
+			font-size: 21px;
+		}
 	}
 
 	&--submit {

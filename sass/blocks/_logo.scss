@@ -1,5 +1,6 @@
 .logo {
-	width: 150px;
+	flex: 0 1 auto;
+	display: flex;
 }
 
 .logo__text {
@@ -12,7 +13,22 @@
 	}
 }
 
+.logo__img {
+	display: block;
+
+	&--header {
+		display: none;
+
+		@media ($tablet-widths) {
+			display: block;
+		}
+	}
+}
+
+
+
 .logo--footer {
+	display: block;
 	margin: 0 auto;
 	padding: 0px;
 	color: $primary-color;

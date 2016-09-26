@@ -55,16 +55,24 @@
 }
 
 .main-footer-down__wrapper {
+	display: flex;
+	flex-direction: column;
+
 	@media ($tablet-widths) {
 		display: flex;
+		margin: 40px auto;
+		flex-direction: row;
 		justify-content: space-around;
-		align-items: center;
 	}
 }
 
 .social {
 	margin: 40px auto;
 	text-align: center;
+
+	@media ($tablet-widths) {
+		margin: 0;
+	}
 }
 
 .footer-copyright {
@@ -72,11 +80,14 @@
 	padding-top: 10px;
 	justify-content: center;
 	align-items: center;
+
+	@media ($tablet-widths) {
+		padding-top: 0px;
+	}
 }
 
 .footer-copyright__title {
 	margin-right: 10px;
-	vertical-align: middle;
 	@include style-font(14px, 18px, normal, "OpenSans");
 	color: $primary-color;
 }
@@ -84,6 +95,5 @@
 .footer-copyright__link {
 	width: 50px;
 	height: 50px;
-	vertical-align: middle;
 	background: url("../img/htmlacademy.svg") no-repeat center;
 }

@@ -9,253 +9,256 @@
 </head>
 <body>
 	<header class="main-header main-header--index">
-		<nav class="main-header__nav">
-			<div class="container">
-				<div class="main-header__wrapper">
+		<div class="main-header__wrapper">
+			<div class="main-header__inner">
+				<div class="main-header__top">
 					<div class="logo">
 						<h1 class="logo__text"><a>Pink</a></h1>
+						<img class="logo__img logo__img--header" src="img/logo-pink-blue-mobile.svg" alt="очки" width="146" height="40">
+					</div>
+					<button type="button" class="main-header__trigger"><span></span></button>
+
+				</div>
+				<nav class="main-nav">
+					<div class="main-nav__dropdown" id="#main-menu">
+						<ul class="main-nav__list">
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="#">Главная</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="photo.html">Фотографии</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="form.html">Конкурс</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="academy.html">HTML Academy</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="download-app">
+			<div class="download-app__wrapper">
+				<h2 class="download-app__headline">Взгляните на жизнь иначе!</h2>
+				<a class="btn btn--app" href="#" download>Скачать приложение</a>
+				<div class="spec">
+					<a class="spec__link" href="#">
+						<img src="img/logo-apple.svg" alt="ios" width="47" height="56">
+					</a>
+					<a class="spec__link" href="#">
+						<img src="img/logo-android.svg" alt="android" width="43" height="47">
+					</a>
+					<a class="spec__link" href="#">
+						<img src="img/logo-microsoft.svg" alt="windows-phone" width="44" height="41">
+					</a>
+					<p class="spec__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="offer">
+			<div class="offer-header">
+				<div class="container">
+					<h2 class="vissualy-hidden">Наше предложение</h2>
+					<p class="offer-header__slogan">
+						Устали от серости мегаполиса?
+					</p>
+					<p class="offer-header__slogan">
+						Нам есть, что вам предложить!
+					</p>
+				</div>
+			</div>
+			<div class="offer-items">
+				<div class="container">
+					<div class="offer-items__wrappers">
+						<div class="offer-item">
+							<h3 class="offer-item__headline">Поднимает настроение</h3>
+							<p class="offer-item__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+						</div>
+						<div class="offer-item">
+							<h3 class="offer-item__headline">Меняет мир вокруг</h3>
+							<p class="offer-item__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+						</div>
+						<div class="offer-item">
+							<h3 class="offer-item__headline">Заводит новых друзей</h3>
+							<p class="offer-item__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="offer-footer">
+				<div class="container">
+					<div class="offer-footer__wrapper">
+						<div class="offer-footer__item">
+							<h2 class="offer-footer__headline">Эффект на 24 часа!</h2>
+							<p class="offer-footer__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+							<a class="offer-footer__link" href="#">Узнать больше об исследовании</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<article class="slider">
+			<div class="container">
+				<input type="radio" id="btn-1" name="review" checked>
+				<input type="radio" id="btn-2" name="review">
+				<input type="radio" id="btn-3" name="review">
+				<div class="slider__controls">
+					<label for="btn-1"></label>
+					<label for="btn-2"></label>
+					<label for="btn-3"></label>
+				</div>
+				<div class="slider__wrappper">
+					<div class="slide">
+						<h2 class="slide__title">Николай Петров</h2>
+						<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+						<p class="slide__sub-text">25 лет, водитель трамвая</p>
+					</div>
+					<div class="slide">
+						<h2 class="slide__title">Николай Петров-2</h2>
+						<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+						<p class="slide__sub-text">25 лет, водитель трамвая</p>
+					</div>
+					<div class="slide">
+						<h2 class="slide__title">Николай Петров-3</h2>
+						<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+						<p class="slide__sub-text">25 лет, водитель трамвая</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article class="price">
+			<input type="radio" id="btn-price-1" name="price">
+			<input type="radio" id="btn-price-2" name="price" checked>
+			<input type="radio" id="btn-price-3" name="price">
+			<div class="price__controls">
+				<label for="btn-price-1"></label>
+				<label for="btn-price-2"></label>
+				<label for="btn-price-3"></label>
+			</div>
+			<div class="price__wrapper">
+				<table class="price-table">
+					<tr>
+						<th class="price-table__cell">
+							<p class="price-table__cell-title">Скрытая ячейка</p>
+							<b class="price-table__cell-cost">Скрытая ячейка</b>
+						</th>
+						<th class="price-table__cell price-table__cell--hit">
+							<p class="price-table__cell-title">База</p>
+							<b class="price-table__cell-cost">1,99 usd</b>
+						</th>
+						<th class="price-table__cell price-table__cell--hit">
+							<p class="price-table__cell-title">Стандарт</p>
+							<b class="price-table__cell-cost">3,99 usd</b>
+						</th>
+						<th class="price-table__cell">
+							<p class="price-table__cell-title">Анлим</p>
+							<b class="price-table__cell-cost">9,99 usd</b>
+						</th>
+					</tr>
+					<tr>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline">Смайлики</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline">Смайлики</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Смайлики</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Смайлики</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline">Комментарии</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline">Комментарии</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline">Комментарии</p>
+						</td>
+						<td class="price-table__cell">
+							<p class="price-table__cell-headline price-table__cell-headline--on">Комментарии</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</article>
+
+	</main>
+	<footer class="main-footer">
+
+		<section class="communication">
+			<div class="container">
+				<h2 class="communication__headline">Остались вопросы? Свяжитесь с нами!</h2>
+				<div class="communication-items">
+					<div class="communication-item">
+						<h3 class="communication-item__title">Звоните:</h3>
+						<a class="communication-item__methods" href="tel:+78125556666">+7 (812) 555-66-66</a>
+					</div>
+
+					<div class="communication-item">
+						<h3 class="communication-item__title">Пишите:</h3>
+						<a class="communication-item__methods" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+					</div>
+
+					<div class="communication-item">
+						<h3 class="communication-item__title">Приезжайте в гости:</h3>
+						<a class="communication-item__methods" href="https://goo.gl/maps/HLzrDs5cRFM2">ул. Большая Конюшенная, 19/8</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2930336017267!2d30.321431057952413!3d59.939010498372625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473693145920" width="100%" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</section>
+
+		<section class="main-footer-down">
+			<div class="container">
+				<div class="main-footer-down__wrapper">
+					<div class="logo logo--footer">
 						<img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="очки" width="146" height="40">
 					</div>
-					<ul class="menu" id="#navbar-collapse">
-						<li class="menu__link menu__link--active">
-							<a href="#">Главная</a>
-						</li>
-						<li class="menu__link">
-							<a href="photo.html">Фотографии</a>
-						</li>
-						<li class="menu__link">
-							<a href="form.html">Конкурс</a>
-						</li>
-						<li class="menu__link">
-							<a href="academy.html">HTML Academy</a>
-						</li>
-					</ul>
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
-						<span></span>
-					</button>
-				</div>
-			</nav>
-		</header>
-		<main>
-			<section class="download-app">
-				<div class="container">
-					<h2 class="download-app__headline">Взгляните на жизнь иначе!</h2>
-					<a class="btn btn--app" href="#" download>Скачать приложение</a>
-					<div class="spec">
-						<a class="spec__link" href="#">
-							<img src="img/logo-apple.svg" alt="ios" width="47" height="56">
-						</a>
-						<a class="spec__link" href="#">
-							<img src="img/logo-android.svg" alt="android" width="43" height="47">
-						</a>
-						<a class="spec__link" href="#">
-							<img src="img/logo-microsoft.svg" alt="windows-phone" width="44" height="41">
-						</a>
-						<p class="spec__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+					<div class="social">
+						<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+						<a class="social-btn social-btn--tw" href="#"></a>
+						<a class="social-btn social-btn--fb" href="#"></a>
+						<a class="social-btn social-btn--ytb" href="#"></a>
+					</div>
+					<div class="footer-copyright">
+						<b class="footer-copyright__title">Разработано</b>
+						<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
 					</div>
 				</div>
-			</section>
-
-			<section class="offer">
-				<div class="offer-header">
-					<div class="container">
-						<h2 class="vissualy-hidden">Наше предложение</h2>
-						<p class="offer-header__slogan">
-							Устали от серости мегаполиса?
-						</p>
-						<p class="offer-header__slogan">
-							Нам есть, что вам предложить!
-						</p>
-					</div>
-				</div>
-				<div class="offer-items">
-					<div class="container">
-						<div class="offer-items__wrappers">
-							<div class="offer-item">
-								<h3 class="offer-item__headline">Поднимает настроение</h3>
-								<p class="offer-item__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-							</div>
-							<div class="offer-item">
-								<h3 class="offer-item__headline">Меняет мир вокруг</h3>
-								<p class="offer-item__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-							</div>
-							<div class="offer-item">
-								<h3 class="offer-item__headline">Заводит новых друзей</h3>
-								<p class="offer-item__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="offer-footer">
-					<div class="container">
-						<div class="offer-footer__wrapper">
-							<div class="offer-footer__item">
-								<h2 class="offer-footer__headline">Эффект на 24 часа!</h2>
-								<p class="offer-footer__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-								<a class="offer-footer__link" href="#">Узнать больше об исследовании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</section>
-
-			<article class="slider">
-				<div class="container">
-					<input type="radio" id="btn-1" name="review" checked>
-					<input type="radio" id="btn-2" name="review">
-					<input type="radio" id="btn-3" name="review">
-					<div class="slider__controls">
-						<label for="btn-1"></label>
-						<label for="btn-2"></label>
-						<label for="btn-3"></label>
-					</div>
-					<div class="slider__wrappper">
-						<div class="slide">
-							<h2 class="slide__title">Николай Петров</h2>
-							<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-							<p class="slide__sub-text">25 лет, водитель трамвая</p>
-						</div>
-						<div class="slide">
-							<h2 class="slide__title">Николай Петров-2</h2>
-							<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-							<p class="slide__sub-text">25 лет, водитель трамвая</p>
-						</div>
-						<div class="slide">
-							<h2 class="slide__title">Николай Петров-3</h2>
-							<p class="slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-							<p class="slide__sub-text">25 лет, водитель трамвая</p>
-						</div>
-					</div>
-				</div>
-			</article>
-
-			<article class="price">
-				<input type="radio" id="btn-price-1" name="price">
-				<input type="radio" id="btn-price-2" name="price" checked>
-				<input type="radio" id="btn-price-3" name="price">
-				<div class="price__controls">
-					<label for="btn-price-1"></label>
-					<label for="btn-price-2"></label>
-					<label for="btn-price-3"></label>
-				</div>
-				<div class="price__wrapper">
-					<table class="price-table">
-						<tr>
-							<th class="price-table__cell">
-								<p class="price-table__cell-title">Скрытая ячейка</p>
-								<b class="price-table__cell-cost">Скрытая ячейка</b>
-							</th>
-							<th class="price-table__cell price-table__cell--hit">
-								<p class="price-table__cell-title">База</p>
-								<b class="price-table__cell-cost">1,99 usd</b>
-							</th>
-							<th class="price-table__cell price-table__cell--hit">
-								<p class="price-table__cell-title">Стандарт</p>
-								<b class="price-table__cell-cost">3,99 usd</b>
-							</th>
-							<th class="price-table__cell">
-								<p class="price-table__cell-title">Анлим</p>
-								<b class="price-table__cell-cost">9,99 usd</b>
-							</th>
-						</tr>
-						<tr>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Розовый фильтр</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline">Смайлики</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline">Смайлики</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Смайлики</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Смайлики</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline">Комментарии</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline">Комментарии</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline">Комментарии</p>
-							</td>
-							<td class="price-table__cell">
-								<p class="price-table__cell-headline price-table__cell-headline--on">Комментарии</p>
-							</td>
-						</tr>
-					</table>
-				</div>
-
-			</article>
-
-		</main>
-		<footer class="main-footer">
-
-			<section class="communication">
-				<div class="container">
-					<h2 class="communication__headline">Остались вопросы? Свяжитесь с нами!</h2>
-					<div class="communication-items">
-						<div class="communication-item">
-							<h3 class="communication-item__title">Звоните:</h3>
-							<a class="communication-item__methods" href="tel:+78125556666">+7 (812) 555-66-66</a>
-						</div>
-
-						<div class="communication-item">
-							<h3 class="communication-item__title">Пишите:</h3>
-							<a class="communication-item__methods" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-						</div>
-
-						<div class="communication-item">
-							<h3 class="communication-item__title">Приезжайте в гости:</h3>
-							<a class="communication-item__methods" href="https://goo.gl/maps/HLzrDs5cRFM2">ул. Большая Конюшенная, 19/8</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2930336017267!2d30.321431057952413!3d59.939010498372625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473693145920" width="100%" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</section>
-
-			<section class="main-footer-down">
-				<div class="container">
-					<div class="main-footer-down__wrapper">
-						<div class="logo logo--footer">
-							<img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="очки" width="146" height="40">
-						</div>
-						<div class="social">
-							<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-							<a class="social-btn social-btn--tw" href="#"></a>
-							<a class="social-btn social-btn--fb" href="#"></a>
-							<a class="social-btn social-btn--ytb" href="#"></a>
-						</div>
-						<div class="footer-copyright">
-							<b class="footer-copyright__title">Разработано</b>
-							<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
-						</div>
-					</div>
-				</div>
-			</section>
-		</footer>
-		<script></script>
-	</body>
-	</html>
+			</div>
+		</section>
+	</footer>
+	<script></script>
+</body>
+</html>
 
