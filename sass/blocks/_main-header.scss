@@ -81,7 +81,7 @@
 
 }
 
-.main-header__trigger {
+.nav-toggle {
 	display: flex;
 	width: 60px;
 	height: 60px;
@@ -94,13 +94,14 @@
 		display: none;
 	}
 }
-
-.main-header__trigger>span {
+/* состояние закрытого меню, по умолчанию*/
+.nav-toggle>span {
 	position: relative;
 	width: 50px;
 	height: 4px;
 	background: $primary-bg;
 	transition: background .3s .5s;
+
 	&::after,
 	&::before {
 		content: "";
@@ -113,8 +114,24 @@
 		transform-origin: 50% 50%;
 		transition: top .3s .3s,transform .3s;
 	}
+
 	&::before {
 		top: 10px;
+	}
+}
+/* состояние открытого меню*/
+.main-header__top--closed .nav-toggle>span {
+	background: 0 0;
+
+	&::after,
+	&::before {
+		top: 0;
+		transition: top .3s,transform .3s .5s;
+		transform: rotate3d(0,0,1,45deg);
+	}
+
+	&:before {
+		transform: rotate3d(0, 0, 1,-45deg);
 	}
 }
 
@@ -141,6 +158,10 @@
 .menu-nav__item {
 	margin: 0;
 	border: 0;
+}
+
+.main-nav__item-active {
+
 }
 
 .main-nav__link {
