@@ -3,16 +3,20 @@
 	margin: 0 auto 20px;
 	background: $primary-bg;
 
-	&--day::after {
-		@include position-container(0, auto, auto, 6.25%);
-		width: 140px;
-		height: 36px;
-		text-align: center;
-		background: #d22856;
-		color: $primary-bg;
+	&--day {
+		max-width: 1200px;
 
-		@media ($tablet-widths) {
-			@include position-container(57px, auto, auto, 6.25%);
+		&::after {
+			@include position-container(0, auto, auto, 6.25%);
+			width: 140px;
+			height: 36px;
+			text-align: center;
+			background: #d22856;
+			color: $primary-bg;
+
+			@media ($tablet-widths) {
+				@include position-container(57px, auto, auto, 6.25%);
+			}
 		}
 	}
 }
@@ -28,7 +32,9 @@
 }
 
 .photo-item {
+	display: flex;
 	width: 300px;
+	flex-direction: column;
 	margin-bottom: 20px;
 
 	&--day {
@@ -49,9 +55,11 @@
 .photo-item__text {
 	position: relative;
 	padding: 19px 18px;
+	flex-grow: 1;
 	background: #f2f2f2;
 
 	@media ($tablet-widths) {
+
 		padding: 32px 27px;
 	}
 }

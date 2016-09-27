@@ -1,8 +1,6 @@
 .offer {
 	padding-top: 45px;
 	text-align: center;
-	background: $primary-bg url("../img/offers.png") no-repeat bottom center ;
-	background-size: cover;
 }
 
 .offer-header__slogan {
@@ -31,21 +29,22 @@
 
 .offer-items {
 	position: relative;
-	padding: 20px 0 334px;
+	background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat top center;
 	z-index: 0;
-
-	@media ($tablet-widths) {
-		margin-bottom: 60px;
-		padding-bottom: 0px;
-	}
 }
 
 .offer-items__wrappers {
 	position: relative;
+	padding: 89px 0 0px;
+
+	@media ($tablet-widths) {
+		padding: 24px 0 19px;
+	}
 
 	@media ($desktop-widths) {
 		position: static;
 		display: flex;
+		padding: 0;
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: flex-start;
@@ -54,17 +53,32 @@
 
 .offer-item {
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 37px;
+
+	&:nth-child(3) {
+		padding-bottom: 315px;
+
+		@media ($tablet-widths) {
+			padding: 16px 0;
+		}
+
+		@media ($desktop-widths) {
+			padding: 335px 0 0;
+		}
+
+	}
 
 	@media ($tablet-widths) {
 		position: static;
 		width: 308px;
 		margin-left: auto;
+		margin-bottom: 10px;
+		padding: 16px 0;
 		text-align: left;
 	}
 
 	@media ($desktop-widths) {
-		padding-top: 335px;
+		padding: 335px 0 0;
 		position: relative;
 		margin-left: 0;
 		text-align: center;
@@ -75,7 +89,7 @@
 		@media ($desktop-widths) {
 			width: 294px;
 			height: 17px;
-			@include position-container(auto, 189px, 50%, auto);
+			@include position-container(293px, auto, 50%, auto);
 			background-size: 294px auto;
 			transform: translateX(-50%);
 			background: url(../img/shadow-offer-item.png) no-repeat top center;
@@ -84,23 +98,23 @@
 	}
 
 	&::after {
-		padding-top: 60px;
-		@include position-container(auto, auto, 0, 0);
+		@include position-container(auto, 0, 0, 0);
 		width: 157px;
-		height: 320px;
-		background: url(../img/iphone-screen-mobile@1x.png) no-repeat bottom center;
+		height: 278px;
+		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
 		z-index: 10;
+		background-size: 157px auto;
 
 		@media ($tablet-widths) {
-			padding-top: 0;
-			@include position-container(0, 0, 0, auto);
+			@include position-container(auto, 0, 0, auto);
+			width: 267px;
+			height: 481px;
+			background-size: 267px auto;
 		}
 		@media ($desktop-widths) {
 			width: 186px;
 			height: 300px;
-			padding-top: 0;
 			@include position-container(0, auto, 50%, auto);
-			background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
 			background-size: 186px auto;
 			transform: translateX(-50%);
 		}
@@ -128,7 +142,7 @@
 }
 
 .offer-item__headline {
-	margin: 10px auto;
+	margin: 7px auto;
 	@include style-font(18px, 24px, bold, "OpenSansBold");
 
 	@media ($tablet-widths) {
@@ -137,7 +151,7 @@
 
 	@media ($desktop-widths) {
 		max-width: 183px;
-		margin: 10px auto;
+		margin: 7px auto;
 	}
 }
 
@@ -161,7 +175,7 @@
 	}
 
 	@media ($desktop-widths) {
-		background: transparent;
+		background: #f2f2f2;
 	}
 
 	&__headline {

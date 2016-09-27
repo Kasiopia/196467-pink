@@ -9,6 +9,7 @@
 		width: 940px;
 		margin: 0 auto;
 		padding: 0 130px;
+		justify-content: space-between;
 		background: $primary-bg;
 	}
 }
@@ -18,9 +19,9 @@
 	padding-bottom: 36px;
 	background: $primary-bg;
 
-	@media ($desktop-widths){
+	@media ($desktop-widths) {
+		width: 100%;
 		margin-bottom: 50px;
-		flex-grow: 1;
 	}
 
 	&--gray {
@@ -38,6 +39,16 @@
 	}
 }
 
+.form-block:nth-child(1),
+.form-block:nth-child(2) {
+	@media ($desktop-widths) {
+		width: 46%;
+		margin-bottom: 50px;
+		padding: 0;
+		flex-basis: 46%;
+	}
+}
+
 .form-block .container {
 	@media ($desktop-widths) {
 		width: auto;
@@ -45,6 +56,7 @@
 		margin: 0;
 	}
 }
+
 
 @media only screen and (max-width : 700px) {
 	.form .form-block:nth-child(1) {

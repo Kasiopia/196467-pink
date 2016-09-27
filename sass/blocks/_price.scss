@@ -1,20 +1,30 @@
 .price {
+	position: relative;
 	padding: 100px 0;
 	text-align: center;
-	background: #f2f2f2;
+	background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat top center;
 
 	@media ($tablet-widths) {
-		padding: 100px 40px;
+		padding: 110px 0px;
 	}
 
 	@media ($desktop-widths) {
-		padding: 100px 130px;
+		padding: 150px 0px;
 	}
 }
 
 .price__wrapper {
-	width: 100%;
 	overflow: hidden;
+
+	@media ($tablet-widths) {
+		margin: 0 auto;
+		padding: 0px 40px;
+	}
+
+	@media ($desktop-widths) {
+		margin: 0 auto;
+		padding: 0px 130px;
+	}
 }
 
 .price-table {
@@ -88,6 +98,7 @@ th.price-table__cell {
 
 .price input[type="radio"] {
 	position: absolute;
+	bottom: 0;
 	opacity: 0;
 }
 

@@ -1,12 +1,12 @@
 .slider {
 	position: relative;
 	padding-top: 25px;
-	text-align: center;
 	background: $primary-bg;
 }
 
 .slider input[type="radio"] {
 	position: absolute;
+	bottom: 0;
 	opacity: 0;
 }
 
@@ -37,6 +37,7 @@
 
 .slider__wrappper {
 	padding-bottom: 97px;
+	text-align: center;
 
 }
 

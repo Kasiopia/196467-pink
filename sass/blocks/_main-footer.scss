@@ -46,6 +46,32 @@
 	}
 }
 
+.map {
+	position: relative;
+	height: 219px;
+
+	@media ($tablet-widths) {
+		height: 428px;
+	}
+
+	@media ($desktop-widths) {
+		height: 522px;
+	}
+
+	&::before {
+		@include position-container(0, auto, 0, 0);
+		width: 100%;
+		height: 53px;
+		background: transparent url(../img/bg-triangle-white-footer.svg) no-repeat top center;
+		z-index: 20;
+		background-size: cover;
+
+		@media ($tablet-widths) {
+			height: 123px;
+		}
+	}
+}
+
 .main-footer-down {
 	display: none;
 
