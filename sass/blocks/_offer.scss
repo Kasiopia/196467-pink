@@ -1,39 +1,227 @@
 .offer {
-	padding-top: 26px;
+	padding-top: 45px;
 	text-align: center;
-	background: $primary-bg;
 }
 
-.offer__slogan {
-	margin: 20px auto;
-	padding-bottom: 26px;
-	@include style-font(24px, 1.4, lighter);
+.offer-header__slogan {
+	margin-bottom: 20px;
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: $primary-color;
+
+	@media ($tablet-widths) {
+		margin-bottom: 0;
+		@include style-font(40px, 1, lighter, "OpenSansLight");
+		&:nth-of-type(2) {
+			width: 351px;
+			margin: 0 auto 30px;
+
+			@media ($desktop-widths) {
+				width: 720px;
+			}
+		}
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(50px, 1, lighter, "OpenSansLight");
+	}
+
 }
 
 .offer-items {
 	position: relative;
-	min-height: 698px;
-	padding-top: 20px;
-	background: #f2f2f2;
-	&::after {
-		@include position-container(auto, 0, 0, 0);
-		width: 157px;
-		height: 308px;
-		background: url(../img/iphone-screen-mobile@1x.png) no-repeat bottom center;
-		z-index: 10;
-		}
+	background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat top center;
+	z-index: 0;
+}
+
+.offer-items__wrappers {
+	position: relative;
+	padding: 89px 0 0px;
+
+	@media ($tablet-widths) {
+		padding: 24px 0 19px;
+	}
+
+	@media ($desktop-widths) {
+		position: static;
+		display: flex;
+		padding: 0;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
 }
 
 .offer-item {
-	margin-bottom: 10px;
+	position: relative;
+	margin-bottom: 37px;
+
+	&:nth-child(3) {
+		padding-bottom: 315px;
+
+		@media ($tablet-widths) {
+			padding: 16px 0;
+		}
+
+		@media ($desktop-widths) {
+			padding: 335px 0 0;
+		}
+
+	}
+
+	@media ($tablet-widths) {
+		position: static;
+		width: 308px;
+		margin-left: auto;
+		margin-bottom: 10px;
+		padding: 16px 0;
+		text-align: left;
+	}
+
+	@media ($desktop-widths) {
+		padding: 335px 0 0;
+		position: relative;
+		margin-left: 0;
+		text-align: center;
+	}
+
+
+	&::before {
+		@media ($desktop-widths) {
+			width: 294px;
+			height: 17px;
+			@include position-container(293px, auto, 50%, auto);
+			background-size: 294px auto;
+			transform: translateX(-50%);
+			background: url(../img/shadow-offer-item.png) no-repeat top center;
+			z-index: 10;
+		}
+	}
+
+	&::after {
+		@include position-container(auto, 0, 0, 0);
+		width: 157px;
+		height: 278px;
+		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
+		z-index: 10;
+		background-size: 157px auto;
+
+		@media ($tablet-widths) {
+			@include position-container(auto, 0, 0, auto);
+			width: 267px;
+			height: 481px;
+			background-size: 267px auto;
+		}
+		@media ($desktop-widths) {
+			width: 186px;
+			height: 300px;
+			@include position-container(0, auto, 50%, auto);
+			background-size: 186px auto;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.offer-item:nth-child(1)::after {
+	content: none;
+
+	@media ($desktop-widths) {
+		content: "";
+		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
+		background-size: 186px auto;
+	}
+}
+
+.offer-item:nth-child(2)::after {
+	content: none;
+
+	@media ($desktop-widths) {
+		content: "";
+		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
+		background-size: 186px auto;
+	}
 }
 
 .offer-item__headline {
-	margin: 10px auto;
-	@include style-font(18px, 24px, bold);
+	margin: 7px auto;
+	@include style-font(18px, 24px, bold, "OpenSansBold");
+
+	@media ($tablet-widths) {
+		margin: 10px 0;
+	}
+
+	@media ($desktop-widths) {
+		max-width: 183px;
+		margin: 7px auto;
+	}
 }
 
 .offer-item__description {
-	@include style-font(14px, 24px, normal);
+	@include style-font(14px, 24px, normal, "OpenSans");
+
+	@media ($desktop-widths) {
+		padding: 0 58px;
+	}
+}
+
+
+.offer-footer {
+	display: none;
+	padding: 103px 0;
+	text-align: left;
+	background: $primary-bg;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
+
+	@media ($desktop-widths) {
+		background: #f2f2f2;
+	}
+
+	&__headline {
+		padding-right: 135px;
+		@include style-font(30px, 36px, bold, "OpenSansBold");
+		color: #000;
+	}
+
+	&__text {
+		padding: 10px 0 10px;
+		@include style-font(14px, 24px, normal, "OpenSans");
+		color: $primary-color;
+	}
+
+	&__link {
+		display: block;
+		@include style-font(14px, 24px, normal, "OpenSans");
+		color: #d22856;
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__wrapper::after {
+		width: 253px;
+		height: 253px;
+		@include position-container(0, 0, 0, auto);
+		background: url("../img/icon-editor-diagram-fill.svg") no-repeat center;
+		z-index: 10;
+	}
+}
+
+
+.offer-footer__item {
+	width: 308px;
+	margin-left: auto;
+	text-align: left;
+
+	@media ($desktop-widths) {
+		width: 570px;
+	}
+}
+
+.offer-footer__text {
+	@media ($desktop-widths) {
+		@include style-font(18px, 30px, normal, "OpenSans");
+	}
 }

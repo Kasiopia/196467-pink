@@ -1,9 +1,18 @@
 .block-appeals {
-	padding: 40px 0;
+	padding: 0px 0 40px;
+
+	@media ($tablet-widths) {
+		padding: 25px 0 71px;
+	}
+
 }
 
 .block-appeals__text {
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	text-align: center;
 	color: $primary-color;
+
+	@media ($tablet-widths) {
+		@include style-font(18px, 30px, normal, "OpenSans");
+	}
 }

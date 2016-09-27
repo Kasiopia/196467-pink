@@ -4,33 +4,40 @@
 	<meta charset="utf-8">
 	<title>Pink - Photo-Gallery</title>
 	<meta name="description" content="Путешествия с Pink">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
-		<nav class="main-header__nav">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
-				<span></span>
-			</button>
-			<div class="logo">
-				<h1 class="logo__text"><a>Pink</a></h1>
+		<div class="main-header__wrapper">
+			<div class="main-header__inner">
+				<div class="main-header__top">
+					<div class="logo">
+						<h1 class="logo__text"><a>Pink</a></h1>
+						<img class="logo__img logo__img--header" src="img/logo-pink-blue-mobile.svg" alt="очки" width="146" height="40">
+					</div>
+					<button type="button" class="nav-toggle"><span></span></button>
+				</div>
+				<nav class="main-nav">
+					<div class="main-nav__dropdown" id="#main-menu">
+						<ul class="main-nav__list">
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="index.html">Главная</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link main-nav__link--active" href="#">Фотографии</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="form.html">Конкурс</a>
+							</li>
+							<li class="menu-nav__item">
+								<a class="main-nav__link" href="academy.html">HTML Academy</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 			</div>
-			<ul class="menu" id="#navbar-collapse">
-				<li class="menu__link menu__link--active">
-					<a href="index.html">Главная</a>
-				</li>
-				<li class="menu__link">
-					<a href="#">Фотографии</a>
-				</li>
-				<li class="menu__link">
-					<a href="form.html">Конкурс</a>
-				</li>
-				<li class="menu__link">
-					<a href="academy.html">HTML Academy</a>
-				</li>
-			</ul>
-		</nav>
+		</div>
 		<div class="intro">
 			<div class="container">
 				<h2 class="intro__headline">Фотографии пользователей</h2>
@@ -46,16 +53,20 @@
 		</section>
 
 		<article class="photo photo--day">
-			<img class="photo__picture" src="img/panorama-mobile@1x.jpg" alt="прыжок с парашутом" width="320" height="137">
+			<img class="photo__picture" src="img/panorama-mobile@1x.jpg" alt="прыжок с парашутом" width="1200" height="137">
 			<div class="container">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Анна</a>
-					<time class="photo-text__time" datetime="2016-09-15T00:05">(5 минут назад)</time>
-					<p class="photo-text__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">215</span>
+				<div class="photo-item photo-item--day">
+					<div class="photo-item__text">
+						<a class="photo-item__author" href="#">Анна</a>
+						<time class="photo-item__time" datetime="2016-09-15T00:05">(5 минут назад)</time>
+						<p class="photo-item__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+						<div class="social-like social-like--day">
+							<div class="social-like__block">
+								<span class="social-like__link">Нравится:</span>
+								<span class="social-like__count">215</span>
+							</div>
+							<i class="social-like__icon"></i>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -63,95 +74,96 @@
 
 		<article class="photo">
 			<div class="container">
-				<img class="photo__picture" src="img/photo-1-mobile@1x.jpg" alt="попался" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Левон</a>
-					<time class="photo-text__time" datetime="2016-09-15T05:00">(5 часов назад)</time>
-					<p class="photo-text__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">356</span>
+				<div class="photo-items">
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-1-mobile@1x.jpg" alt="попался" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Левон</a>
+							<time class="photo-item__time" datetime="2016-09-15T05:00">(5 часов назад)</time>
+							<p class="photo-item__title">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">356</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="photo">
-			<div class="container">
-				<img class="photo__picture" src="img/photo-2-mobile@1x.jpg" alt="барабанная установка" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Антон</a>
-					<time class="photo-text__time" datetime="2016-09-15T12:00">(12 часов назад)</time>
-					<p class="photo-text__title">Соседи будут рады!</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">666</span>
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-2-mobile@1x.jpg" alt="барабанная установка" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Антон</a>
+							<time class="photo-item__time" datetime="2016-09-15T12:00">(12 часов назад)</time>
+							<p class="photo-item__title">Соседи будут рады!</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">666</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="photo">
-			<div class="container">
-				<img class="photo__picture" src="img/photo-3-mobile@1x.jpg" alt="небоскреб" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Борис</a>
-					<time class="photo-text__time" datetime="2016-09-15T20:00">(20 часов назад)</time>
-					<p class="photo-text__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">215</span>
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-3-mobile@1x.jpg" alt="небоскреб" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Борис</a>
+							<time class="photo-item__time" datetime="2016-09-15T20:00">(20 часов назад)</time>
+							<p class="photo-item__title">Здесь могла быть ваша цитата о высоком и вечном.</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">215</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="photo">
-			<div class="container">
-				<img class="photo__picture" src="img/photo-4-mobile@1x.jpg" alt="фестиваль кубанаская бахча" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Сергей</a>
-					<time class="photo-text__time" datetime="2016-08-15T01:00">(25 часов назад)</time>
-					<p class="photo-text__title">Самая кубанская в мире!</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">4</span>
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-4-mobile@1x.jpg" alt="фестиваль кубанаская бахча" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Сергей</a>
+							<time class="photo-item__time" datetime="2016-08-15T01:00">(25 часов назад)</time>
+							<p class="photo-item__title">Самая кубанская в мире!</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">4</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="photo">
-			<div class="container">
-				<img class="photo__picture" src="img/photo-5-mobile@1x.jpg" alt="снега нет" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Максим</a>
-					<time class="photo-text__time" datetime="2016-08-15T16:00">(40 часов назад)</time>
-					<p class="photo-text__title">Где снег-то?</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">150</span>
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-5-mobile@1x.jpg" alt="снега нет" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Максим</a>
+							<time class="photo-item__time" datetime="2016-08-15T16:00">(40 часов назад)</time>
+							<p class="photo-item__title">Где снег-то?</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">150</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="photo">
-			<div class="container">
-				<img class="photo__picture" src="img/photo-6-mobile@1x.jpg" alt="вид из самолета" width="320" height="137">
-				<div class="photo-text">
-					<a class="photo-text__author" href="#">Надежда</a>
-					<time class="photo-text__time" datetime="2016-08-15T21:00">(45 часов назад)</time>
-					<p class="photo-text__title">Всем GM и взаимные лайки!</p>
-					<div class="social-like">
-						<i class="social-like__icon"></i>
-						<span class="social-like__link">Нравится:</span>
-						<span class="social-like__count">2560</span>
+					<div class="photo-item">
+						<img class="photo-item__picture" src="img/photo-6-mobile@1x.jpg" alt="вид из самолета" width="300" height="400">
+						<div class="photo-item__text">
+							<a class="photo-item__author" href="#">Надежда</a>
+							<time class="photo-item__time" datetime="2016-08-15T21:00">(45 часов назад)</time>
+							<p class="photo-item__title">Всем GM и взаимные лайки!</p>
+							<div class="social-like">
+								<div class="social-like__block">
+									<span class="social-like__link">Нравится:</span>
+									<span class="social-like__count">2560</span>
+								</div>
+								<i class="social-like__icon"></i>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -167,31 +179,39 @@
 		<section class="upload-block">
 			<div class="container">
 				<form class="form-upload" action="#" method="post">
-					<div class="form-upload__image-wrapper">
-						<img class="form-upload__image" src="img/photo-7-mobile@1x.jpg" alt="путь в никуда" width="280" height="374">
+					<div class="form-upload__left-block">
+						<img class="form-upload__image" src="img/photo-7-mobile@1x.jpg" alt="путь в никуда" width="280" height="400">
 					</div>
-					<div class="form-upload__photo-options">
-						<a class="form-upload__brightness" href="#"></a>
-						<a class="form-upload__contrast" href="#"></a>
-						<a class="form-upload__cut" href="#"></a>
-					</div>
-					<div class="form-upload__manual-options">
-						<div class="range-controls range-controls--active range-controls--brightness">
-							<div class="range-controls__bar"></div>
-							<div class="range-controls__toggle"></div>
+					<div class="form-upload__right-block">
+						<div class="form-upload__inner">
+							<div class="form-upload__options-wrapper">
+								<div class="form-upload-option">
+									<a class="form-upload-option__brightness" href="#"></a>
+									<div class="range-controls range-controls--active">
+										<div class="range-controls__bar"></div>
+										<div class="range-controls__toggle"></div>
+									</div>
+								</div>
+								<div class="form-upload-option">
+									<a class="form-upload-option__contrast" href="#"></a>
+									<div class="range-controls">
+										<div class="range-controls__bar"></div>
+										<div class="range-controls__toggle"></div>
+									</div>
+								</div>
+								<div class="form-upload-option">
+									<a class="form-upload-option__cut" href="#"></a>
+									<div class="range-controls">
+										<div class="range-controls__bar"></div>
+										<div class="range-controls__toggle"></div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="range-controls range-controls--contrast" style="display: none;">
-							<div class="range-controls__bar"></div>
-							<div class="range-controls__toggle"></div>
+						<div class="form-upload__actions">
+							<button class="btn btn--post" type="submit">Запостить</button>
+							<button class="btn btn--cancel" type="button">Отмена</button>
 						</div>
-						<div class="range-controls range-controls--cut" style="display: none;">
-							<div class="range-controls__bar"></div>
-							<div class="range-controls__toggle"></div>
-						</div>
-					</div>
-					<div class="form-upload__actions">
-						<button class="btn btn--post" type="submit">Запостить</button>
-						<button class="btn btn--cancel" type="button">Отмена</button>
 					</div>
 				</form>
 			</div>
@@ -200,19 +220,20 @@
 	</main>
 	<footer class="main-footer">
 		<div class="container">
-			<div class="logo logo--footer">
-				<img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="очки" width="147" height="40">
-				<!-- <h1 class="logo__text"><a>Pink</a></h1> -->
-			</div>
-			<div class="social">
-				<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-				<a class="social-btn social-btn--tw" href="#"></a>
-				<a class="social-btn social-btn--fb" href="#"></a>
-				<a class="social-btn social-btn--ytb" href="#"></a>
-			</div>
-			<div class="footer-copyright">
-				<b class="footer-copyright__title">Разработано</b>
-				<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
+			<div class="main-footer-down__wrapper">
+				<div class="logo logo--footer">
+					<img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="очки" width="146" height="40">
+				</div>
+				<div class="social">
+					<span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+					<a class="social-btn social-btn--tw" href="#"></a>
+					<a class="social-btn social-btn--fb" href="#"></a>
+					<a class="social-btn social-btn--ytb" href="#"></a>
+				</div>
+				<div class="footer-copyright">
+					<b class="footer-copyright__title">Разработано</b>
+					<a class="footer-copyright__link" href="https://htmlacademy.ru"></a>
+				</div>
 			</div>
 		</div>
 	</footer>

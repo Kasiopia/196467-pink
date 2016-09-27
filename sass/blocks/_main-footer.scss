@@ -4,27 +4,111 @@
 }
 
 .communication__headline {
-	margin-bottom: 35px;
-	@include style-font(24px, 1.4, lighter);
-	color: #616c77;
-}
-
-.communication__title {
+	padding: 20px 0px;
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: $primary-color;
-	@include style-font(18px, 1.4, bold);
+
+	@media ($tablet-widths) {
+		padding: 40px 23px;
+		@include style-font(40px, 1.1, lighter, "OpenSansLight");
+	}
+
+	@media ($desktop-widths) {
+		padding: 40px 108px;
+		@include style-font(50px, 1.1, lighter, "OpenSansLight");
+	}
 }
 
-.communication__methods {
+.communication-items {
+	@media ($tablet-widths) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+.communication-item__title {
+	color: $primary-color;
+	@include style-font(18px, 1.4, bold, "OpenSansBold");
+}
+
+.communication-item__methods {
 	display: block;
 	margin-bottom: 20px;
 	text-decoration: none;
-	@include style-font(24px, 1.4, lighter);
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: #d22856;
+
+	&--email:hover {
+		text-decoration: underline;
+		color: $primary-color;
+	}
+
+	&--email:active {
+		text-decoration: none;
+		color: #bec2c7;
+	}
+}
+
+.communication-items .communication-item:nth-child(2n) {
+	@media ($desktop-widths) {
+		order: 2;
+	}
+}
+
+.map {
+	position: relative;
+	height: 219px;
+
+	@media ($tablet-widths) {
+		height: 428px;
+	}
+
+	@media ($desktop-widths) {
+		height: 522px;
+	}
+
+	&::before {
+		@include position-container(0, auto, 0, 0);
+		width: 100%;
+		height: 53px;
+		background: transparent url(../img/bg-triangle-white-footer.svg) no-repeat top center;
+		z-index: 20;
+		background-size: cover;
+
+		@media ($tablet-widths) {
+			height: 123px;
+		}
+	}
+}
+
+.main-footer-down {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
+}
+
+.main-footer-down__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@media ($tablet-widths) {
+		display: flex;
+		margin: 40px auto;
+		flex-direction: row;
+		justify-content: space-around;
+	}
 }
 
 .social {
 	margin: 40px auto;
 	text-align: center;
+
+	@media ($tablet-widths) {
+		margin: 0;
+	}
 }
 
 .footer-copyright {
@@ -32,18 +116,20 @@
 	padding-top: 10px;
 	justify-content: center;
 	align-items: center;
+
+	@media ($tablet-widths) {
+		padding-top: 0px;
+	}
 }
 
 .footer-copyright__title {
 	margin-right: 10px;
-	vertical-align: middle;
-	@include style-font(14px, 18px, normal);
+	@include style-font(14px, 18px, normal, "OpenSans");
 	color: $primary-color;
 }
 
 .footer-copyright__link {
 	width: 50px;
 	height: 50px;
-	vertical-align: middle;
 	background: url("../img/htmlacademy.svg") no-repeat center;
 }

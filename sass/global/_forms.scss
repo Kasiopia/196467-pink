@@ -1,47 +1,222 @@
 .form {
+	display: flex;
+	flex-direction: column;
 	background: $primary-bg;
+
+	@media ($desktop-widths) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 940px;
+		margin: 0 auto;
+		padding: 0 130px;
+		justify-content: space-between;
+		background: $primary-bg;
+	}
 }
 
 .form-block {
+	margin-bottom: 10px;
 	padding-bottom: 36px;
 	background: $primary-bg;
+
+	@media ($desktop-widths) {
+		width: 100%;
+		margin-bottom: 50px;
+	}
 
 	&--gray {
 		padding-bottom: 10px;
 		background: #f2f2f2;
+
+		@media ($tablet-widths) {
+			margin-bottom: 30px;
+			background: $primary-bg;
+		}
+
+		@media ($desktop-widths) {
+			background: $primary-bg;
+		}
 	}
 }
 
-.form__label-text {
-	display: block;
-	padding: 10px 0px 10px 23px;
-	@include style-font(14px, 30px, normal);
-	text-transform: uppercase;
-	color: #d54166;
+.form-block:nth-child(1),
+.form-block:nth-child(2) {
+	@media ($desktop-widths) {
+		width: 46%;
+		margin-bottom: 50px;
+		padding: 0;
+		flex-basis: 46%;
+	}
 }
 
-.form__input-text {
+.form-block .container {
+	@media ($desktop-widths) {
+		width: auto;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+@media only screen and (max-width : 700px) {
+	.form .form-block:nth-child(1) {
+		order: 1;
+	}
+	.form .form-block:nth-child(2) {
+		order: 4;
+	}
+	.form .form-block:nth-child(3) {
+		order: 3;
+	}
+	.form .form-block:nth-child(4) {
+		order: 2;
+	}
+	.form .form-block:nth-child(5) {
+		order: 5;
+	}
+	.form .form-block:nth-child(6) {
+		order: 6;
+	}
+	.form-block__contact-item {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+}
+
+.form-block__wrapper {
+	@media ($tablet-widths) {
+		display: flex;
+		width: 100%;
+		margin-bottom: 20px;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.form-block__label-text {
+	display: block;
+	padding: 10px 0px 10px 23px;
+	@include style-font(14px, 30px, normal, "OpenSans");
+	text-transform: uppercase;
+	color: #d54166;
+
+	@media ($tablet-widths) {
+		display: inline-block;
+		vertical-align: top;
+		padding: 10px 20px 10px 0px;
+	}
+
+	&--icon::after {
+		@media ($tablet-widths) {
+			width: 60px;
+			height: 60px;
+			@include position-container(0, auto, auto, 0);
+			background: #e5e5e5 url(../img/phone.svg) no-repeat center;
+			z-index: 20;
+			cursor: pointer;
+		}
+	}
+
+	&--icon-email::after {
+		@media ($tablet-widths) {
+			background: #e5e5e5 url(../img/mail.svg) no-repeat center;
+		}
+	}
+}
+
+.form-block__input-text {
 	width: 100%;
-	padding: 14.5px 0px 14.5px 21px;
+	padding: 14px 0px 14px 21px;
 	box-sizing: border-box;
-	@include style-font(18px, 30px, normal);
+	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	border: 2px solid #e5e5e5;
 	border-radius: 5px;
 	outline: none;
+
+	@media ($tablet-widths) {
+		display: inline-block;
+		vertical-align: top;
+		flex-shrink: 1;
+		width: 100%;
+	}
+}
+
+.form-block__contact-items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.form-block__contact-item {
+	position: relative;
+	width: 100%;
+
+	@media ($desktop-widths) {
+		width: 375px;
+	}
+}
+
+.form-block__contact-item  .form-block__label-text {
+	padding: 16px 19px;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+
+	@media ($tablet-widths) {
+		border: 2px solid #e5e5e5;
+		margin: 0;
+		padding: 20px 58px;
+	}
+}
+
+.form-block__legend {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+		padding: 0 25px;
+		@include style-font(14px, 30px, normal, "OpenSans");
+		text-align: center;
+		color: #d22856;
+	}
+}
+
+.form-block__progress-item {
+	@media ($desktop-widths) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.form-block__progress-items {
+	@media ($desktop-widths) {
+		width: 32%;
+	}
 }
 
 .form-block__headline {
 	padding: 38px 14px 0px;
-	@include style-font(14px, 18px, normal);
+	@include style-font(14px, 18px, normal, "OpenSans");
 	text-align: center;
 	text-transform: uppercase;
 	color: #d22856;
+
+	@media ($tablet-widths) {
+		display: none;
+	}
 }
 
-.form__input-checkbox {
+.form-block__input-checkbox {
 	display: none;
-	&:checked+.form__label-checkbox::after {
+	&:checked+.form-block__label-checkbox::after {
 		@include position-container(0, 0, 10px, auto);
 		width: 22px;
 		height: 16px;
@@ -50,14 +225,19 @@
 	}
 }
 
-.form__label-checkbox {
+.form-block__label-checkbox {
 	position: relative;
 	display: block;
 	margin: 29px auto;
 	padding-left: 70px;
-	@include style-font(18px, 30px, normal);
+	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	cursor: pointer;
+
+	@media ($desktop-widths) {
+		padding-left: 50px;
+	}
+
 	&::before {
 		@include position-container(0, 0, 0, auto);
 		width: 35px;
@@ -69,9 +249,9 @@
 	}
 }
 
-.form__input-radio {
+.form-block__input-radio {
 	display: none;
-	&:checked+.form__label-radio::after {
+	&:checked+.form-block__label-radio::after {
 		@include position-container(0, 0, 14px, auto);
 		width: 16px;
 		height: 16px;
@@ -80,12 +260,12 @@
 	}
 }
 
-.form__label-radio {
+.form-block__label-radio {
 	position: relative;
 	display: block;
 	margin: 29px auto;
 	padding-left: 70px;
-	@include style-font(18px, 30px, normal);
+	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	cursor: pointer;
 	&::before {
@@ -99,21 +279,25 @@
 	}
 }
 
-.form__label-textarea {
+.form-block__label-textarea {
 	display: block;
 	padding: 53px 0 13px;
 	text-align: center;
 	text-transform: uppercase;
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	color: #d22856;
+
+	@media ($tablet-widths) {
+		display: none;
+	}
 }
 
-.form__input-textarea {
+.form-block__input-textarea {
 	width: 100%;
 	margin-bottom: 15px;
 	padding-left: 20px;
 	box-sizing: border-box;
-	@include style-font(18px, 30px, normal);
+	@include style-font(18px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	border-radius: 5px;
 	border: 2px solid #e5e5e5;
@@ -140,10 +324,10 @@
 	opacity: 1;
 }
 
-.form__attention {
+.form-block__attention {
 	display: block;
 	text-align: center;
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	color: $primary-color;
 	& span {
 		color: #d22856;

@@ -1,21 +1,221 @@
 .main-header {
-	position: relative;
 	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
 	background-size: cover;
-	background-position-y: 252px;
+	background-position-y: 247px;
+
+	@media ($desktop-widths) {
+		background-position-y: 100%;
+	}
 }
 
 .main-header--index {
-	position: relative;
-	min-height: 720px;
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat bottom center;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
 	background-size: cover;
+
 	&::after {
-		@include position-container(auto, 0, 0, 0);
-		width: 258px;
-		height: 286px;
-		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
-		z-index: 10;
+		@media ($tablet-widths) {
+			@include position-container(auto, 0, 0, 0);
+			width: 470px;
+			height: 526px;
+			z-index: 10;
+			background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
+			background-size: cover;
+			transform: translateX(15%);
+		}
+
+		@media ($desktop-widths) {
+			@include position-container(auto, 0, 0, 0);
+			width: 555px;
+			height: 614px;
+			transform: translateX(21%);
+		}
+	}
+}
+
+.main-header__wrapper {
+	background: $primary-color;
+
+	@media ($desktop-widths) {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.main-header--index .main-header__wrapper {
+	margin-bottom: 395px;
+
+	@media ($tablet-widths) {
+		margin-bottom: 0;
+	}
+}
+
+.main-header__inner {
+	@media ($desktop-widths) {
+		display: flex;
+		width: 100%;
+		max-width: 940px;
+		margin: 0 auto;
+		padding-right: 130px;
+		padding-left: 130px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.main-header__top {
+	display: flex;
+	max-width: 620px;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid #000001;
+
+	@media ($tablet-widths) {
+		max-width: 940px;
+		margin: 0 auto;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	@media ($desktop-widths) {
+		width: auto;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+		border: none;
+	}
+}
+
+.nav-toggle {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	background: transparent;
+
+	@media ($desktop-widths) {
+		display: none;
+	}
+}
+/* состояние открытого меню, крест по умолчанию*/
+.nav-toggle>span {
+	position: relative;
+	width: 50px;
+	height: 4px;
+	background: 0 0;
+	transition: background .3s .5s;
+
+	&::after,
+	&::before {
+		@include position-container(0px, auto, 0, 0);
+		width: 29px;
+		height: 4px;
+		background: $primary-bg;
+		transform-origin: 50% 50%;
+		transition: top .3s .3s,transform .3s;
+		transition: top .3s,transform .3s .5s;
+		transform: rotate3d(0,0,1,45deg);
+	}
+
+	&:before {
+		transform: rotate3d(0, 0, 1,-45deg);
+	}
+}
+
+/* /состояние открытого меню, крест по умолчанию*/
+
+/* состояние закрытого меню, три полоски*/
+.main-header__top--closed .nav-toggle>span {
+	background: $primary-bg;
+
+	&::after,
+	&::before {
+		top: -10px;
+		width: 100%;
+		transform: none;
+	}
+
+	&::before {
+		top: 10px;
+	}
+}
+/* /состояние закрытого меню*/
+
+.nav-toggle:hover>span,
+.nav-toggle:hover>span::after,
+.nav-toggle:hover>span::before{
+	background: #d22856;
+	transition: background .3s .5s;
+}
+
+.main-header__top--closed .nav-toggle:active>span,
+.nav-toggle:active>span::after,
+.nav-toggle:active>span::before{
+	background: #5f3750;
+	transition: background .3s .5s;
+}
+
+.main-nav {
+	flex: 1 1 auto;
+}
+
+.main-nav__dropdown {
+	display: flex;
+}
+
+.main-nav__list {
+	width: 100%;
+	text-align: center;
+
+	@media ($desktop-widths) {
+		flex: 10 1 auto;
+		justify-content: flex-end;
+		display: flex;
+		background: transparent;
+	}
+}
+
+.menu-nav__item {
+	margin: 0;
+	border: 0;
+}
+
+.main-nav__link {
+	display: block;
+	padding: 16px 0;
+	@include style-font(18px, 32px, bold, "OpenSansBold");
+	color: $primary-bg;
+	text-decoration: none;
+	border-top: 1px solid #485461;
+	border-bottom: 1px solid #000001;
+
+	&--active {
+		@media ($desktop-widths) {
+			text-decoration: underline;
+		}
+	}
+
+	@media ($desktop-widths) {
+		padding: 46px 41px;
+		@include style-font(18px, 18px, normal, "OpenSans");
+		border: none;
+	}
+
+	&:hover {
+		color: #d22856;
+		transition: background .3s .5s;
+	}
+
+	&:active {
+		color: #5f3750;
+		transition: background .3s .5s;
+
+		@media ($desktop-widths) {
+			color: #6b7580;
+		}
 	}
 }
 
@@ -24,79 +224,18 @@
 }
 
 .intro__headline {
-	padding: 36px 0;
+	padding: 35px 0 70px;
 	text-align: center;
 	color: $primary-bg;
-	@include style-font(24px, 1.4, lighter);
-}
+	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 
-.main-header__nav {
-	position: relative;
-}
-
-.navbar-toggle {
-	position: absolute;
-	top: 0;
-	right: 18px;
-	display: -webkit-flex;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 60px;
-	height: 60px;
-	padding: 0;
-	background: transparent;
-	border: 0;
-	cursor: pointer;
-	outline: 0;
-}
-
-.navbar-toggle>span {
-	position: relative;
-	width: 50px;
-	height: 4px;
-	background: $primary-bg;
-	transition: background .3s .5s;
-	&::after,
-	&::before {
-		content: "";
-		position: absolute;
-		top: -10px;
-		left: 0;
-		width: 100%;
-		height: 4px;
-		background: $primary-bg;
-		transform-origin: 50% 50%;
-		transition: top .3s .3s,transform .3s;
-	}
-	&::before {
-		top: 10px;
+	@media ($tablet-widths) {
+		max-width: 608px;
+		margin: 0 auto;
+		font-size: 50px;
 	}
 
-}
-
-.menu {
-	background: $primary-color;
-}
-
-.menu__link {
-	&:hover {
-		background: lighten($primary-color, 10%);
+	@media ($desktop-widths) {
+		max-width: 658px;
 	}
-	&:active {
-		background: darken($primary-color, 50%);
-	}
-	&--active {
-		/*что то написать */
-	}
-}
-
-.menu__link a {
-	@include a-link;
-	@include style-font(18px, 32px, bold);
-	padding: 18px 0;
-	text-align: center;
-	color: $primary-bg;
-	border-top: solid 1px #485461;
-	border-bottom: solid 1px #000101;
 }

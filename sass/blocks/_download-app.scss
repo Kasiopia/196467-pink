@@ -1,8 +1,65 @@
 .download-app {
+	position: relative;
 	padding-top: 28px;
 	background: #1d2631;
 	text-align: center;
+	z-index: 20;
+
+	&::after {
+		@include position-container(0, auto, 0, 0);
+		width: 258px;
+		height: 286px;
+		z-index: 10;
+		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
+		background-size: cover;
+		transform: translateY(-100%);
+
+		@media ($tablet-widths) {
+			display: none;
+		}
+	}
+
+	@media ($tablet-widths) {
+		position: relative;
+		display: flex;
+		min-height: 500px;
+		padding: 121px 0px;
+		background: transparent;
+		z-index: 20;
+	}
+
+	@media ($desktop-widths) {
+		padding: 121px 0px;
+	}
 }
+
+.download-app__wrapper {
+	@media ($tablet-widths) {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	@media ($desktop-widths) {
+		flex-basis: 32%;
+		max-width: 32%;
+	}
+}
+
+.download-app__headline {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+		margin-bottom: 33px;
+		@include style-font(50px, 1.4, lighter, "OpenSansLight");
+		color: $primary-bg;
+	}
+
+	@media ($desktop-widths) {
+		font-size: 50px;
+	}
+}
+
 
 .spec {
 	padding: 32px 0;
@@ -13,7 +70,12 @@
 }
 
 .spec__text {
-	margin-top: 24px;
-	@include style-font(14px, 24px, lighter);
+	margin-top: 13px;
+	@include style-font(14px, 24px, lighter, "OpenSansLight");
 	color: $primary-bg;
+
+	@media ($tablet-widths) {
+		margin-top: 24px;
+		font-size: 18px;
+	}
 }

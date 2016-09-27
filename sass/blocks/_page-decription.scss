@@ -1,10 +1,28 @@
 .page-description {
-	padding: 47px 0 20px;
+	padding: 47px 0 47px;
 	background: $primary-bg;
 	text-align: center;
 }
 
 .page-description__text {
-	@include style-font(14px, 30px, normal);
+	@include style-font(14px, 30px, normal, "OpenSans");
 	color: $primary-color;
+
+	&--hidden {
+		display: none;
+
+		@media ($tablet-widths) {
+			display: block;
+		}
+	}
+
+	@media ($tablet-widths) {
+		@include style-font(18px, 30px, normal, "OpenSans");
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	@media ($desktop-widths) {
+		width: 754px;
+	}
 }

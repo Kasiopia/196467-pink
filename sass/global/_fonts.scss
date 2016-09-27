@@ -1,0 +1,24 @@
+/* font-family: "OpenSans"; */
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/opensans.eot");
+	src: url("../fonts/opensans.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/opensans.woff") format("woff"),
+	url("../fonts/opensans.ttf") format("truetype");
+}
+/* font-family: "OpenSansBold"; */
+@font-face {
+	font-family: "OpenSansBold";
+	src: url("../fonts/opensansbold.eot");
+	src: url("../fonts/opensansbold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/opensansbold.woff") format("woff"),
+	url("../fonts/opensansbold.ttf") format("truetype");
+}
+/* font-family: "OpenSansLight"; */
+@font-face {
+	font-family: "OpenSansLight";
+	src: url("../fonts/opensanslight.eot");
+	src: url("../fonts/opensanslight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/opensanslight.woff") format("woff"),
+	url("../fonts/opensanslight.ttf") format("truetype");
+}
