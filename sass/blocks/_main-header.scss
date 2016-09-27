@@ -48,9 +48,7 @@
 	}
 }
 
-
 .main-header__inner {
-
 	@media ($desktop-widths) {
 		display: flex;
 		width: 100%;
@@ -87,7 +85,6 @@
 		padding-left: 0;
 		border: none;
 	}
-
 }
 
 .nav-toggle {
@@ -103,36 +100,22 @@
 		display: none;
 	}
 }
-/* состояние закрытого меню, по умолчанию*/
+/* состояние открытого меню, крест по умолчанию*/
 .nav-toggle>span {
 	position: relative;
 	width: 50px;
 	height: 4px;
-	background: $primary-bg;
+	background: 0 0;
 	transition: background .3s .5s;
 
 	&::after,
 	&::before {
-		@include position-container(-10px, auto, 0, 0);
-		width: 100%;
+		@include position-container(0px, auto, 0, 0);
+		width: 29px;
 		height: 4px;
 		background: $primary-bg;
 		transform-origin: 50% 50%;
 		transition: top .3s .3s,transform .3s;
-	}
-
-	&::before {
-		top: 10px;
-	}
-}
-/* состояние открытого меню*/
-.main-header__top--closed .nav-toggle>span {
-	background: 0 0;
-
-	&::after,
-	&::before {
-		width: 29px;
-		top: 0;
 		transition: top .3s,transform .3s .5s;
 		transform: rotate3d(0,0,1,45deg);
 	}
@@ -140,6 +123,39 @@
 	&:before {
 		transform: rotate3d(0, 0, 1,-45deg);
 	}
+}
+
+/* /состояние открытого меню, крест по умолчанию*/
+
+/* состояние закрытого меню, три полоски*/
+.main-header__top--closed .nav-toggle>span {
+	background: $primary-bg;
+
+	&::after,
+	&::before {
+		top: -10px;
+		width: 100%;
+		transform: none;
+	}
+
+	&::before {
+		top: 10px;
+	}
+}
+/* /состояние закрытого меню*/
+
+.nav-toggle:hover>span,
+.nav-toggle:hover>span::after,
+.nav-toggle:hover>span::before{
+	background: #d22856;
+	transition: background .3s .5s;
+}
+
+.main-header__top--closed .nav-toggle:active>span,
+.nav-toggle:active>span::after,
+.nav-toggle:active>span::before{
+	background: #5f3750;
+	transition: background .3s .5s;
 }
 
 .main-nav {
@@ -167,10 +183,6 @@
 	border: 0;
 }
 
-.main-nav__item-active {
-
-}
-
 .main-nav__link {
 	display: block;
 	padding: 16px 0;
@@ -180,10 +192,30 @@
 	border-top: 1px solid #485461;
 	border-bottom: 1px solid #000001;
 
+	&--active {
+		@media ($desktop-widths) {
+			text-decoration: underline;
+		}
+	}
+
 	@media ($desktop-widths) {
 		padding: 46px 41px;
 		@include style-font(18px, 18px, normal, "OpenSans");
 		border: none;
+	}
+
+	&:hover {
+		color: #d22856;
+		transition: background .3s .5s;
+	}
+
+	&:active {
+		color: #5f3750;
+		transition: background .3s .5s;
+
+		@media ($desktop-widths) {
+			color: #6b7580;
+		}
 	}
 }
 
@@ -207,4 +239,3 @@
 		max-width: 658px;
 	}
 }
-

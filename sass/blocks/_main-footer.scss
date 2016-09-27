@@ -38,6 +38,16 @@
 	text-decoration: none;
 	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: #d22856;
+
+	&--email:hover {
+		text-decoration: underline;
+		color: $primary-color;
+	}
+
+	&--email:active {
+		text-decoration: none;
+		color: #bec2c7;
+	}
 }
 
 .communication-items .communication-item:nth-child(2n) {

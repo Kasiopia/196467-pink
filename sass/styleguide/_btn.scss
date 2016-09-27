@@ -16,6 +16,17 @@
 		border: solid 3px $primary-bg;
 		border-radius: 30px;
 
+		&:hover{
+			color: #d22856;
+			background: $primary-bg;
+			box-shadow: 0 5px 7px 0 rgba(1, 1, 1, 0.25);
+		}
+
+		&:active{
+			color: #f1becc;
+			box-shadow: none;
+		}
+
 		@media ($tablet-widths) {
 			font-size: 21px;
 		}
@@ -91,6 +102,14 @@
 	border-radius: 50%;
 	border: 3px solid #e9ebec;
 	text-decoration: none;
+
+	&:hover {
+		border: 3px solid $primary-color;
+	}
+
+	&:active {
+		border: 3px solid #e9ebec;
+	}
 
 	&--tw {
 		background: url("../img/icon-twitter.svg") no-repeat center;

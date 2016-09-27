@@ -13,6 +13,76 @@
 	}
 }
 
+.price input[type="radio"] {
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+}
+
+.price__controls {
+	@include position-container(auto, 0, 0, 0);
+	width: 120px;
+	height: 20px;
+	padding-bottom: 39px;
+	z-index: 10;
+
+	@media ($tablet-widths) {
+		display: none;
+	}
+}
+
+.price__controls label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 8px;
+	vertical-align: top;
+	background: #bec2c7;
+	border: solid 3px #f2f2f2;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&:hover {
+		background: #7e868f;
+	}
+
+	&:active {
+		background: #e9ebec;
+	}
+}
+
+#btn-price-1:checked~.price__controls label[for="btn-price-1"],
+#btn-price-2:checked~.price__controls label[for="btn-price-2"],
+#btn-price-3:checked~.price__controls label[for="btn-price-3"] {
+	background: $primary-bg;
+	border: solid 3px $primary-color;
+}
+
+#btn-price-1:checked ~ .price__wrapper .price-table {
+	transform: translateX(24px);
+
+	@media ($tablet-widths) {
+		transform: none;
+	}
+}
+
+#btn-price-2:checked ~ .price__wrapper .price-table {
+	transform: translateX(calc(-33.333333% + 24px));
+
+	@media ($tablet-widths) {
+		transform: none;
+	}
+}
+
+#btn-price-3:checked ~ .price__wrapper .price-table {
+	transform: translateX(calc(-66.666666% + 24px));
+
+	@media ($tablet-widths) {
+		transform: none;
+	}
+}
+
+
 .price__wrapper {
 	overflow: hidden;
 
@@ -98,66 +168,6 @@ th.price-table__cell {
 	}
 }
 
-.price input[type="radio"] {
-	position: absolute;
-	bottom: 0;
-	opacity: 0;
-}
-
-.price__controls {
-	@include position-container(auto, 0, 0, 0);
-	width: 120px;
-	height: 20px;
-	padding-bottom: 39px;
-	z-index: 10;
-
-	@media ($tablet-widths) {
-		display: none;
-	}
-}
-
-.price__controls label {
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	margin: 0 8px;
-	vertical-align: top;
-	background: #bec2c7;
-	border: solid 3px #f2f2f2;
-	border-radius: 50%;
-	cursor: pointer;
-}
-
-#btn-price-1:checked~.price__controls label[for="btn-price-1"],
-#btn-price-2:checked~.price__controls label[for="btn-price-2"],
-#btn-price-3:checked~.price__controls label[for="btn-price-3"] {
-	background: $primary-bg;
-	border: solid 3px $primary-color;
-}
-
-#btn-price-1:checked ~ .price__wrapper .price-table {
-	transform: translateX(24px);
-
-	@media ($tablet-widths) {
-		transform: none;
-	}
-}
-
-#btn-price-2:checked ~ .price__wrapper .price-table {
-	transform: translateX(calc(-33.333333% + 24px));
-
-	@media ($tablet-widths) {
-		transform: none;
-	}
-}
-
-#btn-price-3:checked ~ .price__wrapper .price-table {
-	transform: translateX(calc(-66.666666% + 24px));
-
-	@media ($tablet-widths) {
-		transform: none;
-	}
-}
 
 .price-table__cell-title {
 	margin: 10px auto;
