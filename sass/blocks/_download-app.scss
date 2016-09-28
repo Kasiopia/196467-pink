@@ -1,6 +1,6 @@
 .download-app {
 	position: relative;
-	padding-top: 28px;
+	padding: 27px 0px 28px;
 	background: #1d2631;
 	text-align: center;
 	z-index: 20;
@@ -48,17 +48,13 @@
 	}
 }
 
-
-.spec {
-
-}
-
 .spec__link {
 	margin: auto 18px;
 }
 
 .spec__text {
-	padding-top: 13px;
+	padding-top: 25px;
+
 	@include style-font(14px, 24px, 300);
 	color: $primary-bg;
 

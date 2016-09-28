@@ -1,5 +1,5 @@
 .offer {
-	padding-top: 45px;
+	padding-top: 41px;
 	text-align: center;
 
 	@media ($desktop-widths) {
@@ -14,8 +14,8 @@
 }
 
 .offer-header__slogan {
-	margin-bottom: 20px;
-	@include style-font(24px, 1.4, 300);
+	margin-bottom: 26px;
+	@include style-font(22px, 1.4, 300);
 	color: $primary-color;
 
 	@media ($tablet-widths) {
@@ -46,7 +46,11 @@
 
 .offer-items__wrappers {
 	position: relative;
-	padding: 89px 0 9px;
+	padding-top: 89px;
+
+	@media ($tablet-widths) {
+		padding: 89px 0 9px;
+	}
 
 	@media ($desktop-widths) {
 		position: static;
@@ -60,9 +64,10 @@
 
 .offer-item {
 	position: relative;
+	padding-bottom: 31px;
 
 	&:nth-child(3) {
-		padding-bottom: 315px;
+		padding-bottom: 319px;
 
 		@media ($tablet-widths) {
 			padding-bottom: 34px;
@@ -147,7 +152,7 @@
 }
 
 .offer-item__headline {
-
+	margin-bottom: 11px;
 	@include style-font(18px, 24px, 700);
 
 	@media ($tablet-widths) {

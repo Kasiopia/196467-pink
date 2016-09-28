@@ -11,12 +11,17 @@
 
 	&--app {
 		width: auto;
-		margin-bottom: 41px;
+		margin-bottom: 27px;
 		padding: 16px 0;
 		@include style-font(18px, 18px, 700);
 		color: $primary-bg;
 		border: solid 3px $primary-bg;
 		border-radius: 30px;
+
+		@media ($tablet-widths) {
+			margin-bottom: 64px;
+			font-size: 21px;
+		}
 
 		@media ($desktop-widths) {
 			margin-bottom: 64px;

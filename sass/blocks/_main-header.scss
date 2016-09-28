@@ -9,7 +9,8 @@
 }
 
 .main-header--index {
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center;
+	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+	background-size: cover;
 
 	@media ($tablet-widths) {
 		background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
