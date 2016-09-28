@@ -54,12 +54,14 @@
 
 .photo-item__text {
 	position: relative;
-	padding: 19px 18px;
+	display: flex;
+	padding: 32px 27px;
+	flex-direction: column;
+	justify-content: space-between;
 	flex-grow: 1;
 	background: #f2f2f2;
 
 	@media ($tablet-widths) {
-
 		padding: 32px 27px;
 	}
 }
@@ -68,7 +70,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
-	@include style-font(14px, 24px, bold, "OpenSansBold");
+	@include style-font(14px, 24px, 700);
 	color: $primary-color;
 }
 
@@ -76,12 +78,12 @@
 	display: inline-block;
 	padding-left: 4px;
 	vertical-align: middle;
-	@include style-font(12px, 24px, lighter, "OpenSansLight");
+	@include style-font(12px, 24px, 300);
 	color: #5e6873;
 }
 
 .photo-item__title {
-	@include style-font(14px, 24px, normal, "OpenSans");
+	@include style-font(14px, 24px, 400);
 	color: $primary-color;
 }
 
@@ -128,7 +130,7 @@
 .social-like__link {
 	display: inline-block;
 	vertical-align: middle;
-	@include style-font(12px, 24px, normal, "OpenSans");
+	@include style-font(12px, 24px, 400);
 	color: #d22856;
 	cursor: pointer;
 }
@@ -137,7 +139,7 @@
 	display: inline-block;
 	padding-left: 4px;
 	vertical-align: middle;
-	@include style-font(12px, 24px, normal, "OpenSans");
+	@include style-font(12px, 24px, 400);
 	color: #d22856;
 	cursor: pointer;
 }

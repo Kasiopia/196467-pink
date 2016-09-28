@@ -1,21 +1,32 @@
+.main-footer {
+	padding-top: 40px;
+
+	@media ($tablet-widths) {
+		padding-top: 49px;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 66px;
+	}
+}
+
 .communication {
-	padding-top: 10px;
 	text-align: center;
 }
 
 .communication__headline {
-	padding: 20px 0px;
-	@include style-font(24px, 1.4, lighter, "OpenSansLight");
+	padding: 0px 0px 32px;
+	@include style-font(24px, 1.3, 300);
 	color: $primary-color;
 
 	@media ($tablet-widths) {
-		padding: 40px 23px;
-		@include style-font(40px, 1.1, lighter, "OpenSansLight");
+		padding: 0px 23px 48px;
+		@include style-font(40px, 1.1, 300);
 	}
 
 	@media ($desktop-widths) {
-		padding: 40px 108px;
-		@include style-font(50px, 1.1, lighter, "OpenSansLight");
+		padding: 0px 108px 54px;
+		@include style-font(50px, 1.2, 300);
 	}
 }
 
@@ -27,17 +38,40 @@
 	}
 }
 
+.communication-item {
+	margin-bottom: 20px;
+
+	@media ($tablet-widths)  {
+		margin-bottom: 0px;
+	}
+}
+
 .communication-item__title {
 	color: $primary-color;
-	@include style-font(18px, 1.4, bold, "OpenSansBold");
+	@include style-font(18px, 1.4, 700);
+
+	@media ($desktop-widths) {
+		padding-bottom: 22px;
+	}
 }
 
 .communication-item__methods {
 	display: block;
-	margin-bottom: 20px;
+	width: 226px;
+	margin: auto;
+	@include style-font(24px, 32px, 300);
 	text-decoration: none;
-	@include style-font(24px, 1.4, lighter, "OpenSansLight");
 	color: #d22856;
+
+	&--email {
+		@media ($tablet-widths) {
+			padding-bottom: 47px;
+		}
+
+		@media ($desktop-widths) {
+			padding-bottom: 0px;
+		}
+	}
 
 	&--email:hover {
 		text-decoration: underline;
@@ -59,6 +93,8 @@
 .map {
 	position: relative;
 	height: 219px;
+	background: url(../img/bg-map-mobile@1x.png) no-repeat;
+	background-size: cover;
 
 	@media ($tablet-widths) {
 		height: 428px;
@@ -95,10 +131,11 @@
 	flex-direction: column;
 
 	@media ($tablet-widths) {
+		min-height: 197px;
 		display: flex;
-		margin: 40px auto;
 		flex-direction: row;
-		justify-content: space-around;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
 
@@ -114,7 +151,6 @@
 .footer-copyright {
 	display: flex;
 	padding-top: 10px;
-	justify-content: center;
 	align-items: center;
 
 	@media ($tablet-widths) {
@@ -124,7 +160,7 @@
 
 .footer-copyright__title {
 	margin-right: 10px;
-	@include style-font(14px, 18px, normal, "OpenSans");
+	@include style-font(14px, 18px, 400);
 	color: $primary-color;
 }
 

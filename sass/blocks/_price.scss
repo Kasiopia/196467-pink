@@ -1,15 +1,15 @@
 .price {
 	position: relative;
-	padding: 100px 0;
+	padding: 125px 0 102px;
 	text-align: center;
 	background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat top center;
 
 	@media ($tablet-widths) {
-		padding: 110px 0px;
+		padding: 100px 0 66px;
 	}
 
 	@media ($desktop-widths) {
-		padding: 150px 0px;
+		padding: 92px 0px 94px;
 	}
 }
 
@@ -33,8 +33,8 @@
 
 .price__controls label {
 	display: inline-block;
-	width: 12px;
-	height: 12px;
+	width: 6px;
+	height: 6px;
 	margin: 0 8px;
 	vertical-align: top;
 	background: #bec2c7;
@@ -59,7 +59,7 @@
 }
 
 #btn-price-1:checked ~ .price__wrapper .price-table {
-	transform: translateX(24px);
+	transform: translateX(23px);
 
 	@media ($tablet-widths) {
 		transform: none;
@@ -67,7 +67,7 @@
 }
 
 #btn-price-2:checked ~ .price__wrapper .price-table {
-	transform: translateX(calc(-33.333333% + 24px));
+	transform: translateX(calc(-33.333333% + 23px));
 
 	@media ($tablet-widths) {
 		transform: none;
@@ -95,12 +95,12 @@
 	@media ($desktop-widths) {
 		width: 940px;
 		margin: 0 auto;
-		padding: 0px 130px;
+		padding: 0;
 	}
 }
 
 .price-table {
-	width: calc(300% - 94px);
+	width: calc(300% - 133px);
 	border-collapse: collapse;
 	box-sizing: border-box;
 	transition: all 0.5s;
@@ -110,11 +110,31 @@
 	}
 }
 
-td.price-table__cell:first-child .price-table__cell-headline {
-	&::after,
-	&::before {
-		content: none;
+th.price-table__cell {
+	position: relative;
+	padding: 17px 0;
+	@include style-font(18px, 30px, 700);
+	background: $primary-color;
+	border-right: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+
+	@media ($tablet-widths) {
+		padding: 10px 0;
 	}
+
+	@media ($desktop-widths) {
+		padding: 17px 0 21px;
+	}
+
+	&:first-child {
+		@media ($tablet-widths) {
+			border: none;
+			opacity: 0;
+		}
+	}
+}
+
+td.price-table__cell:first-child .price-table__cell-headline {
 
 	@media ($tablet-widths) {
 		display: table-cell;
@@ -126,29 +146,25 @@ td.price-table__cell:first-child .price-table__cell-headline {
 		padding-left: 24px;
 		font-size: 18px;
 	}
-}
 
-th.price-table__cell {
-	position: relative;
-	background: $primary-color;
-	border-right: 1px solid #e5e5e5;
-	border-left: 1px solid #e5e5e5;
-
-	&:first-child {
-		@media ($tablet-widths) {
-			border: none;
-			opacity: 0;
-		}
+	&::after,
+	&::before {
+		content: none;
 	}
 }
 
 .price-table__cell {
-	padding: 10px 0;
+	padding: 16px 0 13px;
 	background: $primary-bg;
 	border: 1px solid #e5e5e5;
 
 	@media ($tablet-widths) {
 		width: 25%;
+		padding: 5px 0 11px;
+	}
+
+	@media ($desktop-widths) {
+		padding: 10px 0 19px;
 	}
 
 	&--hit::before {
@@ -170,32 +186,52 @@ th.price-table__cell {
 
 
 .price-table__cell-title {
-	margin: 10px auto;
-	@include style-font(18px, 30px, bold, "OpenSansBold");
+	@include style-font(18px, 30px, 700);
 	color: $primary-bg;
+	text-transform: uppercase;
+
+	@media ($tablet-widths) {
+		@include style-font(16px, 30px, 700);
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(18px, 30px, 700);
+	}
 }
 
 .price-table__cell-cost {
-	@include style-font(24px, 30px, lighter, "OpenLight");
+	@include style-font(24px, 30px, 300);
 	text-align: center;
 	color: #f1f2f3;
+	text-transform: uppercase;
+
+	@media ($tablet-widths) {
+		@include style-font(18px, 30px, 300);
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(24px, 30px, 300);
+	}
 }
 
 .price-table__cell-headline {
 	position: relative;
-	padding-left: 22px;
+	padding-left: 19px;
 	text-align: left;
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	color: $primary-color;
+	text-transform: uppercase;
 
 	@media ($tablet-widths) {
+		padding-left: 22px;
 		font-size: 0px;
+		text-transform: none;
 	}
 
 	&::before,
 	&::after {
 		@include position-container(0, 0, auto, 19px);
-		width: 27px;
+		width: 35px;
 		height: 3px;
 		background-color: #f25b26;
 		transform: rotate(45deg);
@@ -211,7 +247,7 @@ th.price-table__cell {
 
 	&--on::before {
 		width: 13px;
-		height: 22px;
+		height: 25px;
 		right: 25px;
 		background-color: rgba(255, 255, 255, 0);
 		border-right: 4px solid #3dc644;

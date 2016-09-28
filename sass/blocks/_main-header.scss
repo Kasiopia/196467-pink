@@ -12,43 +12,68 @@
 	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
 	background-size: cover;
 
+	@media ($tablet-widths) {
+		background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+		background-size: cover;
+		background-position-y: 247px;
+	}
+
+	@media ($desktop-widths) {
+		background-position-y: 100%;
+	}
+
 	&::after {
 		@media ($tablet-widths) {
 			@include position-container(auto, 0, 0, 0);
-			width: 470px;
-			height: 526px;
+			width: 495px;
+			height: 550px;
 			z-index: 10;
 			background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
-			background-size: cover;
-			transform: translateX(15%);
+			background-size: 447px auto;
+			transform: translateX(17%);
 		}
 
 		@media ($desktop-widths) {
 			@include position-container(auto, 0, 0, 0);
-			width: 555px;
-			height: 614px;
-			transform: translateX(21%);
+			width: 558px;
+			height: 646px;
+			background-size: 536px auto;
+			transform: translateX(30%);
 		}
 	}
 }
 
 .main-header__wrapper {
-	background: $primary-color;
-
 	@media ($desktop-widths) {
 		background: rgba(0, 0, 0, 0.5);
 	}
 }
 
 .main-header--index .main-header__wrapper {
-	margin-bottom: 395px;
+	position: relative;
+	padding-bottom: 395px;
+
+	&::after {
+		@include position-container(auto, 0, 0, auto);
+		width: 258px;
+		height: 286px;
+		z-index: 10;
+		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
+		background-size: cover;
+
+		@media ($tablet-widths) {
+			display: none;
+		}
+	}
 
 	@media ($tablet-widths) {
-		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 }
 
 .main-header__inner {
+	background: $primary-color;
+
 	@media ($desktop-widths) {
 		display: flex;
 		width: 100%;
@@ -58,6 +83,7 @@
 		padding-left: 130px;
 		flex-direction: row;
 		justify-content: space-between;
+		background: transparent;
 	}
 }
 
@@ -89,12 +115,17 @@
 
 .nav-toggle {
 	display: flex;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 69px;
+	padding: 0;
 	border: 0;
 	cursor: pointer;
 	outline: 0;
 	background: transparent;
+
+	@media ($tablet-widths) {
+		height: 109px;
+	}
 
 	@media ($desktop-widths) {
 		display: none;
@@ -110,7 +141,7 @@
 
 	&::after,
 	&::before {
-		@include position-container(0px, auto, 0, 0);
+		@include position-container(0px, auto, auto, 0);
 		width: 29px;
 		height: 4px;
 		background: $primary-bg;
@@ -185,22 +216,25 @@
 
 .main-nav__link {
 	display: block;
-	padding: 16px 0;
-	@include style-font(18px, 32px, bold, "OpenSansBold");
+	padding: 15px 0;
+	@include style-font(18px, 32px, 700);
 	color: $primary-bg;
+	text-transform: uppercase;
 	text-decoration: none;
 	border-top: 1px solid #485461;
 	border-bottom: 1px solid #000001;
 
 	&--active {
 		@media ($desktop-widths) {
+			text-transform: none;
 			text-decoration: underline;
 		}
 	}
 
 	@media ($desktop-widths) {
-		padding: 46px 41px;
-		@include style-font(18px, 18px, normal, "OpenSans");
+		margin-left: 79px;
+		padding: 46px 0px;
+		@include style-font(18px, 18px, 400);
 		border: none;
 	}
 
@@ -227,7 +261,7 @@
 	padding: 35px 0 70px;
 	text-align: center;
 	color: $primary-bg;
-	@include style-font(24px, 1.4, lighter, "OpenSansLight");
+	@include style-font(24px, 1.4, 300);
 
 	@media ($tablet-widths) {
 		max-width: 608px;

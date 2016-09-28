@@ -2,8 +2,9 @@ body {
 	color: $primary-color;
 	background: $primary-bg;
 	min-width: 320px;
-	@include style-font(14px, 24px, normal,"OpenSans");
+	@include style-font(14px, 24px, 400);
 	font-style: normal;
+	font-family: "OpenSans", Arial, sans-serif;
 
 	@media ($tablet-widths) {
 		min-width: 700px;

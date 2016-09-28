@@ -1,42 +1,28 @@
 .download-app {
 	position: relative;
-	padding-top: 28px;
+	padding: 27px 0px 28px;
 	background: #1d2631;
 	text-align: center;
 	z-index: 20;
-
-	&::after {
-		@include position-container(0, auto, 0, 0);
-		width: 258px;
-		height: 286px;
-		z-index: 10;
-		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
-		background-size: cover;
-		transform: translateY(-100%);
-
-		@media ($tablet-widths) {
-			display: none;
-		}
-	}
 
 	@media ($tablet-widths) {
 		position: relative;
 		display: flex;
 		min-height: 500px;
-		padding: 121px 0px;
+		padding: 90px 0px 28px;
 		background: transparent;
 		z-index: 20;
 	}
 
 	@media ($desktop-widths) {
-		padding: 121px 0px;
+		padding: 106px 0px 122px;
 	}
 }
 
 .download-app__wrapper {
 	@media ($tablet-widths) {
-		flex-basis: 50%;
-		max-width: 50%;
+		flex-basis: 48.388%;
+		max-width: 48.388%;
 	}
 
 	@media ($desktop-widths) {
@@ -50,19 +36,16 @@
 
 	@media ($tablet-widths) {
 		display: block;
-		margin-bottom: 33px;
-		@include style-font(50px, 1.4, lighter, "OpenSansLight");
+		max-width: 245px;
+		margin: 0px auto 29px;
+		@include style-font(40px, 49px, 300);
 		color: $primary-bg;
 	}
 
 	@media ($desktop-widths) {
-		font-size: 50px;
+		margin: 0px auto 54px;
+		@include style-font(50px, 1.2, 300);
 	}
-}
-
-
-.spec {
-	padding: 32px 0;
 }
 
 .spec__link {
@@ -70,12 +53,17 @@
 }
 
 .spec__text {
-	margin-top: 13px;
-	@include style-font(14px, 24px, lighter, "OpenSansLight");
+	padding-top: 25px;
+
+	@include style-font(14px, 24px, 300);
 	color: $primary-bg;
 
 	@media ($tablet-widths) {
-		margin-top: 24px;
+		padding-top: 37px;
 		font-size: 18px;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 55px;
 	}
 }

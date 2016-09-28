@@ -1,7 +1,15 @@
 .slider {
 	position: relative;
-	padding-top: 25px;
+	padding-top: 32px;
 	background: $primary-bg;
+
+	@media ($tablet-widths) {
+		padding-top: 82px;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 186px;
+	}
 }
 
 .slider input[type="radio"] {
@@ -11,18 +19,21 @@
 }
 
 .slider__controls {
-
 	@include position-container(auto, 0, 0, 0);
 	width: 120px;
 	height: 20px;
-	padding-bottom: 46px;
+	text-align: center;
 	z-index: 60;
+
+	@media ($desktop-widths) {
+		display: none;
+	}
 }
 
 .slider__controls label {
 	display: inline-block;
-	width: 12px;
-	height: 12px;
+	width: 6px;
+	height: 6px;
 	margin: 0 8px;
 	vertical-align: top;
 	background: #bec2c7;
@@ -44,9 +55,16 @@
 }
 
 .slider__wrappper {
-	padding-bottom: 97px;
+	padding-bottom: 52px;
 	text-align: center;
 
+	@media ($tablet-widths) {
+		padding-bottom: 55px;
+	}
+
+	@media ($desktop-widths) {
+		padding-bottom: 97px;
+	}
 }
 
 #btn-1:checked~.slider__controls label[for="btn-1"],
@@ -68,31 +86,48 @@
 }
 
 .slide__title {
-	margin: 10px auto;
-	@include style-font(20px, 30px, bold, "OpenSansBold");
+	margin: 10px auto 14px;
+	@include style-font(18px, 30px, 700);
 	color: #000;
 
 	@media ($tablet-widths) {
+		margin: 10px auto 1px;
 		order: 2;
+		font-size: 20px;
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(24px, 30px, 700);
 	}
 }
 
 .slide__text {
-	@include style-font(18px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 
 	@media ($tablet-widths) {
+		margin-bottom: 25px;
 		order: 1;
+		font-size: 18px;
+	}
+
+	@media ($desktop-widths) {
+		padding: 0 75px;
 	}
 }
 
 .slide__sub-text {
 	display: none;
-	@include style-font(14px, 30px, normal, "OpenSans");
-	color: $primary-color;
+
 
 	@media ($tablet-widths) {
 		display: block;
+		@include style-font(14px, 30px, 400);
+		color: $primary-color;
 		order: 3;
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(18px, 30px, 400);
 	}
 }

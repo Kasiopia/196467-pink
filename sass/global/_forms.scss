@@ -98,7 +98,7 @@
 .form-block__label-text {
 	display: block;
 	padding: 10px 0px 10px 23px;
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	text-transform: uppercase;
 	color: #d54166;
 
@@ -130,7 +130,7 @@
 	width: 100%;
 	padding: 14px 0px 14px 21px;
 	box-sizing: border-box;
-	@include style-font(18px, 30px, normal, "OpenSans");
+	@include style-font(18px, 30px, 400);
 	color: $primary-color;
 	border: 2px solid #e5e5e5;
 	border-radius: 5px;
@@ -181,7 +181,7 @@ fieldset {
 	@media ($tablet-widths) {
 		display: block;
 		padding: 0 25px;
-		@include style-font(14px, 30px, normal, "OpenSans");
+		@include style-font(14px, 30px, 400);
 		text-align: center;
 		color: #d22856;
 	}
@@ -204,7 +204,7 @@ fieldset {
 
 .form-block__headline {
 	padding: 38px 14px 0px;
-	@include style-font(14px, 18px, normal, "OpenSans");
+	@include style-font(14px, 18px, 400);
 	text-align: center;
 	text-transform: uppercase;
 	color: #d22856;
@@ -230,7 +230,7 @@ fieldset {
 	display: block;
 	margin: 29px auto;
 	padding-left: 70px;
-	@include style-font(18px, 30px, normal, "OpenSans");
+	@include style-font(18px, 30px, 400);
 	color: $primary-color;
 	cursor: pointer;
 
@@ -265,7 +265,7 @@ fieldset {
 	display: block;
 	margin: 29px auto;
 	padding-left: 70px;
-	@include style-font(18px, 30px, normal, "OpenSans");
+	@include style-font(18px, 30px, 400);
 	color: $primary-color;
 	cursor: pointer;
 	&::before {
@@ -284,7 +284,7 @@ fieldset {
 	padding: 53px 0 13px;
 	text-align: center;
 	text-transform: uppercase;
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	color: #d22856;
 
 	@media ($tablet-widths) {
@@ -297,7 +297,7 @@ fieldset {
 	margin-bottom: 15px;
 	padding-left: 20px;
 	box-sizing: border-box;
-	@include style-font(18px, 30px, normal, "OpenSans");
+	@include style-font(18px, 30px, 400);
 	color: $primary-color;
 	border-radius: 5px;
 	border: 2px solid #e5e5e5;
@@ -327,7 +327,7 @@ fieldset {
 .form-block__attention {
 	display: block;
 	text-align: center;
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 	& span {
 		color: #d22856;

@@ -5,7 +5,7 @@
 }
 
 .page-description__text {
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 
 	&--hidden {
@@ -17,7 +17,7 @@
 	}
 
 	@media ($tablet-widths) {
-		@include style-font(18px, 30px, normal, "OpenSans");
+		@include style-font(18px, 30px, 400);
 		width: 500px;
 		margin: 0 auto;
 	}
