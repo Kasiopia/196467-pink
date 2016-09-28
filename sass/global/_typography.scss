@@ -1,20 +1,20 @@
 h1 {
-	@include style-font(30px, 1.4, normal, "OpenSans");
+	@include style-font(30px, 1.4, 400);
 	text-transform: uppercase;
 	color: $primary-color;
 }
 
 h2 {
-	@include style-font(24px, 1.4, normal, "OpenSans");
+	@include style-font(24px, 1.4, 400);
 	color: $primary-color;
 }
 
 h3 {
-	@include style-font(22px, 1.4, normal, "OpenSans");
+	@include style-font(22px, 1.4, 400);
 	color: $primary-color;
 }
 
 h4 {
-	@include style-font(18px, 1.4, normal, "OpenSans");
+	@include style-font(18px, 1.4, 400);
 	color: $primary-color;
 }

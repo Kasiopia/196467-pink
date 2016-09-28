@@ -19,15 +19,13 @@
 
 @mixin a-link() {
 	display: block;
-	text-transform: uppercase;
 	text-decoration: none;
 }
 
-@mixin style-font($f-size, $l-height, $f-weight,$f-family) {
+@mixin style-font($f-size, $l-height, $f-weight) {
 	font-size: $f-size;
 	line-height: $l-height;
 	font-weight: $f-weight;
-	font-family: $f-family;
 }
 
 @mixin position-container($top, $bottom, $left, $right) {

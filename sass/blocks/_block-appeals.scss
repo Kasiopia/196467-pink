@@ -8,11 +8,11 @@
 }
 
 .block-appeals__text {
-	@include style-font(14px, 30px, normal, "OpenSans");
+	@include style-font(14px, 30px, 400);
 	text-align: center;
 	color: $primary-color;
 
 	@media ($tablet-widths) {
-		@include style-font(18px, 30px, normal, "OpenSans");
+		@include style-font(18px, 30px, 400);
 	}
 }

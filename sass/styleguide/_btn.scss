@@ -1,6 +1,6 @@
 .btn {
 	padding: 18px 0;
-	@include style-font(18px, 24px, normal, "OpenSans");
+	@include style-font(18px, 24px, 400);
 	@include a-link;
 	text-align: center;
 
@@ -10,11 +10,18 @@
 	}
 
 	&--app {
-		margin: 0 auto;
-		@include style-font(18px, 18px, normal, "OpenSansBold");
+		width: auto;
+		margin-bottom: 41px;
+		padding: 16px 0;
+		@include style-font(18px, 18px, 700);
 		color: $primary-bg;
 		border: solid 3px $primary-bg;
 		border-radius: 30px;
+
+		@media ($desktop-widths) {
+			margin-bottom: 64px;
+			font-size: 21px;
+		}
 
 		&:hover{
 			color: #d22856;
@@ -25,10 +32,6 @@
 		&:active{
 			color: #f1becc;
 			box-shadow: none;
-		}
-
-		@media ($tablet-widths) {
-			font-size: 21px;
 		}
 	}
 
@@ -46,7 +49,7 @@
 	&--post {
 		width: 100%;
 		margin-bottom: 12px;
-		@include style-font(18px, 18px, bold, "OpenSansBold");
+		@include style-font(18px, 18px, 700);
 		color: #d22856;
 		background: #f2f2f2;
 		border-radius: 35px;
@@ -68,7 +71,7 @@
 	&--cancel {
 		width: 100%;
 		margin-bottom: 12px;
-		@include style-font(18px, 18px, bold, "OpenSansBold");
+		@include style-font(18px, 18px, 700);
 		color: #dddfe0;
 		background: #f2f2f2;
 		border-radius: 35px;
@@ -85,11 +88,7 @@
 			margin-bottom: 0px;
 		}
 	}
-
-
 }
-
-
 
 .social-btn {
 	display: inline-block;

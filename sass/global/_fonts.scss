@@ -5,20 +5,23 @@
 	src: url("../fonts/opensans.eot?#iefix")format("embedded-opentype"),
 	url("../fonts/opensans.woff") format("woff"),
 	url("../fonts/opensans.ttf") format("truetype");
+	font-weight: 400;
 }
 /* font-family: "OpenSansBold"; */
 @font-face {
-	font-family: "OpenSansBold";
+	font-family: "OpenSans";
 	src: url("../fonts/opensansbold.eot");
 	src: url("../fonts/opensansbold.eot?#iefix")format("embedded-opentype"),
 	url("../fonts/opensansbold.woff") format("woff"),
 	url("../fonts/opensansbold.ttf") format("truetype");
+	font-weight: 700;
 }
 /* font-family: "OpenSansLight"; */
 @font-face {
-	font-family: "OpenSansLight";
+	font-family: "OpenSans";
 	src: url("../fonts/opensanslight.eot");
 	src: url("../fonts/opensanslight.eot?#iefix")format("embedded-opentype"),
 	url("../fonts/opensanslight.woff") format("woff"),
 	url("../fonts/opensanslight.ttf") format("truetype");
+	font-weight: 300;
 }
