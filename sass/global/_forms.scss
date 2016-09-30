@@ -16,6 +16,7 @@
 }
 
 .form-block {
+	margin-bottom: 50px;
 	background: $primary-bg;
 
 	@media ($desktop-widths) {
@@ -122,6 +123,7 @@
 	}
 
 	&--icon::after {
+
 		@media ($tablet-widths) {
 			width: 61px;
 			height: 61px;
@@ -157,6 +159,10 @@ fieldset {
 }
 
 .form-block__app {
+	@media ($tablet-widths) {
+		padding: 20px 60px;
+	}
+
 	@media ($desktop-widths) {
 		padding: 45px 70px 15px;
 	}
@@ -181,6 +187,13 @@ fieldset {
 
 .form-block__contact-items {
 	padding: 20px 0 47px;
+
+	@media ($tablet-widths) {
+		display: flex;
+		padding: 20px 60px 20px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 
 	@media ($desktop-widths) {
 		display: flex;
@@ -220,7 +233,7 @@ fieldset {
 }
 
 .form-block__progress-items {
-	padding-top: 41px;
+	padding: 42px 60px 9px;
 
 	@media ($desktop-widths) {
 		display: flex;
@@ -348,6 +361,10 @@ fieldset {
 }
 
 .form-block__textarea-wrapper {
+	@media ($tablet-widths){
+		padding: 28px 60px 43px;
+	}
+
 	@media ($desktop-widths){
 		padding: 28px 60px 43px;
 	}
@@ -368,6 +385,7 @@ fieldset {
 
 .form-block__input-textarea {
 	width: 100%;
+	min-height: 201px;
 	margin-bottom: 48px;
 	padding: 13px 0 3px 20px;
 	box-sizing: border-box;
@@ -376,6 +394,12 @@ fieldset {
 	border-radius: 5px;
 	border: 2px solid #e5e5e5;
 	outline: none;
+
+	@media ($tablet-widths) {
+		min-height: 240px;
+		margin-bottom: 0px;
+		padding: 14px 0 20px 17px;
+	}
 
 	@media ($desktop-widths) {
 		margin-bottom: 0px;
@@ -408,7 +432,7 @@ fieldset {
 }
 
 .form-action__wrapper {
-	@media ($desktop-widths) {
+	@media ($tablet-widths) {
 		display: flex;
 		padding-top: 16px;
 		justify-content: space-between;
