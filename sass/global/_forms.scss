@@ -1,5 +1,6 @@
 .form {
 	display: flex;
+	margin-bottom: 12px;
 	flex-direction: column;
 	background: $primary-bg;
 
@@ -15,8 +16,6 @@
 }
 
 .form-block {
-	margin-bottom: 10px;
-	padding-bottom: 36px;
 	background: $primary-bg;
 
 	@media ($desktop-widths) {
@@ -25,7 +24,7 @@
 	}
 
 	&--gray {
-		padding-bottom: 10px;
+		padding-bottom: 2px;
 		background: #f2f2f2;
 
 		@media ($tablet-widths) {
@@ -60,6 +59,7 @@
 
 @media only screen and (max-width : 700px) {
 	.form .form-block:nth-child(1) {
+		padding: 0px 0 37px;
 		order: 1;
 	}
 	.form .form-block:nth-child(2) {
@@ -85,10 +85,12 @@
 }
 
 .form-block__wrapper {
+	margin-bottom: 7px;
+
 	@media ($tablet-widths) {
 		display: flex;
 		width: 100%;
-		margin-bottom: 20px;
+		margin-top: 30px;
 		align-items: center;
 		flex-direction: row;
 		justify-content: space-between;
@@ -97,7 +99,7 @@
 
 .form-block__label-text {
 	display: block;
-	padding: 10px 0px 10px 23px;
+	padding: 10px 0px 5px 23px;
 	@include style-font(14px, 30px, 400);
 	text-transform: uppercase;
 	color: #d54166;
@@ -128,7 +130,7 @@
 
 .form-block__input-text {
 	width: 100%;
-	padding: 14px 0px 14px 21px;
+	padding: 14px 0px 15px 21px;
 	box-sizing: border-box;
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
@@ -145,22 +147,17 @@
 }
 
 .form-block__contact-items {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	padding: 20px 0 47px;
 }
 
 .form-block__contact-item {
 	position: relative;
 	width: 100%;
+	padding-bottom: 6px;
 
 	@media ($desktop-widths) {
 		width: 375px;
 	}
-}
-
-.form-block__contact-item  .form-block__label-text {
-	padding: 16px 19px;
 }
 
 fieldset {
@@ -188,6 +185,8 @@ fieldset {
 }
 
 .form-block__progress-item {
+	padding-top: 41px;
+
 	@media ($desktop-widths) {
 		display: flex;
 		flex-wrap: wrap;
@@ -228,7 +227,7 @@ fieldset {
 .form-block__label-checkbox {
 	position: relative;
 	display: block;
-	margin: 29px auto;
+	margin-bottom: 52px;
 	padding-left: 70px;
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
@@ -263,7 +262,7 @@ fieldset {
 .form-block__label-radio {
 	position: relative;
 	display: block;
-	margin: 29px auto;
+	margin: 38px auto 45px;
 	padding-left: 70px;
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
@@ -281,7 +280,7 @@ fieldset {
 
 .form-block__label-textarea {
 	display: block;
-	padding: 53px 0 13px;
+	padding: 50px 0 11px;
 	text-align: center;
 	text-transform: uppercase;
 	@include style-font(14px, 30px, 400);
@@ -294,8 +293,8 @@ fieldset {
 
 .form-block__input-textarea {
 	width: 100%;
-	margin-bottom: 15px;
-	padding-left: 20px;
+	margin-bottom: 48px;
+	padding: 13px 0 3px 20px;
 	box-sizing: border-box;
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
@@ -327,6 +326,7 @@ fieldset {
 .form-block__attention {
 	display: block;
 	text-align: center;
+	text-transform: uppercase;
 	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 	& span {

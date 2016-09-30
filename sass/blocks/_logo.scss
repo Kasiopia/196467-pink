@@ -4,8 +4,8 @@
 }
 
 .logo__text {
-	padding: 18px 20px 18px;
-	@include style-font(30px, 26px, 400);
+	padding: 18px 0;
+	@include style-font(32px, 33px, 400);
 	color: $primary-bg;
 
 	@media ($tablet-widths) {

@@ -2,6 +2,10 @@
 	padding-top: 41px;
 	text-align: center;
 
+	@media ($tablet-widths) {
+		padding-top: 45px;
+	}
+
 	@media ($desktop-widths) {
 		padding-top: 67px;
 	}

@@ -10,7 +10,7 @@
 <body>
 	<header class="main-header">
 		<div class="main-header__wrapper">
-			<div class="main-header__inner">
+			<div class="main-header__inner main-header__inner--nojs">
 				<div class="main-header__top">
 					<div class="logo">
 						<h1 class="logo__text"><a>Pink</a></h1>
@@ -45,10 +45,10 @@
 		</div>
 	</header>
 	<main>
-		<section class="page-description">
+		<section class="page-description page-description--form">
 			<div class="container">
-				<p class="page-description__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-				<p class="page-description__text page-description__text--hidden">Пожалуйста, заполните форму ниже:</p>
+				<p class="page-description__text page-description__text--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+				<p class="page-description__text page-description__text--hidden page-description__text--form">Пожалуйста, заполните форму ниже:</p>
 			</div>
 		</section>
 		<form class="form" action="#" method="post">
@@ -145,7 +145,7 @@
 					<fieldset>
 						<legend class="form-block__legend">Опишите свои эмоции</legend>
 						<label class="form-block__label-textarea" for="recall">Опишите свои эмоции</label>
-						<textarea class="form-block__input-textarea" name="recall" id="recall" cols="50" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+						<textarea class="form-block__input-textarea" name="recall" id="recall" cols="50" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
 					</fieldset>
 				</div>
 			</section>
