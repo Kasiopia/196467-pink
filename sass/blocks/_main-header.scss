@@ -12,11 +12,11 @@
 		background-size: cover;
 		/*background-position-y: 247px;*/
 	}
-
+/*
 	@media ($desktop-widths) {
-		/*background-position-y: 100%;*/
+		background-position-y: 100%;
 	}
-
+	*/
 	&::after {
 		@media ($tablet-widths) {
 			@include position-container(auto, 0, 0, 0);
@@ -293,6 +293,12 @@
 
 	@media ($desktop-widths) {
 		padding: 64px 0 100px;
-		max-width: 658px;
+		max-width: 650px747px;
+	}
+
+	&--form {
+		@media ($desktop-widths) {
+			max-width: 747px;
+		}
 	}
 }

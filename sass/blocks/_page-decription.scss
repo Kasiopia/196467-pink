@@ -3,16 +3,20 @@
 	background: $primary-bg;
 	text-align: center;
 
-	&--form {
-		padding-bottom: 24px;
-	}
-
 	@media ($tablet-widths) {
 		padding: 92px 0 76px;
 	}
 
 	@media ($desktop-widths) {
 		padding: 92px 0 88px;
+	}
+
+	&--form {
+		padding-bottom: 24px;
+
+		@media ($desktop-widths) {
+			padding: 92px 0 65px;
+		}
 	}
 }
 
@@ -22,18 +26,6 @@
 	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 
-	&--form {
-		width: 290px;
-	}
-
-	&--hidden {
-		display: none;
-
-		@media ($tablet-widths) {
-			display: block;
-		}
-	}
-
 	@media ($tablet-widths) {
 		@include style-font(18px, 30px, 400);
 		width: 500px;
@@ -42,5 +34,25 @@
 
 	@media ($desktop-widths) {
 		width: 641px;
+	}
+
+	&--form {
+		width: 290px;
+
+		@media ($tablet-widths) {
+			width: 500px;
+		}
+
+		@media ($desktop-widths) {
+			width: 800px;
+		}
+	}
+
+	&--hidden {
+		display: none;
+
+		@media ($tablet-widths) {
+			display: inline;
+		}
 	}
 }

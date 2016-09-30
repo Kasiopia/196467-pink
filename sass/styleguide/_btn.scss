@@ -49,6 +49,11 @@
 		color: $primary-bg;
 		border: none;
 		outline: none;
+
+		@media ($desktop-widths) {
+			width: 300px;
+			padding: 16px 0px;
+		}
 	}
 
 	&--post {
