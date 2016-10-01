@@ -74,7 +74,6 @@
 					<fieldset>
 						<legend class="form-block__legend">С каким приложением путешествовали?</legend>
 						<div class="form-block__app">
-							<h2 class="form-block__headline">С каким приложением путешествовали?</h2>
 							<input class="form-block__input-radio" type="radio" name="application" id="rd1" value="ios" checked="">
 							<label class="form-block__label-radio" for="rd1">Pink для iOS</label>
 							<input class="form-block__input-radio" type="radio" name="application" id="rd2" value="android">
@@ -92,12 +91,16 @@
 						<legend class="form-block__legend">Контактная информация</legend>
 						<div class="form-block__contact-items">
 							<div class="form-block__contact-item">
-								<input class="form-block__input-text" type="tel" name="phone" id="tel" placeholder="Номер, пожалуйста">
-								<label class="form-block__label-text form-block__label-text--icon" for="tel">Номер<span>ок</span> телефончика</label>
+								<div class="form-block__wrapper-icon">
+									<input class="form-block__input-text" type="tel" name="phone" id="tel" placeholder="Номер, пожалуйста">
+								</div>
+								<label class="form-block__label-text" for="tel">Номер<span>ок</span> телефон<span>чик</span>а</label>
 							</div>
 							<div class="form-block__contact-item">
-								<input class="form-block__input-text" type="email" name="email" id="email" placeholder="Введите почту">
-								<label class="form-block__label-text form-block__label-text--icon form-block__label-text--icon-email" for="email">Адрес<span>ок</span> почты</label>
+								<div class="form-block__wrapper-icon form-block__wrapper-icon--email">
+									<input class="form-block__input-text" type="email" name="email" id="email" placeholder="Введите почту">
+								</div>
+								<label class="form-block__label-text" for="email">Адрес<span>ок</span> почты</label>
 							</div>
 						</div>
 					</fieldset>
@@ -108,7 +111,6 @@
 				<div class="container">
 					<fieldset>
 						<legend class="form-block__legend">Ваши безбашенные достижения в путешествии</legend>
-						<h2 class="form-block__headline">Ваши безбашенные достижения в путешествии</h2>
 						<div class="form-block__progress-items">
 							<div class="form-block__progress-item">
 								<input class="form-block__input-checkbox" type="checkbox" name="firm1" id="ch1" checked="">
@@ -144,7 +146,6 @@
 					<fieldset>
 						<legend class="form-block__legend">Опишите свои эмоции</legend>
 						<div class="form-block__textarea-wrapper">
-							<label class="form-block__label-textarea" for="recall">Опишите свои эмоции</label>
 							<textarea class="form-block__input-textarea" name="recall" id="recall" cols="50" rows="3" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
 						</div>
 					</fieldset>

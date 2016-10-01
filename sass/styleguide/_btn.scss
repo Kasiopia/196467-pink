@@ -1,5 +1,5 @@
 .btn {
-	padding: 18px 0;
+	padding: 18px 20px;
 	@include style-font(18px, 24px, 400);
 	@include a-link;
 	text-align: center;
@@ -12,7 +12,7 @@
 	&--app {
 		width: auto;
 		margin-bottom: 27px;
-		padding: 16px 0;
+		padding: 16px 26px;
 		@include style-font(18px, 18px, 700);
 		color: $primary-bg;
 		border: solid 3px $primary-bg;
@@ -42,7 +42,7 @@
 	&--submit {
 		width: 280px;
 		margin-bottom: 36px;
-		padding: 16px 0;
+		padding: 16px 20px;
 		line-height: 30px;
 		text-transform: uppercase;
 		background: #2aab6d;
@@ -50,16 +50,15 @@
 		border: none;
 		outline: none;
 
-		@media ($desktop-widths) {
+		@media ($tablet-widths) {
 			width: 300px;
-			padding: 16px 0px;
 		}
 	}
 
 	&--post {
 		width: 100%;
 		margin-bottom: 12px;
-		padding: 16px 0;
+		padding: 16px 20px;
 		@include style-font(18px, 18px, 700);
 		color: #d22856;
 		background: #f2f2f2;
@@ -82,7 +81,7 @@
 	&--cancel {
 		width: 100%;
 		margin-bottom: 12px;
-		padding: 16px 0;
+		padding: 16px 20px;
 		@include style-font(18px, 18px, 700);
 		color: #dddfe0;
 		background: #f2f2f2;
@@ -97,7 +96,6 @@
 
 		@media ($desktop-widths) {
 			width: 183px;
-			margin-bottom: 0px;
 		}
 	}
 }

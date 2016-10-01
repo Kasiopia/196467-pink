@@ -4,7 +4,7 @@
 }
 
 .logo__text {
-	padding: 18px 0;
+	padding: 16px 0;
 	@include style-font(32px, 33px, 400);
 	color: $primary-bg;
 
@@ -24,8 +24,6 @@
 		}
 	}
 }
-
-
 
 .logo--footer {
 	display: block;

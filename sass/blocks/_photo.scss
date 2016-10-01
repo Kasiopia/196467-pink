@@ -12,18 +12,23 @@
 
 		&::after {
 			@include position-container(0, auto, auto, 6.25%);
+			content: "Панорама дня";
 			width: 140px;
 			height: 36px;
+			@include style-font(12px, 36px, 700);
 			text-align: center;
+			text-transform: uppercase;
 			background: #d22856;
 			color: $primary-bg;
 
 			@media ($tablet-widths) {
 				@include position-container(57px, auto, auto, 5.85%);
+				content: "Панорама дня";
 			}
 
 			@media ($desktop-widths) {
 				@include position-container(54px, auto, auto, 10.75%);
+				content: "Панорама дня";
 			}
 		}
 	}
