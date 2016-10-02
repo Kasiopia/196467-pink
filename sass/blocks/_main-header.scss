@@ -153,7 +153,6 @@
 	width: 50px;
 	height: 4px;
 	background: $primary-bg;
-	transition: background .3s .5s;
 
 	&::after,
 	&::before {
@@ -182,8 +181,6 @@
 		width: 29px;
 		background: $primary-bg;
 		transform-origin: 50% 50%;
-		transition: top .3s .3s,transform .3s;
-		transition: top .3s,transform .3s .5s;
 		transform: rotate3d(0,0,1,45deg);
 	}
 
@@ -215,14 +212,20 @@
 .nav-toggle:hover>span::after,
 .nav-toggle:hover>span::before{
 	background: #d22856;
-	transition: background .3s .5s;
 }
 
-.main-header__inner--opened .nav-toggle:active>span,
+.main-header__inner--opened .nav-toggle:hover>span {
+	background: transparent;
+}
+
+.nav-toggle:active>span,
 .nav-toggle:active>span::after,
 .nav-toggle:active>span::before{
 	background: #5f3750;
-	transition: background .3s .5s;
+}
+
+.main-header__inner--opened .nav-toggle:active>span {
+	background: transparent;
 }
 
 .main-nav {
@@ -296,6 +299,10 @@
 
 .main-nav__link--active:hover::after {
 	background: #d22856;
+}
+
+.main-nav__link--active:active::after {
+	background: #6b7580;
 }
 
 .intro__headline {
