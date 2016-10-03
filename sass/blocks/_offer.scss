@@ -2,6 +2,10 @@
 	padding-top: 41px;
 	text-align: center;
 
+	@media ($tablet-widths) {
+		padding-top: 45px;
+	}
+
 	@media ($desktop-widths) {
 		padding-top: 67px;
 	}
@@ -41,7 +45,8 @@
 .offer-items {
 	position: relative;
 	background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat top center;
-	z-index: 0;
+	background-size: 100% auto;
+	z-index: 20;
 }
 
 .offer-items__wrappers {
@@ -242,22 +247,30 @@
 	}
 
 	&__wrapper::after {
-		width: 174px;
-		height: 174px;
-		@include position-container(0, auto, 0, auto);
-		border: 15px solid #d22856;
-		border-radius: 50%;
-		transform: translate(9%,8%);
-		z-index: 10;
 
-		@media ($desktop-widths){
+		@media ($tablet-widths) {
+			@include position-container(0, auto, 0, auto);
+			content: "24";
+			width: 174px;
+			height: 174px;
+			@include style-font(96px, 174px, 700);
+			text-transform: uppercase;
+			text-align: center;
+			color: #d22856;
+			border: 15px solid #d22856;
+			border-radius: 50%;
+			transform: translate(9%,8%);
+			z-index: 10;
+		}
+
+		@media ($desktop-widths) {
+			@include position-container(0, 0, 0, auto);
+			content: "24";
 			width: 220px;
 			height: 220px;
-			@include position-container(0, 0, 0, auto);
+			@include style-font(96px, 220px, 700);
 			border: 16px solid #d22856;
-			border-radius: 50%;
 			transform: translate(9%, 0%);
-			z-index: 10;
 		}
 	}
 }

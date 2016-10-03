@@ -17,6 +17,16 @@
 	}
 }
 
+@mixin container-fluid() {
+	width: auto;
+
+	@media ($tablet-widths) {
+		width: 88%; /*700pxобщая, 620 конт=620/700=88,57142857142857*/
+		max-width: 1068px; /*940 ширина контента на десктоп, 940/0.88= 1068px*/
+		margin: 0 auto;
+	}
+}
+
 @mixin a-link() {
 	display: block;
 	text-decoration: none;

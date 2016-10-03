@@ -1,17 +1,20 @@
 .main-footer {
-	padding-top: 40px;
-
-	@media ($tablet-widths) {
-		padding-top: 49px;
-	}
-
 	@media ($desktop-widths) {
 		padding-top: 66px;
 	}
 }
 
 .communication {
+	padding-top: 40px;
 	text-align: center;
+
+	@media ($tablet-widths) {
+		padding-top: 49px;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 0px;
+	}
 }
 
 .communication__headline {
@@ -20,8 +23,8 @@
 	color: $primary-color;
 
 	@media ($tablet-widths) {
-		padding: 0px 23px 48px;
-		@include style-font(40px, 1.1, 300);
+		padding: 0px 23px 43px;
+		@include style-font(40px, 47px, 300);
 	}
 
 	@media ($desktop-widths) {
@@ -97,7 +100,7 @@
 	background-size: cover;
 
 	@media ($tablet-widths) {
-		height: 428px;
+		height: 401px;
 	}
 
 	@media ($desktop-widths) {
@@ -113,6 +116,10 @@
 		background-size: cover;
 
 		@media ($tablet-widths) {
+			height: 95px;
+		}
+
+		@media ($desktop-widths) {
 			height: 123px;
 		}
 	}
@@ -129,9 +136,9 @@
 .main-footer-down__wrapper {
 	display: flex;
 	flex-direction: column;
+	padding: 38px 0;
 
 	@media ($tablet-widths) {
-		min-height: 197px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -140,7 +147,7 @@
 }
 
 .social {
-	margin: 40px auto;
+	margin: 38px auto 28px;
 	text-align: center;
 
 	@media ($tablet-widths) {
@@ -150,16 +157,11 @@
 
 .footer-copyright {
 	display: flex;
-	padding-top: 10px;
 	align-items: center;
-
-	@media ($tablet-widths) {
-		padding-top: 0px;
-	}
+	justify-content: center;
 }
 
 .footer-copyright__title {
-	margin-right: 10px;
 	@include style-font(14px, 18px, 400);
 	color: $primary-color;
 }

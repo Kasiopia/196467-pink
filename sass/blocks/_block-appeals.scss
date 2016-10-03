@@ -1,10 +1,13 @@
 .block-appeals {
-	padding: 0px 0 40px;
+	padding: 4px 0 41px;
 
 	@media ($tablet-widths) {
-		padding: 25px 0 71px;
+		padding: 24px 0 68px;
 	}
 
+	@media ($desktop-widths) {
+		padding: 4px 0 67px;
+	}
 }
 
 .block-appeals__text {

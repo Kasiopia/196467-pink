@@ -28,8 +28,6 @@
 }
 
 .form-upload {
-	margin-bottom: 42px;
-
 	@media ($tablet-widths) {
 		display: flex;
 		justify-content: space-between;
@@ -37,7 +35,7 @@
 	}
 
 	@media ($desktop-widths) {
-		padding: 0px 60px;
+		padding: 0px 60px 0 80px;
 	}
 }
 
@@ -46,7 +44,11 @@
 
 	@media ($tablet-widths) {
 		width: 300px;
-		padding: 57px 0px;
+		padding: 57px 0px 53px;
+	}
+
+	@media ($desktop-widths){
+		padding: 58px 0 55px;
 	}
 }
 
@@ -83,9 +85,9 @@
 .form-upload__options-wrapper {
 	position: relative;
 	display: flex;
-	width: 300px;
+	width: 240px;
 	margin: 0 auto;
-	padding-bottom: 75px;
+	padding-bottom: 71px;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
@@ -103,7 +105,7 @@
 
 	@media ($tablet-widths) {
 		width: 275px;
-		padding: 18px 0 19px;
+		padding: 20px 0 19px;
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid #dddfe0;
@@ -111,6 +113,7 @@
 
 	@media ($desktop-widths) {
 		width: 410px;
+		    padding: 20px 0 5px;
 	}
 }
 
@@ -142,10 +145,15 @@
 	@media ($tablet-widths) {
 		display: block;
 	}
+
+	@media ($desktop-widths) {
+		display: block;
+		margin-right: 30px;
+	}
 }
 
 .range-controls--active {
-	@include position-container(auto, 36px, 0, 0);
+	@include position-container(auto, 34px, 0, 0);
 	content: none;
 	display: block;
 	z-index: 50;
@@ -154,6 +162,10 @@
 		position: relative;
 		margin: 0;
 		bottom: 0;
+	}
+
+	@media ($desktop-widths) {
+		margin-right: 30px;
 	}
 }
 
@@ -177,7 +189,7 @@
 	content: "";
 	position: absolute;
 	top: -6px;
-	right: 64px;
+	right: 35px;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -190,7 +202,12 @@
 .form-upload__actions {
 	width: 280px;
 	margin: 0 auto;
-	padding: 38px 0;
+	padding: 38px 0 31px;
+
+	@media ($tablet-widths) {
+		width: 260px;
+		margin: 0px;
+	}
 
 	@media ($desktop-widths) {
 		display: flex;

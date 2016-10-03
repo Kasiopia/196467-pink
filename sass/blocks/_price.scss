@@ -10,6 +10,7 @@
 
 	@media ($desktop-widths) {
 		padding: 92px 0px 94px;
+		background-size: 100% auto;
 	}
 }
 
@@ -168,11 +169,23 @@ td.price-table__cell:first-child .price-table__cell-headline {
 	}
 
 	&--hit::before {
-		@include position-container(0, auto, 0, auto);
-		width: 61px;
-		height: 61px;
-		background: url("../img/bg-hit-tablet.svg") no-repeat top center;
+		@include position-container(0, auto, -30px, auto);
+		content: "хит";
+		width: 70px;
+		height: 21px;
+		@include style-font(14px, 60px, 700);
+		text-align: center;
+		text-transform: uppercase;
+		color: $primary-bg;
+		border-bottom: 20px solid #d22856;
+		border-left: 19px solid transparent;
+		border-right: 19px solid transparent;
+		transform: rotate(-45deg);
 		z-index: 10;
+
+		@media ($tablet-widths) {
+			width: 60px;
+		}
 	}
 }
 
