@@ -7,6 +7,15 @@
 	padding: 16px 0;
 	@include style-font(32px, 33px, 400);
 	color: $primary-bg;
+	opacity: 1;
+
+	&:hover {
+		color: $additional-color;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
 
 	@media ($tablet-widths) {
 		display: none;
@@ -14,13 +23,89 @@
 }
 
 .logo__img {
-	display: block;
+	background: url(../img/logo-pink-blue-mobile.svg) no-repeat;
+	width: 147px;
+	height: 40px;
+	margin: auto;
+	opacity: 1;
+	background-size: 100% auto;
+
+	&:hover {
+		background: url(../img/logo-pink-blue-mobile--red.svg) no-repeat;
+		background-size: 100% auto;
+	}
+
+	&:active {
+		opacity: 0.7;
+		background: url(../img/logo-pink-blue-mobile.svg) no-repeat;
+		background-size: 100% auto;
+	}
+
+	@media ($tablet-widths) {
+		background: url(../img/logo-pink-blue-mobile.svg) no-repeat;
+		background-size: 100% auto;
+
+		&:hover {
+			background: url(../img/logo-pink-blue-mobile--red.svg) no-repeat;
+			background-size: 100% auto;
+		}
+
+		&:active {
+			opacity: 0.7;
+			background: url(../img/logo-pink-blue-mobile.svg) no-repeat;
+			background-size: 100% auto;
+		}
+	}
+
+	@media ($desktop-widths) {
+		background: url(../img/logo-pink-blue-desktop.svg) no-repeat;
+		background-size: 100% auto;
+
+		&:hover {
+			background: url(../img/logo-pink-blue-desktop--red.svg) no-repeat;
+			background-size: 100% auto;
+		}
+
+		&:active {
+			opacity: 0.7;
+			background: url(../img/logo-pink-blue-desktop.svg) no-repeat;
+			background-size: 100% auto;
+		}
+	}
 
 	&--header {
 		display: none;
 
 		@media ($tablet-widths) {
 			display: block;
+			background: url(../img/logo-pink-white-tablet.svg) no-repeat;
+			background-size: 100% auto;
+
+			&:hover {
+				background: url(../img/logo-pink-white-tablet--red.svg) no-repeat;
+				background-size: 100% auto;
+			}
+
+			&:active {
+				background: url(../img/logo-pink-white-tablet.svg) no-repeat;
+				background-size: 100% auto;
+			}
+		}
+
+		@media ($desktop-widths) {
+			display: block;
+			background: url(../img/logo-pink-white-desktop.svg) no-repeat;
+			background-size: 100% auto;
+
+			&:hover {
+				background: url(../img/logo-pink-white-desktop--red.svg) no-repeat;
+				background-size: 100% auto;
+			}
+
+			&:active {
+				background: url(../img/logo-pink-white-desktop.svg) no-repeat;
+				background-size: 100% auto;
+			}
 		}
 	}
 }
@@ -38,4 +123,3 @@
 		margin: 0;
 	}
 }
-

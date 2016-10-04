@@ -131,10 +131,10 @@
 
 	&::after {
 		@media ($tablet-widths) {
-			width: 60px;
-			height: 60px;
-			@include position-container(0, 0, auto, 1px);
-			background: #e5e5e5 url(../img/phone.png) no-repeat center;
+			width: 61px;
+			height: 59px;
+			@include position-container(0, 0, auto, 2px);
+			background: $gray-color url(../img/phone.png) no-repeat center;
 			z-index: 20;
 			border-top-right-radius: 5px;
 			border-bottom-right-radius: 5px;
@@ -144,7 +144,7 @@
 
 	&--email::after  {
 		@media ($tablet-widths) {
-			background: #e5e5e5 url(../img/mail.png) no-repeat center;
+			background: $gray-color url(../img/mail.png) no-repeat center;
 		}
 	}
 }
@@ -155,9 +155,17 @@
 	box-sizing: border-box;
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
-	border: 2px solid #e5e5e5;
+	border: 2px solid $gray-color;
 	border-radius: 5px;
 	outline: none;
+
+	&:hover {
+		border: 2px solid $primary-color;
+	}
+
+	&:focus {
+		border: 2px solid $additional-color;
+	}
 
 	@media ($tablet-widths) {
 		display: inline-block;
@@ -193,7 +201,7 @@ fieldset {
 	padding: 0;
 
 	@media ($tablet-widths) {
-		border: 2px solid #e5e5e5;
+		border: 2px solid $gray-color;
 		border-radius: 5px;
 	}
 }
@@ -213,7 +221,7 @@ fieldset {
 	@include style-font(14px, 18px, 400);
 	text-align: center;
 	text-transform: uppercase;
-	color: #d22856;
+	color: $additional-color;
 
 	@media ($tablet-widths) {
 		display: block;
@@ -313,12 +321,25 @@ fieldset {
 
 .form-block__input-checkbox {
 	display: none;
+
+	&+.form-block__label-checkbox:active::after {
+		@include position-container(0, 0, 10px, auto);
+		width: 22px;
+		height: 16px;
+		z-index: 10;
+		background: url(../img/icon-yes.svg) no-repeat center;
+	}
+
 	&:checked+.form-block__label-checkbox::after {
 		@include position-container(0, 0, 10px, auto);
 		width: 22px;
 		height: 16px;
 		z-index: 10;
 		background: url(../img/icon-yes.svg) no-repeat center;
+	}
+
+	&:checked+.form-block__label-checkbox:active::after {
+		background: transparent;
 	}
 }
 
@@ -340,22 +361,45 @@ fieldset {
 		width: 35px;
 		height: 35px;
 		background: $primary-bg;
-		border: 2px solid #e5e5e5;
+		border: 2px solid $gray-color;
 		border-radius: 5px;
 		z-index: 10;
+	}
+
+	&:hover::before {
+		border: 2px solid $primary-color;
+	}
+
+	&:active::before {
+		border: 2px solid $additional-color;
 	}
 }
 
 .form-block__input-radio {
 	display: none;
+
+	&+.form-block__label-radio:active::after {
+		@include position-container(0, 0, 12px, auto);
+		width: 15px;
+		height: 15px;
+		z-index: 10;
+		background: $additional-color;
+		border-radius: 50%;
+	}
+
 	&:checked+.form-block__label-radio::after {
 		@include position-container(0, 0, 12px, auto);
 		width: 15px;
 		height: 15px;
 		z-index: 10;
-		background: #d22856;
+		background: $additional-color;
 		border-radius: 50%;
 	}
+
+	&:checked+.form-block__label-radio:active::after {
+		background: transparent;
+	}
+
 }
 
 .form-block__label-radio {
@@ -381,9 +425,13 @@ fieldset {
 		width: 35px;
 		height: 35px;
 		background: $primary-bg;
-		border: 2px solid #e5e5e5;
+		border: 2px solid $gray-color;
 		border-radius: 50%;
 		z-index: 10;
+	}
+
+	&:hover::before {
+		border: 2px solid $primary-color;
 	}
 }
 
@@ -408,9 +456,17 @@ fieldset {
 	@include style-font(18px, 30px, 400);
 	color: $primary-color;
 	border-radius: 5px;
-	border: 2px solid #e5e5e5;
+	border: 2px solid $gray-color;
 	outline: none;
 	resize: none;
+
+	&:hover {
+		border: 2px solid $primary-color;
+	}
+
+	&:focus {
+		border: 2px solid $additional-color;
+	}
 
 	@media ($tablet-widths) {
 		min-height: 195px;
@@ -463,7 +519,7 @@ fieldset {
 	@include style-font(14px, 30px, 400);
 	color: $primary-color;
 	& b {
-		color: #d22856;
+		color: $additional-color;
 	}
 }
 

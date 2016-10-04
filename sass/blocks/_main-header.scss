@@ -211,7 +211,7 @@
 .nav-toggle:hover>span,
 .nav-toggle:hover>span::after,
 .nav-toggle:hover>span::before{
-	background: #d22856;
+	background: $additional-color;
 }
 
 .main-header__inner--opened .nav-toggle:hover>span {
@@ -263,6 +263,7 @@
 	text-transform: uppercase;
 	border-top: 1px solid #485461;
 	border-bottom: 1px solid #000001;
+	cursor: pointer;
 
 	@media ($desktop-widths) {
 		margin-left: 79px;
@@ -273,7 +274,7 @@
 	}
 
 	&:hover {
-		color: #d22856;
+		color: $additional-color;
 		transition: background .3s .5s;
 	}
 
@@ -298,7 +299,7 @@
 }
 
 .main-nav__link--active:hover::after {
-	background: #d22856;
+	background: $additional-color;
 }
 
 .main-nav__link--active:active::after {

@@ -64,7 +64,7 @@
 	margin: auto;
 	@include style-font(24px, 32px, 300);
 	text-decoration: none;
-	color: #d22856;
+	color: $additional-color;
 
 	&--email {
 		@media ($tablet-widths) {

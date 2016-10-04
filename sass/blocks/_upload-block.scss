@@ -113,29 +113,55 @@
 
 	@media ($desktop-widths) {
 		width: 410px;
-		    padding: 20px 0 5px;
+		padding: 20px 0 5px;
 	}
 }
 
 .form-upload-option__brightness {
-	width: 48px;
-	height: 48px;
-	background: url("../img/icon-editor-crop.svg") no-repeat center;
 	cursor: pointer;
+	opacity: 0.3;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&:active {
+		opacity: 1;
+		fill: $additional-color;
+	}
 }
 
 .form-upload-option__contrast {
-	width: 48px;
-	height: 48px;
-	background: url("../img/icon-editor-fill.svg") no-repeat center;
 	cursor: pointer;
+	opacity: 0.3;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&:active {
+		opacity: 1;
+		fill: $additional-color;
+	}
 }
 
 .form-upload-option__cut {
-	width: 48px;
-	height: 32px;
-	background: url("../img/icon-editor-contrast.svg") no-repeat center;
 	cursor: pointer;
+	opacity: 0.3;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&:active {
+		opacity: 1;
+		fill: $additional-color;
+	}
+}
+
+.form-upload-option--active {
+	opacity: 1;
+	fill: $additional-color;
 }
 
 .range-controls {
@@ -193,10 +219,14 @@
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	border: 2px solid #cd2856;
+	border: 2px solid $additional-color;
 	background: #f2f2f2;
 	z-index: 10;
 	cursor: pointer;
+
+	&:active {
+		background: $additional-color;
+	}
 }
 
 .form-upload__actions {
