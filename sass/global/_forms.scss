@@ -133,18 +133,18 @@
 		@media ($tablet-widths) {
 			width: 61px;
 			height: 59px;
-			@include position-container(0, 0, auto, 2px);
-			background: $gray-color url(../img/phone.png) no-repeat center;
+			@include position-container(0, 0, auto, 1px);
+			background: $gray-color url(../img/icon-phone.svg) no-repeat center;
 			z-index: 20;
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
 			cursor: pointer;
 		}
 	}
 
 	&--email::after  {
 		@media ($tablet-widths) {
-			background: $gray-color url(../img/mail.png) no-repeat center;
+			background: $gray-color url(../img/icon-mail.svg) no-repeat center;
 		}
 	}
 }

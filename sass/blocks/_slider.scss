@@ -98,6 +98,16 @@
 
 	@media ($desktop-widths) {
 		@include style-font(24px, 30px, 700);
+
+		&::before {
+			@include position-container(0, auto, 0, 0);
+			width: 79px;
+			height: 63px;
+			background: url(../img/quotes.svg) no-repeat center;
+			background-size: cover;
+			z-index: 20;
+			transform: translate(0%, 100%);
+		}
 	}
 }
 
