@@ -50,6 +50,43 @@
 	}
 }
 
+@media (min-width: 1200px) {
+	.slider .arrow-left::before,
+	.slider .arrow-left::after,
+	.slider .arrow-right::before,
+	.slider .arrow-right::after {
+		content: "";
+		position: absolute;
+		z-index: 20;
+		left: 127px;
+		top: 223px;
+		transform: rotate(-45deg);
+		display: block;
+		width: 28px;
+		height: 4px;
+		background: #bec2c7;
+		cursor: pointer;
+	}
+
+	.slider .arrow-left::after {
+		top: 240px;
+		transform: rotate(45deg);
+	}
+
+	.slider .arrow-right::before {
+		left: auto;
+		right: 127px;
+		transform: rotate(45deg);
+	}
+
+	.slider .arrow-right::after {
+		left: auto;
+		right: 127px;
+		top: 240px;
+		transform: rotate(-45deg);
+	}
+}
+
 .slide {
 	display: none;
 }
@@ -63,7 +100,7 @@
 	}
 
 	@media ($desktop-widths) {
-		padding-bottom: 97px;
+		padding-bottom: 38px;
 	}
 }
 
@@ -101,12 +138,12 @@
 
 		&::before {
 			@include position-container(0, auto, 0, 0);
-			width: 79px;
-			height: 63px;
-			background: url(../img/quotes.svg) no-repeat center;
-			background-size: cover;
+			content: "“";
+			@include style-font(182px, 63px, bold);
+			font-family: "Georgia", sans-serif;
+			color: #efefef;
 			z-index: 20;
-			transform: translate(0%, 100%);
+			transform: translate(0%, 180%);
 		}
 	}
 }
