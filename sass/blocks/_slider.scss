@@ -85,6 +85,20 @@
 		top: 240px;
 		transform: rotate(-45deg);
 	}
+
+	.slider .arrow-left:hover::before,
+	.slider .arrow-left:hover::after,
+	.slider .arrow-right:hover::before,
+	.slider .arrow-right:hover::after {
+		background: #7e868f;
+	}
+
+	.slider .arrow-left:active::before,
+	.slider .arrow-left:active::after,
+	.slider .arrow-right:active::before,
+	.slider .arrow-right:active::after {
+		opacity: 0.7;
+	}
 }
 
 .slide {

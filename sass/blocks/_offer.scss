@@ -106,6 +106,11 @@
 		z-index: 10;
 		background-size: 157px auto;
 
+		@media (max-width: 699px) and (min-resolution: 144dpi),
+		(max-width: 699px) and (min-resolution: 1.5dppx) {
+			background: url(../img/iphone-screen-mobile@2x.png) no-repeat top center;
+		}
+
 		@media ($tablet-widths) {
 			@include position-container(auto, 0, 0, auto);
 			width: 268px;
