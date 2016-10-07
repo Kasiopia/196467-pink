@@ -9,7 +9,7 @@
 	}
 
 	@media ($desktop-widths) {
-		padding: 92px 0px 94px;
+		padding: 152px 0px 94px;
 		background-size: 100% auto;
 	}
 }
@@ -116,8 +116,8 @@ th.price-table__cell {
 	padding: 17px 0;
 	@include style-font(18px, 30px, 700);
 	background: $primary-color;
-	border-right: 1px solid #e5e5e5;
-	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid $gray-color;
+	border-left: 1px solid $gray-color;
 
 	@media ($tablet-widths) {
 		padding: 10px 0;
@@ -157,7 +157,7 @@ td.price-table__cell:first-child .price-table__cell-headline {
 .price-table__cell {
 	padding: 16px 0 13px;
 	background: $primary-bg;
-	border: 1px solid #e5e5e5;
+	border: 1px solid $gray-color;
 
 	@media ($tablet-widths) {
 		width: 25%;
@@ -173,11 +173,11 @@ td.price-table__cell:first-child .price-table__cell-headline {
 		content: "хит";
 		width: 70px;
 		height: 21px;
-		@include style-font(14px, 60px, 700);
+		@include style-font(14px, 60px, 600);
 		text-align: center;
 		text-transform: uppercase;
 		color: $primary-bg;
-		border-bottom: 20px solid #d22856;
+		border-bottom: 20px solid $additional-color;
 		border-left: 19px solid transparent;
 		border-right: 19px solid transparent;
 		transform: rotate(-45deg);

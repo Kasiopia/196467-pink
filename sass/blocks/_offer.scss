@@ -81,7 +81,6 @@
 		@media ($desktop-widths) {
 			padding-top: 335px 0 0;
 		}
-
 	}
 
 	@media ($tablet-widths) {
@@ -99,19 +98,6 @@
 		text-align: center;
 	}
 
-
-	&::before {
-		@media ($desktop-widths) {
-			width: 294px;
-			height: 17px;
-			@include position-container(293px, auto, 50%, auto);
-			background-size: 294px auto;
-			transform: translateX(-50%);
-			background: url(../img/shadow-offer-item.png) no-repeat top center;
-			z-index: 10;
-		}
-	}
-
 	&::after {
 		@include position-container(auto, 0, 0, 0);
 		width: 157px;
@@ -120,18 +106,38 @@
 		z-index: 10;
 		background-size: 157px auto;
 
+		@media (max-width: 699px) and (min-resolution: 144dpi),
+		(max-width: 699px) and (min-resolution: 1.5dppx) {
+			background: url(../img/iphone-screen-mobile@2x.png) no-repeat top center;
+		}
+
 		@media ($tablet-widths) {
 			@include position-container(auto, 0, 0, auto);
-			width: 267px;
+			width: 268px;
 			height: 481px;
-			background-size: 267px auto;
+			background: url(../img/iphone-screen-3-tablet@1x.png) no-repeat top center;
+			background-size: cover;
 		}
+
+		@media ($tablet-widths) and (min-resolution: 144dpi),
+		($tablet-widths) and (min-resolution: 1.5dppx) {
+			background: url(../img/iphone-screen-3-tablet@2x.png) no-repeat top center;
+			background-size: cover;
+		}
+
 		@media ($desktop-widths) {
-			width: 186px;
-			height: 300px;
+			width: 292px;
+			height: 302px;
 			@include position-container(0, auto, 50%, auto);
-			background-size: 186px auto;
+			background: url(../img/iphone-screen-3-desktop@1x.png) no-repeat top center;
+			background-size: cover;
 			transform: translateX(-50%);
+		}
+
+		@media ($desktop-widths) and (min-resolution: 144dpi),
+		($desktop-widths) and (min-resolution: 1.5dppx) {
+			background: url(../img/iphone-screen-3-desktop@2x.png) no-repeat top center;
+			background-size: cover;
 		}
 	}
 }
@@ -141,8 +147,14 @@
 
 	@media ($desktop-widths) {
 		content: "";
-		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
-		background-size: 186px auto;
+		background: url(../img/iphone-screen-1-desktop@1x.png) no-repeat top center;
+		background-size: cover;
+	}
+
+	@media ($desktop-widths) and (min-resolution: 144dpi),
+	($desktop-widths) and (min-resolution: 1.5dppx) {
+		background: url(../img/iphone-screen-1-desktop@2x.png) no-repeat top center;
+		background-size: cover;
 	}
 }
 
@@ -151,8 +163,14 @@
 
 	@media ($desktop-widths) {
 		content: "";
-		background: url(../img/iphone-screen-mobile@1x.png) no-repeat top center;
-		background-size: 186px auto;
+		background: url(../img/iphone-screen-2-desktop@1x.png) no-repeat top center;
+		background-size: cover;
+	}
+
+	@media ($desktop-widths) and (min-resolution: 144dpi),
+	($desktop-widths) and (min-resolution: 1.5dppx) {
+		background: url(../img/iphone-screen-2-desktop@2x.png) no-repeat top center;
+		background-size: cover;
 	}
 }
 
@@ -235,7 +253,7 @@
 	&__link {
 		display: block;
 		@include style-font(14px, 24px, 400);
-		color: #d22856;
+		color: $additional-color;
 
 		@media ($desktop-widths) {
 			@include style-font(18px, 30px, 400);
@@ -244,6 +262,28 @@
 
 	&__wrapper {
 		position: relative;
+	}
+
+	&__wrapper::before {
+
+		@media ($tablet-widths) {
+			@include position-container(0, auto, 0, auto);
+			width: 238px;
+			height: 276px;
+			background: url(../img/icon-timer.svg) no-repeat center;
+			background-size: cover;
+			z-index: 10;
+			transform: translate(0%, -13%);
+		}
+
+		@media ($desktop-widths) {
+			@include position-container(0, 0, 0, auto);
+			width: 298px;
+			height: 345px;
+			background: url(../img/icon-timer.svg) no-repeat center;
+			background-size: cover;
+			transform: translate(0%, -7%);
+		}
 	}
 
 	&__wrapper::after {
@@ -256,8 +296,8 @@
 			@include style-font(96px, 174px, 700);
 			text-transform: uppercase;
 			text-align: center;
-			color: #d22856;
-			border: 15px solid #d22856;
+			color: $additional-color;
+			border: 15px solid $additional-color;
 			border-radius: 50%;
 			transform: translate(9%,8%);
 			z-index: 10;
@@ -268,8 +308,8 @@
 			content: "24";
 			width: 220px;
 			height: 220px;
-			@include style-font(96px, 220px, 700);
-			border: 16px solid #d22856;
+			@include style-font(122px, 205px, 700);
+			border: 16px solid $additional-color;
 			transform: translate(9%, 0%);
 		}
 	}

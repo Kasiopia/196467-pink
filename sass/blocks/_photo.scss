@@ -18,7 +18,7 @@
 			@include style-font(12px, 36px, 700);
 			text-align: center;
 			text-transform: uppercase;
-			background: #d22856;
+			background: $additional-color;
 			color: $primary-bg;
 
 			@media ($tablet-widths) {
@@ -33,7 +33,7 @@
 		}
 	}
 }
-
+/*
 .photo__picture {
 	width: 100%;
 
@@ -45,7 +45,7 @@
 		height: 506px;
 	}
 }
-
+*/
 .photo--day .photo-item__text {
 	@media ($tablet-widths) {
 		min-height: 70px;
@@ -81,7 +81,7 @@
 		margin-bottom: 53px;
 	}
 }
-
+/*
 .photo-item__picture {
 	display: block;
 	width: 100%;
@@ -95,7 +95,7 @@
 		height: 400px;
 	}
 }
-
+*/
 .photo-item__text {
 	position: relative;
 	display: flex;
@@ -182,7 +182,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	@include style-font(12px, 24px, 400);
-	color: #d22856;
+	color: $additional-color;
 	text-transform: uppercase;
 	cursor: pointer;
 }
@@ -192,6 +192,6 @@
 	padding-left: 4px;
 	vertical-align: middle;
 	@include style-font(12px, 24px, 400);
-	color: #d22856;
+	color: $additional-color;
 	cursor: pointer;
 }
