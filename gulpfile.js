@@ -37,15 +37,6 @@ gulp.task("style", function() {
 	.pipe(server.stream());
 });
 
-gulp.task("images", function() {
-	return gulp.src("*img/**/*.{png,jpg.gif}")
-	.pipe(imagemin([
-		imagemin.optipng({optimizationlevel: 3}),
-		imagemin.jpegtran({progressive: true})
-	]))
-	.pipe(gulp.dest("img"));
-})
-
 gulp.task("symbols", function() {
 	return gulp.src("*img/svgsprite/*.svg")
 	.pipe(svgmin())
@@ -53,6 +44,15 @@ gulp.task("symbols", function() {
 		inlinesvg: true
 	}))
 	.pipe(rename("symbols.svg"))
+	.pipe(gulp.dest("img"));
+})
+
+gulp.task("images", function() {
+	return gulp.src("*img/**/*.{png,jpg.gif}")
+	.pipe(imagemin([
+		imagemin.optipng({optimizationlevel: 3}),
+		imagemin.jpegtran({progressive: true})
+	]))
 	.pipe(gulp.dest("img"));
 })
 
