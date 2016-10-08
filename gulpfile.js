@@ -84,7 +84,6 @@ gulp.task("compress", function (cb) {
 
 	pump([
 			gulp.src("js/*.js"),
-			uglify(),
 			minifier(options, uglifyjs),
 			.pipe(rename("*.min.js")),
 			gulp.dest("build/js")
