@@ -120,6 +120,30 @@
 .svg-icon {
 	cursor: pointer;
 	opacity: 0.3;
+	width: 48px;
+	height: 44px;
+
+	&--last {
+		height: 32px;
+	}
+
+	@media ($tablet-widths) {
+		width: 28px;
+		height: 22px;
+
+		&--last {
+			height: 16px;
+		}
+	}
+
+	@media ($desktop-widths) {
+		width: 48px;
+		height: 44px;
+
+		&--last {
+			height: 32px;
+		}
+	}
 
 	&:hover {
 		opacity: 0.5;
@@ -130,23 +154,7 @@
 		fill: $additional-color;
 	}
 }
-/*
-.svg-icon .form-upload-option__brightness,
-.svg-icon .form-upload-option__contrast,
-.svg-icon .form-upload-option__cut {
-	cursor: pointer;
-	opacity: 0.3;
 
-	&:hover {
-		opacity: 0.5;
-	}
-
-	&:active {
-		opacity: 1;
-		fill: $additional-color;
-	}
-}
-*/
 .svg-icon--active {
 	opacity: 1;
 	fill: $additional-color;

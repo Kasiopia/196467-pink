@@ -12,6 +12,22 @@
 		}
 	});
 
+	// Create a map object and specify the DOM element for display
+	function initMap() {
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 59.938796, lng: 30.323169},
+			scrollwheel: false,
+			zoom: 18
+		});
+
+		var marker = new google.maps.Marker({
+			position: {lat: 59.938796, lng: 30.323169},
+			map: map,
+			itle:"офис HTML academy"
+		});
+	}
+
 	// //modal failure
 	// var linkFailure = document.querySelector (".btn-js--failure");
 	// var modalFailure = document.querySelector (".modal");

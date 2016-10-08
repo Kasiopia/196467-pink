@@ -173,7 +173,7 @@ td.price-table__cell:first-child .price-table__cell-headline {
 		content: "хит";
 		width: 70px;
 		height: 21px;
-		@include style-font(14px, 60px, 600);
+		@include style-font(14px, 60px, 700);
 		text-align: center;
 		text-transform: uppercase;
 		color: $primary-bg;
@@ -187,6 +187,10 @@ td.price-table__cell:first-child .price-table__cell-headline {
 			width: 60px;
 		}
 	}
+}
+
+.price-table__cell--hit {
+	overflow: hidden;
 }
 
 .price-table__cell:first-child {
