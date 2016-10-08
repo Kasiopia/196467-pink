@@ -14,8 +14,7 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
-var uglifyjs = require("uglifyjs-js");
-var minifier = require("gulp-uglify/minifier");
+var uglify = require("gulp-uglify");
 var pump = require("pump");
 
 gulp.task("style", function() {
@@ -77,15 +76,15 @@ gulp.task("clean", function() {
 })
 
 gulp.task("compress", function (cb) {
-	 // the same options as described above
+	// the same options as described above
 	var options = {
 		preserveComments: "license"
 	};
 
 	pump([
-			gulp.src("js/*.js"),
-			minifier(options, uglifyjs),
-			.pipe(rename("*.min.js")),
+			gulp.src("build/js/*.js"),
+			uglify(),
+			rename({suffix: ".min"}),
 			gulp.dest("build/js")
 		],
 			cb
