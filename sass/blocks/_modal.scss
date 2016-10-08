@@ -1,12 +1,14 @@
 .modal {
 	display: none;
-	@include position-container(auto, 50%, 50%, auto);
+	content: "";
 	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 	width: 320px;
 	text-align: center;
 	background: $primary-bg;
 	z-index: 200;
-	transform: translate(-50%,25%);
 	box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 	border-radius: 5px;
 
@@ -16,8 +18,11 @@
 
 	&--success {
 		@media ($desktop-widths) {
-			@include position-container(auto, 50%, 50%, auto);
+			content: "";
 			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
 			width: 779px;
 		}
 	}

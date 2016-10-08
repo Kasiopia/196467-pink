@@ -222,6 +222,10 @@
 
 		@media ($desktop-widths) {
 			width: 572px;
+
+			& br {
+				display: none;
+			}
 		}
 	}
 
