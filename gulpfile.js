@@ -33,7 +33,7 @@ gulp.task("style", function() {
 			sort: false
 		})
 		]))
-	.pipe(gulp.dest("build/css"))
+	.pipe(gulp.dest("css"))
 	.pipe(minify())
 	.pipe(rename("style.min.css"))
 	.pipe(gulp.dest("build/css"))
@@ -105,7 +105,7 @@ gulp.task("build", function(fn) {
 
 gulp.task("serve", function() {
 	server.init({
-		server: "build",
+		server: ".",
 		notify: false,
 		open: true,
 		ui: false
