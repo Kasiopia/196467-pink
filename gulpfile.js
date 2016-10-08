@@ -14,6 +14,9 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
+var uglifyjs = require("uglifyjs-js");
+var minifier = require("gulp-uglify/minifier");
+var pump = require("pump");
 
 gulp.task("style", function() {
 	gulp.src("sass/style.scss")
@@ -39,7 +42,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function() {
-	return gulp.src("build/img/**/*.{png,jpg.gif}")
+	return gulp.src("build/img/**/*.{png,jpg,gif}")
 	.pipe(imagemin([
 		imagemin.optipng({optimizationlevel: 3}),
 		imagemin.jpegtran({progressive: true})
@@ -57,17 +60,6 @@ gulp.task("symbols", function() {
 	.pipe(gulp.dest("build/img"));
 })
 
-gulp.task("build", function(fn) {
-	run(
-		"clean",
-		"copy",
-		"style",
-		"images",
-		"symbols",
-		fn
-	);
-})
-
 gulp.task("copy", function() {
 	return gulp.src([
 		"fonts/**/*.{woff,woff2}",
@@ -82,6 +74,35 @@ gulp.task("copy", function() {
 
 gulp.task("clean", function() {
 	return del("build");
+})
+
+gulp.task("compress", function (cb) {
+	 // the same options as described above
+	var options = {
+		preserveComments: "license"
+	};
+
+	pump([
+			gulp.src("js/*.js"),
+			uglify(),
+			minifier(options, uglifyjs),
+			.pipe(rename("*.min.js")),
+			gulp.dest("build/js")
+		],
+			cb
+	);
+})
+
+gulp.task("build", function(fn) {
+	run(
+		"clean",
+		"copy",
+		"style",
+		"images",
+		"compress",
+		"symbols",
+		fn
+		);
 })
 
 gulp.task("serve", function() {
