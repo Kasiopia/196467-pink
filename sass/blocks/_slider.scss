@@ -1,14 +1,5 @@
 .slider {
-	padding-top: 32px;
 	background: $primary-bg;
-
-	@media ($tablet-widths) {
-		padding-top: 82px;
-	}
-
-	@media ($desktop-widths) {
-		padding-top: 186px;
-	}
 }
 
 .slider .container {
@@ -66,62 +57,47 @@
 		position: absolute;
 		display: block;
 		width: 30px;
-		height: 30px;
+		height: 4px;
+		top: 50%;
 		left: 126px;
+		background: #bec2c7;
+		z-index: 10;
+		transform: rotate(45deg);
 		border: none;
 		outline: none;
-		background: transparent;
-		z-index: 10;
 	}
 
 	.arrow-right {
 		left: auto;
 		right: 126px;
+		transform: rotate(-45deg);
 	}
 
-	.arrow-left::before,
 	.arrow-left::after,
-	.arrow-right::before,
 	.arrow-right::after {
 		content: "";
 		position: absolute;
-		margin: auto;
-		bottom: auto;
-		left: auto;
-		top: 36px;
-		right: 0;
-		width: 100%;
+		left: -13px;
+		top: -13px;
+		width: 30px;
 		height: 4px;
 		background: #bec2c7;
-		transform: rotate(-45deg);
+		transform: rotate(90deg);
 		cursor: pointer;
 	}
 
-	.arrow-left::after {
-		top: 55px;
-		transform: rotate(45deg);
-	}
-
-	.arrow-right::before {
-		transform: rotate(45deg);
-	}
-
 	.arrow-right::after {
-		top: 55px;
-		transform: rotate(-45deg);
+		left: 13px;
+		transform: rotate(-90deg);
 	}
 
-	.arrow-left:hover::before,
-	.arrow-left:hover::after,
-	.arrow-right:hover::before,
-	.arrow-right:hover::after {
+	.arrow-left:hover,
+	.arrow-right:hover {
 		background: #7e868f;
 	}
 
-	.arrow-left:active::before,
-	.arrow-left:active::after,
-	.arrow-right:active::before,
-	.arrow-right:active::after {
+	.arrow-left:active,
+	.arrow-right:active {
 		opacity: 0.7;
 	}
 }
@@ -131,14 +107,17 @@
 }
 
 .slider__wrappper {
+	padding-top: 32px;
 	padding-bottom: 52px;
 	text-align: center;
 
 	@media ($tablet-widths) {
+		padding-top: 82px;
 		padding-bottom: 55px;
 	}
 
 	@media ($desktop-widths) {
+		padding-top: 186px;
 		padding-bottom: 38px;
 	}
 }
@@ -176,7 +155,7 @@
 		@include style-font(24px, 30px, 700);
 
 		&::before {
-			@include position-container(-185px, auto, 0, 0);
+			@include position-container(0, auto, 0, 0);
 			content: "“";
 			@include style-font(182px, 63px, bold);
 			font-family: "Georgia", sans-serif;
