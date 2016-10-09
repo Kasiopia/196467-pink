@@ -222,19 +222,16 @@
 
 		@media ($desktop-widths) {
 			width: 572px;
-
-			& br {
-				display: none;
-			}
 		}
 	}
 
 	&__headline {
-		padding-right: 135px;
+		max-width: 297px;
 		@include style-font(30px, 36px, 700);
 		color: #000;
 
 		@media ($desktop-widths) {
+			max-width: 100%;
 			line-height: 30px;
 		}
 	}
