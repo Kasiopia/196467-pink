@@ -112,7 +112,6 @@
 }
 
 th.price-table__cell {
-	position: relative;
 	padding: 17px 0;
 	@include style-font(18px, 30px, 700);
 	background: $primary-color;
@@ -158,6 +157,7 @@ td.price-table__cell:first-child .price-table__cell-headline {
 	padding: 16px 0 13px;
 	background: $primary-bg;
 	border: 1px solid $gray-color;
+	overflow: hidden;
 
 	@media ($tablet-widths) {
 		width: 25%;
@@ -167,9 +167,15 @@ td.price-table__cell:first-child .price-table__cell-headline {
 	@media ($desktop-widths) {
 		padding: 10px 0 19px;
 	}
+}
+
+.price-table__cell-inner {
+	&--hit {
+		position: relative;
+	}
 
 	&--hit::before {
-		@include position-container(0, auto, -30px, auto);
+		@include position-container(-19px, auto, -30px, auto);
 		content: "хит";
 		width: 70px;
 		height: 21px;
@@ -189,9 +195,6 @@ td.price-table__cell:first-child .price-table__cell-headline {
 	}
 }
 
-.price-table__cell--hit {
-	overflow: hidden;
-}
 
 .price-table__cell:first-child {
 	display: none;

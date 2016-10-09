@@ -105,6 +105,7 @@
 		@media (max-width: 699px) and (min-resolution: 144dpi),
 		(max-width: 699px) and (min-resolution: 1.5dppx) {
 			background: url(../img/iphone-screen-mobile@2x.png) no-repeat top center;
+			background-size: 157px auto;
 		}
 
 		@media ($tablet-widths) {
