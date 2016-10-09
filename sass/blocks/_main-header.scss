@@ -305,7 +305,7 @@
 	display: flex;
 }
 
-.main-nav__list {
+.main-menu {
 	width: 100%;
 	text-align: center;
 
@@ -318,12 +318,12 @@
 	}
 }
 
-.menu-nav__item {
+.main-menu__item {
 	margin: 0;
 	border: 0;
 }
 
-.main-nav__link {
+.main-menu__link {
 	position: relative;
 	@include a-link();
 	padding: 15px 0;
@@ -385,11 +385,11 @@
 	}
 }
 
-.main-nav__link--active:hover::after {
+.main-main__link--active:hover::after {
 	background: $additional-color;
 }
 
-.main-nav__link--active:active::after {
+.main-main__link--active:active::after {
 	background: #6b7580;
 }
 
@@ -408,7 +408,6 @@
 
 	@media ($desktop-widths) {
 		padding: 64px 0 100px;
-		max-width: 650px747px;
 	}
 
 	&--form {

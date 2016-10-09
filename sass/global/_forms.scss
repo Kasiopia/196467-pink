@@ -196,11 +196,12 @@
 }
 
 fieldset {
-	border: none;
 	margin: 0;
 	padding: 0;
+	border: none;
 
 	@media ($tablet-widths) {
+		position: relative;
 		border: 2px solid $gray-color;
 		border-radius: 5px;
 	}
@@ -224,9 +225,13 @@ fieldset {
 	color: $additional-color;
 
 	@media ($tablet-widths) {
-		display: block;
-		padding: 0 25px;
+		position: absolute;
+		top: -16px;
+		left: 50%;
+		padding: 0 20px;
+		background: white;
 		@include style-font(14px, 30px, 400);
+		transform: translate(-50%, 0);
 	}
 
 	@media ($desktop-widths) {

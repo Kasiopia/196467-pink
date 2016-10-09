@@ -32,10 +32,12 @@ gulp.task("style", function() {
 		mqpacker({
 			sort: false
 		})
-		]))
+	]))
 	.pipe(gulp.dest("css"))
+	.pipe(gulp.dest("build/css"))
 	.pipe(minify())
 	.pipe(rename("style.min.css"))
+	.pipe(gulp.dest("css"))
 	.pipe(gulp.dest("build/css"))
 	.pipe(server.stream());
 });
@@ -59,6 +61,26 @@ gulp.task("symbols", function() {
 	.pipe(gulp.dest("build/img"));
 })
 
+gulp.task("clean", function() {
+	return del("build");
+})
+
+gulp.task("compress", function (cb) {
+	// the same options as described above
+	var options = {
+		preserveComments: "license"
+	};
+
+	pump([
+			gulp.src("js/js.js"),
+			uglify(),
+			rename("js.min.js"),
+			gulp.dest("js")
+		],
+			cb
+	);
+})
+
 gulp.task("copy", function() {
 	return gulp.src([
 		"fonts/**/*.{woff,woff2,ttf}",
@@ -71,33 +93,13 @@ gulp.task("copy", function() {
 	.pipe(gulp.dest("build"));
 })
 
-gulp.task("clean", function() {
-	return del("build");
-})
-
-gulp.task("compress", function (cb) {
-	// the same options as described above
-	var options = {
-		preserveComments: "license"
-	};
-
-	pump([
-			gulp.src("build/js/*.js"),
-			uglify(),
-			rename({suffix: ".min"}),
-			gulp.dest("build/js")
-		],
-			cb
-	);
-})
-
 gulp.task("build", function(fn) {
 	run(
+		"style",
+		"compress",
 		"clean",
 		"copy",
-		"style",
 		"images",
-		"compress",
 		"symbols",
 		fn
 		);

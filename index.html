@@ -27,18 +27,18 @@
 				</div>
 				<nav class="main-nav">
 					<div class="main-nav__dropdown" id="#main-menu">
-						<ul class="main-nav__list">
-							<li class="menu-nav__item">
-								<a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+						<ul class="main-menu">
+							<li class="main-menu__item">
+								<a class="main-menu__link main-menu__link--active" href="#">Главная</a>
 							</li>
-							<li class="menu-nav__item">
-								<a class="main-nav__link" href="photo.html">Фотографии</a>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="photo.html">Фотографии</a>
 							</li>
-							<li class="menu-nav__item">
-								<a class="main-nav__link" href="form.html">Конкурс</a>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="form.html">Конкурс</a>
 							</li>
-							<li class="menu-nav__item">
-								<a class="main-nav__link" href="academy.html">HTML Academy</a>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="academy.html">HTML Academy</a>
 							</li>
 						</ul>
 					</div>
@@ -101,7 +101,7 @@
 				<div class="container">
 					<div class="offer-footer__wrapper">
 						<div class="offer-footer__item">
-							<h2 class="offer-footer__headline">Эффект<br> на 24 часа!</h2>
+							<h2 class="offer-footer__headline">Эффект на&nbsp;24&nbsp;часа!</h2>
 							<p class="offer-footer__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
 							<a class="offer-footer__link" href="#">Узнать больше об исследовании</a>
 						</div>
@@ -121,8 +121,8 @@
 					<label for="btn-2"></label>
 					<label for="btn-3"></label>
 				</div>
-				<label class="arrow-left" for="btn-1"></label>
-				<label class="arrow-right" for="btn-2"></label>
+				<button class="arrow-left"></button>
+				<button class="arrow-right"></button>
 				<div class="slider__wrappper">
 					<div class="slide">
 						<h2 class="slide__title">Николай Петров</h2>
@@ -156,20 +156,28 @@
 				<table class="price-table">
 					<tr>
 						<th class="price-table__cell">
-							<p class="price-table__cell-title">Скрытая ячейка</p>
-							<b class="price-table__cell-cost">Скрытая ячейка</b>
+							<div class="price-table__cell-inner">
+								<p class="price-table__cell-title">Скрытая ячейка</p>
+								<b class="price-table__cell-cost">Скрытая ячейка</b>
+							</div>
 						</th>
 						<th class="price-table__cell">
-							<p class="price-table__cell-title">База</p>
-							<b class="price-table__cell-cost">1,99 usd</b>
-						</th>
-						<th class="price-table__cell price-table__cell--hit">
-							<p class="price-table__cell-title">Стандарт</p>
-							<b class="price-table__cell-cost">3,99 usd</b>
+							<div class="price-table__cell-inner">
+								<p class="price-table__cell-title">База</p>
+								<b class="price-table__cell-cost">1,99 usd</b>
+							</div>
 						</th>
 						<th class="price-table__cell">
-							<p class="price-table__cell-title">Анлим</p>
-							<b class="price-table__cell-cost">9,99 usd</b>
+							<div class="price-table__cell-inner price-table__cell-inner--hit">
+								<p class="price-table__cell-title">Стандарт</p>
+								<b class="price-table__cell-cost">3,99 usd</b>
+							</div>
+						</th>
+						<th class="price-table__cell">
+							<div class="price-table__cell-inner">
+								<p class="price-table__cell-title">Анлим</p>
+								<b class="price-table__cell-cost">9,99 usd</b>
+							</div>
 						</th>
 					</tr>
 					<tr>
