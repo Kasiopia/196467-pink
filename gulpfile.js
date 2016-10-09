@@ -70,9 +70,9 @@ gulp.task("compress", function (cb) {
 	};
 
 	pump([
-			gulp.src("js/*.js"),
+			gulp.src("js/js.js"),
 			uglify(),
-			rename({suffix: ".min"}),
+			rename("js.min.js"),
 			gulp.dest("js")
 		],
 			cb
@@ -82,8 +82,8 @@ gulp.task("compress", function (cb) {
 gulp.task("copy", function() {
 	return gulp.src([
 		"fonts/**/*.{woff,woff2,ttf}",
-		"img/**.min.js",
-		"js/**",
+		"img/**",
+		"js/**.min.js",
 		"css/**.min.css",
 		"*.html"
 		],	{
