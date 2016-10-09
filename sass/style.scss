@@ -1,14 +1,13 @@
-
-// файл стилей по умолчанию
+/* файл стилей по умолчанию*/
 @import "_normalize.scss";
 
-// переменные
+/* переменные*/
 @import "_variables.scss";
 
-// примеси
+/* примеси*/
 @import "_mixins.scss";
 
-//библиотека blocks
+/*библиотека blocks*/
 @import "blocks/_download-app.scss";
 @import "blocks/_offer.scss";
 @import "blocks/_logo.scss";
@@ -23,12 +22,11 @@
 @import "blocks/_modal.scss";
 
 
-//библиотека global
+/*библиотека global*/
 @import "global/_forms.scss";
 @import "global/_typography.scss";
 @import "global/_base.scss";
 @import "global/_fonts.scss";
 
-//библиотека styleguide
+/*библиотека styleguide*/
 @import "styleguide/_btn.scss";
-

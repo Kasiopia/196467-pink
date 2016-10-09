@@ -56,49 +56,53 @@
 	.arrow-right {
 		position: absolute;
 		display: block;
-		width: 30px;
-		height: 4px;
+		margin-top: -21px;
+		width: 22px;
+		height: 42px;
 		top: 50%;
-		left: 126px;
-		background: #bec2c7;
+		background: 0 0;
 		z-index: 10;
-		transform: rotate(45deg);
 		border: none;
 		outline: none;
-	}
-
-	.arrow-right {
-		left: auto;
-		right: 126px;
-		transform: rotate(-45deg);
-	}
-
-	.arrow-left::after,
-	.arrow-right::after {
-		content: "";
-		position: absolute;
-		left: -13px;
-		top: -13px;
-		width: 30px;
-		height: 4px;
-		background: #bec2c7;
-		transform: rotate(90deg);
 		cursor: pointer;
 	}
 
-	.arrow-right::after {
-		left: 13px;
-		transform: rotate(-90deg);
+	.arrow-left {
+		left: 130px;
+	}
+	.arrow-right {
+		right: 130px;
 	}
 
-	.arrow-left:hover,
-	.arrow-right:hover {
-		background: #7e868f;
+	.arrow-left::before,
+	.arrow-right::before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		width: 22px;
+		height: 22px;
+		border-top: 3px solid $primary-color;
+		border-right: 3px solid $primary-color;
+		transform: rotate(45deg);
+		opacity: 0.3;
 	}
 
-	.arrow-left:active,
-	.arrow-right:active {
-		opacity: 0.7;
+	.arrow-left:before {
+		left: 5px;
+		transform: rotate(-135deg);
+	}
+	.arrow-right:before {
+		right: 5px;
+	}
+
+	.arrow-left:hover::before,
+	.arrow-right:hover::before {
+		opacity: 0.6;
+	}
+
+	.arrow-left:active:before,
+	.arrow-right:active:before {
+		opacity: 0.1;
 	}
 }
 
