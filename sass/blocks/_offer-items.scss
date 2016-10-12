@@ -1,0 +1,24 @@
+.offer-items {
+	position: relative;
+	background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat top center;
+	background-size: 100% auto;
+	z-index: 20;
+}
+
+.offer-items__wrappers {
+	position: relative;
+	padding-top: 89px;
+
+	@media ($tablet-widths) {
+		padding: 75px 0 9px;
+	}
+
+	@media ($desktop-widths) {
+		position: static;
+		display: flex;
+		padding: 0;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}

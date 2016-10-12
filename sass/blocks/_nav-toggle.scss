@@ -1,0 +1,99 @@
+.nav-toggle {
+	display: flex;
+	width: 50px;
+	/*height: 66px;*/
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	background: transparent;
+/*
+	@media ($tablet-widths) {
+		height: 110px;
+	}
+*/
+	@media ($desktop-widths) {
+		display: none;
+	}
+}
+
+/*.main-header__inner--nojs .nav-toggle,
+.main-header__inner--opened .nav-toggle {
+	height: 69px;
+
+	@media ($tablet-widths){
+		height: 109px;
+	}
+}*/
+
+/* состояние закрытого, крест по умолчанию*/
+.nav-toggle>span {
+	position: relative;
+	width: 50px;
+	height: 4px;
+	background: $primary-bg;
+
+	&::after,
+	&::before {
+		@include position-container(-10px, auto, 0, 0);
+		width: 100%;
+		height: 4px;
+		background: $primary-bg;
+
+		@media ($desktop-widths){
+			border: none;
+			@include position-container(-10px, auto, 0, 0);
+		}
+	}
+
+	&:before {
+		top: 10px;
+	}
+}
+
+/* /состояние закрытого меню, крест по умолчанию*/
+
+/* состояние открытого меню меню, три полоски*/
+.main-header__inner--opened .nav-toggle>span {
+	background: 0 0;
+
+	&::after,
+	&::before {
+		top: 0px;
+		width: 29px;
+		background: $primary-bg;
+		transform-origin: 50% 50%;
+		transform: rotate3d(0,0,1,45deg);
+	}
+
+	&::before {
+		transform: rotate3d(0, 0, 1,-45deg);
+	}
+}
+/* /состояние открытого меню меню*/
+
+@media (max-width: 959px) {
+	.main-header__inner--nojs .nav-toggle {
+		opacity: 0;
+	}
+}
+
+.nav-toggle:hover>span,
+.nav-toggle:hover>span::after,
+.nav-toggle:hover>span::before{
+	background: $additional-color;
+}
+
+.main-header__inner--opened .nav-toggle:hover>span {
+	background: transparent;
+}
+
+.nav-toggle:active>span,
+.nav-toggle:active>span::after,
+.nav-toggle:active>span::before{
+	background: #5f3750;
+}
+
+.main-header__inner--opened .nav-toggle:active>span {
+	background: transparent;
+}

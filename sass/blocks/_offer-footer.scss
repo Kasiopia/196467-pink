@@ -1,0 +1,116 @@
+.offer-footer {
+	display: none;
+
+	text-align: left;
+	background: $primary-bg;
+
+	@media ($tablet-widths) {
+		display: block;
+		padding: 97px 0 42px;
+	}
+
+	@media ($desktop-widths) {
+		padding: 127px 0 113px;
+		background: #f2f2f2;
+	}
+
+	&__item {
+		width: 308px;
+		margin-left: auto;
+		text-align: left;
+
+		@media ($desktop-widths) {
+			width: 572px;
+		}
+	}
+
+	&__headline {
+		max-width: 297px;
+		@include style-font(30px, 36px, 700);
+		color: #000;
+
+		@media ($desktop-widths) {
+			max-width: 100%;
+			line-height: 30px;
+		}
+	}
+
+	&__text {
+		padding: 23px 51px 31px 0px;
+		@include style-font(14px, 24px, 400);
+		color: $primary-color;
+
+		@media ($tablet-widths) {
+			padding: 10px 0px;
+		}
+
+		@media ($desktop-widths) {
+			padding: 23px 51px 31px 0px;
+			@include style-font(18px, 30px, 400);
+		}
+	}
+
+	&__link {
+		display: block;
+		@include style-font(14px, 24px, 400);
+		color: $additional-color;
+
+		@media ($desktop-widths) {
+			@include style-font(18px, 30px, 400);
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__wrapper::before {
+
+		@media ($tablet-widths) {
+			@include position-container(0, auto, 0, auto);
+			width: 238px;
+			height: 276px;
+			background: url(../img/icon-timer.svg) no-repeat center;
+			background-size: cover;
+			z-index: 10;
+			transform: translate(0%, -13%);
+		}
+
+		@media ($desktop-widths) {
+			@include position-container(0, 0, 0, auto);
+			width: 298px;
+			height: 345px;
+			background: url(../img/icon-timer.svg) no-repeat center;
+			background-size: cover;
+			transform: translate(0%, -7%);
+		}
+	}
+
+	&__wrapper::after {
+
+		@media ($tablet-widths) {
+			@include position-container(0, auto, 0, auto);
+			content: "24";
+			width: 174px;
+			height: 174px;
+			@include style-font(96px, 174px, 700);
+			text-transform: uppercase;
+			text-align: center;
+			color: $additional-color;
+			border: 15px solid $additional-color;
+			border-radius: 50%;
+			transform: translate(9%,8%);
+			z-index: 10;
+		}
+
+		@media ($desktop-widths) {
+			@include position-container(0, 0, 0, auto);
+			content: "24";
+			width: 220px;
+			height: 220px;
+			@include style-font(122px, 205px, 700);
+			border: 16px solid $additional-color;
+			transform: translate(9%, 0%);
+		}
+	}
+}

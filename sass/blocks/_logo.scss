@@ -1,6 +1,5 @@
 .logo {
 	flex: 0 1 auto;
-	display: flex;
 	width: 75px;
 	height: 23px;
 	overflow: hidden;
@@ -11,9 +10,13 @@
 	}
 }
 
+.logo-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 .logo-text,
-.logo-star,
-.logo-star-pink,
 .logo-glasses,
 .logo-glasses-desktop {
 	display: none;
@@ -22,16 +25,23 @@
 
 .logo-star,
 .logo-star-pink {
+	display: none;
 	fill: $additional-color;
 }
 
 .logo:hover .logo-text,
-.logo:hover .logo-glasses,{
+.logo:hover .logo-star,
+.logo:hover .logo-star-pink,
+.logo:hover .logo-glasses,
+.logo:hover .logo-glasses-desktop {
 	fill: $additional-color;
 }
 
 .logo:active .logo-text,
-.logo:active .logo-glasses, {
+.logo:active .logo-star,
+.logo:active .logo-star-pink,
+.logo:active .logo-glasses,
+.logo:active .logo-glasses-desktop {
 	fill: $primary-bg;
 	opacity: 0.7;
 }
@@ -39,24 +49,26 @@
 @media (max-width: 659px) {
 	.logo-text {
 		display: block;
-		transform: translate(-97%,-80%);
+		width: 75px;
+		height: 23px;
+		transform: translate(-72px,-17px);
 	}
 }
 
 @media only screen
-and (min-width : 660px)
-and (max-width : 959px) {
+and (min-width: 660px)
+and (max-width: 959px) {
 	.logo-text,
 	.logo-glasses {
 		display: block;
 	}
 }
 
-@media (min-width : 960px) {
+@media (min-width: 960px) {
 	.logo-text,
 	.logo-star,
-	.logo-glasses,
-	.logo-star-pink {
+	.logo-star-pink,
+	.logo-glasses-desktop {
 		display: block;
 	}
 }
@@ -85,8 +97,26 @@ and (max-width : 959px) {
 	fill: $additional-color;
 }
 
+.logo--footer:hover .logo-star,
+.logo--footer:hover .logo-star-pink {
+	fill: $primary-color;
+}
+
 .logo--footer:active .logo-text,
-.logo--footer:active .logo-glasses, {
+.logo--footer:active .logo-star {
 	fill: $primary-color;
 	opacity: 0.7;
 }
+
+.logo--footer:active .logo-star-pink,
+.logo--footer:active .logo-glasses,
+.logo--footer:active .logo-glasses-desktop {
+	fill: $additional-color;
+	opacity: 0.7;
+}
+
+// .logo:hover .logo-text,
+// .logo:hover .logo-star,
+// .logo:hover .logo-star-pink,
+// .logo:hover .logo-glasses,
+// .logo:hover .logo-glasses-desktop

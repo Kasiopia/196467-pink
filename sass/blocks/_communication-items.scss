@@ -1,0 +1,7 @@
+.communication-items {
+	@media ($tablet-widths) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
