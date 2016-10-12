@@ -3,7 +3,7 @@
 	text-align: center;
 
 	@media ($tablet-widths) {
-		padding-top: 49px;
+		padding-top: 47px;
 	}
 
 	@media ($desktop-widths) {
@@ -17,7 +17,7 @@
 	color: $primary-color;
 
 	@media ($tablet-widths) {
-		padding: 0px 23px 43px;
+		padding: 0px 23px 45px;
 		@include style-font(40px, 47px, 300);
 	}
 
