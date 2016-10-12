@@ -1,0 +1,29 @@
+.intro__headline {
+	padding: 29px 0 83px;
+	text-align: center;
+	color: $primary-bg;
+	@include style-font(24px, 29px, 300);
+
+	@media ($tablet-widths) {
+		max-width: 608px;
+		margin: 0 auto;
+		padding: 70px 0 139px;
+		@include style-font(50px, 60px, 300);
+	}
+
+	@media ($desktop-widths) {
+		padding: 64px 0 100px;
+	}
+
+	&--form {
+		padding: 29px 0 54px;
+
+		@media ($tablet-widths) {
+			padding: 70px 0 79px;
+		}
+
+		@media ($desktop-widths) {
+			max-width: 747px;
+		}
+	}
+}

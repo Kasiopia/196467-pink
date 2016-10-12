@@ -90,13 +90,13 @@
 	@media ($tablet-widths) {
 		width: 620px;
 		margin: 0 auto;
-		padding: 0px 40px;
+		padding: 0px 20px;
 	}
 
 	@media ($desktop-widths) {
 		width: 940px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 10px;
 	}
 }
 
@@ -175,15 +175,15 @@ td.price-table__cell:first-child .price-table__cell-headline {
 	}
 
 	&--hit::before {
-		@include position-container(-19px, auto, -30px, auto);
+		@include position-container(-21px, auto, -41px, auto);
 		content: "хит";
-		width: 70px;
+		width: 71px;
 		height: 21px;
-		@include style-font(14px, 60px, 700);
+		@include style-font(14px, 67px, 700);
 		text-align: center;
 		text-transform: uppercase;
 		color: $primary-bg;
-		border-bottom: 20px solid $additional-color;
+		border-bottom: 27px solid $additional-color;
 		border-left: 19px solid transparent;
 		border-right: 19px solid transparent;
 		transform: rotate(-45deg);
@@ -192,9 +192,12 @@ td.price-table__cell:first-child .price-table__cell-headline {
 		@media ($tablet-widths) {
 			width: 60px;
 		}
+
+		@media ($desktop-widths) {
+			width: 79px;
+		}
 	}
 }
-
 
 .price-table__cell:first-child {
 	display: none;

@@ -7,6 +7,7 @@
 	}
 
 	@media ($desktop-widths) {
+		margin-bottom: 66px;
 		background: $primary-bg;
 	}
 }
@@ -20,10 +21,12 @@
 .upload-block .container {
 	@media ($tablet-widths) {
 		width: 620px;
+		padding: 0 20px;
 	}
 
 	@media ($desktop-widths) {
 		width: 940px;
+		padding: 0 10px;
 	}
 }
 
@@ -40,10 +43,13 @@
 }
 
 .form-upload__left-block {
+	width: 280px;
+	margin: 0 auto;
 	padding: 20px 0px 42px;
 
 	@media ($tablet-widths) {
 		width: 300px;
+		margin: 0;
 		padding: 57px 0px 53px;
 	}
 
@@ -51,13 +57,7 @@
 		padding: 58px 0 55px;
 	}
 }
-/*
-.form-upload__image {
-	@media ($tablet-widths) {
-		width: 100%;
-	}
-}
-*/
+
 .form-upload__right-block {
 	display: flex;
 	flex-direction: column;
@@ -69,7 +69,7 @@
 
 	@media ($desktop-widths) {
 		width: 410px;
-		padding: 35px 0 57px;
+		padding: 46px 0 57px;
 		justify-content: space-between;
 	}
 }
@@ -78,6 +78,8 @@
 	border-bottom: 1px solid #dddfe0;
 
 	@media ($tablet-widths) {
+		margin-bottom: 63px;
+		margin-top: -5px;
 		border-bottom: none;
 	}
 }
@@ -87,7 +89,7 @@
 	display: flex;
 	width: 240px;
 	margin: 0 auto;
-	padding-bottom: 71px;
+	padding-bottom: 75px;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
@@ -105,15 +107,17 @@
 
 	@media ($tablet-widths) {
 		width: 275px;
-		padding: 20px 0 19px;
+		padding: 20px 18px 22px 0;
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid #dddfe0;
+		margin-bottom: 10px;
 	}
 
 	@media ($desktop-widths) {
 		width: 410px;
-		padding: 20px 0 5px;
+		padding: 14px 0 13px;
+		margin-bottom: 2px;
 	}
 }
 
@@ -233,6 +237,7 @@
 	@media ($tablet-widths) {
 		width: 260px;
 		margin: 0px;
+		padding: 0;
 	}
 
 	@media ($desktop-widths) {

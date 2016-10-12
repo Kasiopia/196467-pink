@@ -8,19 +8,25 @@
 @import "_mixins.scss";
 
 /*библиотека blocks*/
+@import "blocks/_main-header.scss";
+@import "blocks/_logo.scss";
+@import "blocks/_main-menu.scss";
+@import "blocks/_intro.scss";
 @import "blocks/_download-app.scss";
 @import "blocks/_offer.scss";
-@import "blocks/_logo.scss";
-@import "blocks/_main-footer.scss";
-@import "blocks/_main-header.scss";
 @import "blocks/_price.scss";
 @import "blocks/_slider.scss";
 @import "blocks/_page-decription.scss";
 @import "blocks/_photo.scss";
 @import "blocks/_block-appeals.scss";
 @import "blocks/_upload-block.scss";
+@import "blocks/_main-footer.scss";
+@import "blocks/_communication.scss";
+@import "blocks/_map.scss";
+@import "blocks/_social.scss";
+@import "blocks/_social-like.scss";
+@import "blocks/_footer-copyright.scss";
 @import "blocks/_modal.scss";
-
 
 /*библиотека global*/
 @import "global/_forms.scss";

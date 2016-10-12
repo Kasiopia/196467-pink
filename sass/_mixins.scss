@@ -7,23 +7,13 @@
 	@media ($tablet-widths) {
 		width: 620px;
 		margin: 0 auto;
-		padding: 0 40px;
+		padding: 0 20px;
 	}
 
 	@media ($desktop-widths) {
 		width: 940px;
 		margin: 0 auto;
-		padding: 0 130px;
-	}
-}
-
-@mixin container-fluid() {
-	width: auto;
-
-	@media ($tablet-widths) {
-		width: 88%; /*700pxобщая, 620 конт=620/700=88,57142857142857*/
-		max-width: 1068px; /*940 ширина контента на десктоп, 940/0.88= 1068px*/
-		margin: 0 auto;
+		padding: 0 10px;
 	}
 }
 

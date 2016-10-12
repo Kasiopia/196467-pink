@@ -1,5 +1,5 @@
 .page-description {
-	padding: 44px 0 24px;
+	padding: 44px 0 50px;
 	background: $primary-bg;
 	text-align: center;
 
@@ -19,7 +19,7 @@
 		}
 
 		@media ($desktop-widths) {
-			padding: 92px 0 65px;
+			padding-bottom: 78px;
 		}
 	}
 }

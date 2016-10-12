@@ -24,12 +24,12 @@
 	background: $primary-bg;
 
 	@media ($tablet-widths) {
-		margin-bottom: 50px;
+		margin-bottom: 65px;
 	}
 
 	@media ($desktop-widths) {
 		width: 100%;
-		margin-bottom: 50px;
+		margin-bottom: 66px;
 	}
 
 	&--gray {
@@ -37,7 +37,7 @@
 		background: #f2f2f2;
 
 		@media ($tablet-widths) {
-			margin-bottom: 50px;
+			margin-bottom: 63px;
 			background: $primary-bg;
 		}
 
@@ -60,7 +60,7 @@
 
 .form-block:nth-child(4) {
 	@media ($desktop-widths) {
-		margin-bottom: 49px;
+		margin-bottom: 64px;
 	}
 }
 
@@ -73,7 +73,7 @@
 	}
 }
 
-@media only screen and (max-width : 699px) {
+@media only screen and (max-width : 659px) {
 	.form .form-block:nth-child(1) {
 		order: 1;
 	}
@@ -118,7 +118,7 @@
 
 	@media ($desktop-widths) {
 		margin: 0 auto;
-		padding: 19px 0 34px;
+		padding: 6px 0 47px;
 	}
 }
 
@@ -209,11 +209,11 @@ fieldset {
 
 .form-block__app {
 	@media ($tablet-widths) {
-		padding: 3px 58px 16px;
+		padding: 18px 58px 14px;
 	}
 
 	@media ($desktop-widths) {
-		padding: 45px 70px 15px;
+		padding: 58px 70px 17px;
 	}
 }
 
@@ -229,6 +229,7 @@ fieldset {
 		top: -16px;
 		left: 50%;
 		padding: 0 20px;
+		white-space: nowrap;
 		background: white;
 		@include style-font(14px, 30px, 400);
 		transform: translate(-50%, 0);
@@ -242,14 +243,14 @@ fieldset {
 .form-block__contact-items {
 	@media ($tablet-widths) {
 		display: flex;
-		padding: 31px 60px 0px;
+		padding: 45px 60px 0px;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 
 	@media ($desktop-widths) {
 		display: flex;
-		padding: 29px 60px 2px;
+		padding: 43px 60px 2px;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
@@ -279,12 +280,12 @@ fieldset {
 	padding: 42px 0px 0px;
 
 	@media ($tablet-widths) {
-		padding: 42px 60px 0px;
+		padding: 55px 60px 0px;
 	}
 
 	@media ($desktop-widths) {
 		display: flex;
-		padding: 44px 60px 6px;
+		padding: 57px 60px 6px;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
@@ -297,7 +298,7 @@ fieldset {
 	}
 }
 
-@media only screen and (min-width : 1200px)  {
+@media only screen and (min-width : 960px)  {
 
 	.form-block__progress-item:nth-child(1) {
 		order: 1;
@@ -444,18 +445,17 @@ fieldset {
 	padding-top: 19px;
 
 	@media ($tablet-widths){
-		padding: 28px 60px 52px;
+		padding: 46px 60px 49px;
 	}
 
 	@media ($desktop-widths){
-		padding: 28px 60px 43px;
+		padding: 43px 60px 43px;
 	}
 }
 
 .form-block__input-textarea {
 	width: 100%;
 	min-height: 201px;
-	margin-bottom: 8px;
 	padding: 13px 20px;
 	box-sizing: border-box;
 	@include style-font(18px, 30px, 400);
@@ -511,7 +511,6 @@ fieldset {
 .form-action__wrapper {
 	@media ($tablet-widths) {
 		display: flex;
-		padding-top: 16px;
 		justify-content: space-between;
 		align-items: baseline;
 	}
