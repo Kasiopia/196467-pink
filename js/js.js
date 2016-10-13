@@ -1,14 +1,17 @@
 	//toogle menu open or close
 	var navMain = document.querySelector (".main-header__inner");
 	var navToggle = document.querySelector (".nav-toggle");
+	var mainHeader= document.querySelector (".main-header");
 
 	navMain.classList.remove("main-header__inner--nojs");
 
 	navToggle.addEventListener ("click", function(event) {
 		if (navMain.classList.contains("main-header__inner--opened")) {
 			navMain.classList.remove("main-header__inner--opened");
+			mainHeader.classList.remove(".main-header--fond");
 		} else {
 			navMain.classList.add("main-header__inner--opened");
+			mainHeader.classList.add(".main-header--fond");
 		}
 	});
 
@@ -27,6 +30,10 @@
 			itle:"офис HTML academy"
 		});
 	}
+
+if __inner.classList.contains(--opened) {добавляем к main-header модификатор, по которому фон внизу} else {убираем этот модификатор}
+это по клику на nav-toggle тоже ловим
+как и открытие меню
 
 	// //modal failure
 	// var linkFailure = document.querySelector (".btn-js--failure");

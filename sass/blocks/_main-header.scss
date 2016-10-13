@@ -1,33 +1,33 @@
 .main-header {
 	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-	background-size: cover;
+	background-size: 213%;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
 		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
-		background-size: cover;
+		background-size: 213%;
 	}
 
 	@media ($tablet-widths) {
-		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat bottom center;
+		background-size: 213%;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat bottom center;
+		background-size: 213%;
 	}
 
 	@media ($desktop-widths) {
 		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat top center;
-		background-size: cover;
+		background-size: 213%;
 	}
 
 	@media ($desktop-widths) and (min-resolution: 144dpi),
 	($desktop-widths) and (min-resolution: 1.5dppx) {
 		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat top center;
-		background-size: cover;
+		background-size: 213%;
 	}
 }
 
@@ -95,7 +95,20 @@
 		}
 	}
 }
+/**фон при клике*/
+.main-header--fond {
+	@media ($tablet-widths) {
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat bottom center;
+		background-size: 213%;
+	}
 
+	@media ($tablet-widths) and (min-resolution: 144dpi),
+	($tablet-widths) and (min-resolution: 1.5dppx) {
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat bottom center;
+		background-size: 0;
+	}
+}
+/**/////фон при клике*/
 .main-header__wrapper {
 	@media ($desktop-widths) {
 		background: rgba(0, 0, 0, 0.3);
@@ -167,7 +180,8 @@
 
 	@media ($tablet-widths) {
 		margin: 0 auto;
-		padding: 36px 40px 34px;
+
+		padding: 36px 40px 42px;
 	}
 
 	@media ($desktop-widths) {
@@ -182,7 +196,7 @@
 	border-bottom: 1px solid black;
 
 	@media ($tablet-widths){
-		padding: 36px 40px 33px;
+		padding: 36px 40px 41px;
 	}
 
 	@media ($desktop-widths) {
