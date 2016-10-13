@@ -103,23 +103,23 @@
 .main-header--opened,
 .main-header--nojs {
 	background-size: 218%;
-	background-position-y: 256px;
+	background-position: bottom -220px center;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
 		background-size: 218%;
-		background-position-y: 256px;
+		background-position: bottom -220px center;
 	}
 
 	@media ($tablet-widths) {
 		background-size: 171%;
-		background-position-y: 258px;
+		background-position: bottom -290px center;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
 		background-size: 171%;
-		background-position-y: 258px;
+		background-position: bottom -290px center;
 	}
 }
 /**/////фон при клике*/
