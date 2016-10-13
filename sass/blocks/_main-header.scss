@@ -1,22 +1,26 @@
 .main-header {
 	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-	background-size: 213%;
+	background-size: 171%;
+	background-position-y: 0px;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
 		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
-		background-size: 213%;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($tablet-widths) {
 		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat bottom center;
-		background-size: 213%;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
 		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat bottom center;
-		background-size: 213%;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($desktop-widths) {
@@ -96,19 +100,30 @@
 	}
 }
 /**фон при клике*/
-.main-header--fond {
+.main-header--opened,
+.main-header--nojs {
+	background-size: 218%;
+	background-position-y: 256px;
+
+	@media (max-width: 699px) and (min-resolution: 144dpi),
+	(max-width: 699px) and (min-resolution: 1.5dppx) {
+		background-size: 218%;
+		background-position-y: 256px;
+	}
+
 	@media ($tablet-widths) {
-		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat bottom center;
-		background-size: 213%;
+		background-size: 171%;
+		background-position-y: 258px;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat bottom center;
-		background-size: 0;
+		background-size: 171%;
+		background-position-y: 258px;
 	}
 }
 /**/////фон при клике*/
+
 .main-header__wrapper {
 	@media ($desktop-widths) {
 		background: rgba(0, 0, 0, 0.3);

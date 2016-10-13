@@ -1,17 +1,18 @@
 	//toogle menu open or close
 	var navMain = document.querySelector (".main-header__inner");
 	var navToggle = document.querySelector (".nav-toggle");
-	var mainHeader= document.querySelector (".main-header");
+	var mainHeader = document.querySelector (".main-header");
 
 	navMain.classList.remove("main-header__inner--nojs");
+	mainHeader.classList.remove("main-header--nojs");
 
 	navToggle.addEventListener ("click", function(event) {
 		if (navMain.classList.contains("main-header__inner--opened")) {
 			navMain.classList.remove("main-header__inner--opened");
-			mainHeader.classList.remove(".main-header--fond");
+			mainHeader.classList.remove("main-header--opened");
 		} else {
 			navMain.classList.add("main-header__inner--opened");
-			mainHeader.classList.add(".main-header--fond");
+			mainHeader.classList.add("main-header--opened");
 		}
 	});
 
@@ -27,13 +28,9 @@
 		var marker = new google.maps.Marker({
 			position: {lat: 59.938796, lng: 30.323169},
 			map: map,
-			itle:"офис HTML academy"
+			title:"офис HTML academy"
 		});
 	}
-
-if __inner.classList.contains(--opened) {добавляем к main-header модификатор, по которому фон внизу} else {убираем этот модификатор}
-это по клику на nav-toggle тоже ловим
-как и открытие меню
 
 	// //modal failure
 	// var linkFailure = document.querySelector (".btn-js--failure");
