@@ -11,59 +11,61 @@
 	}
 
 	@media ($tablet-widths) {
-		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat bottom center;
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat center bottom ;
 		background-size: 171%;
 		background-position-y: 0px;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat bottom center;
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat center bottom ;
 		background-size: 171%;
 		background-position-y: 0px;
 	}
 
 	@media ($desktop-widths) {
-		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat center top;
 		background-size: 213%;
 	}
 
 	@media ($desktop-widths) and (min-resolution: 144dpi),
 	($desktop-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat center top;
 		background-size: 213%;
 	}
 }
 
-.main-header--index {
-	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-	background-size: cover;
+.main-header.main-header--index {
+	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center top;
+	background-size: 217%;
+	background-position: top -6px center;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center top;
+		background-size: 217%;
+		background-position: top -6px center;
 	}
 
 	@media ($tablet-widths) {
-		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($desktop-widths) {
-		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($desktop-widths) and (min-resolution: 144dpi),
 	($desktop-widths) and (min-resolution: 1.5dppx) {
-		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
@@ -122,6 +124,30 @@
 		background-position: bottom -290px center;
 	}
 }
+
+.main-header--index.main-header--opened,
+.main-header--index.main-header--nojs {
+	background-size: 217%;
+	background-position: bottom 277px center;
+
+	@media (max-width: 699px) and (min-resolution: 144dpi),
+	(max-width: 699px) and (min-resolution: 1.5dppx) {
+		background-size: 217%;
+		background-position: bottom 277px center;
+	}
+
+	@media ($tablet-widths) {
+		background-size: 171%;
+		background-position: bottom 10px center;
+	}
+
+	@media ($tablet-widths) and (min-resolution: 144dpi),
+	($tablet-widths) and (min-resolution: 1.5dppx) {
+		background-size: 171%;
+		background-position: bottom 10px center;
+	}
+}
+
 /**/////фон при клике*/
 
 .main-header__wrapper {

@@ -187,7 +187,7 @@
 		left: 50%;
 		padding: 0 20px;
 		white-space: nowrap;
-		background: white;
+		background: $primary-bg;
 		@include style-font(14px, 30px, 400);
 		transform: translate(-50%, 0);
 	}
@@ -251,7 +251,7 @@
 
 .form-block__progress-item {
 	@media ($desktop-widths) {
-		width: 32%;
+		width: 29%;
 	}
 }
 
