@@ -4,11 +4,6 @@
 	@include a-link;
 	text-align: center;
 
-
-	@media ($tablet-widths) {
-		width: 300px;
-	}
-
 	&--app {
 		width: auto;
 		margin-bottom: 27px;
@@ -150,8 +145,8 @@
 
 .social-btn {
 	display: inline-block;
-	width: 46px;
-	height: 46px;
+	width: 45px;
+	height: 45px;
 	margin: auto 6px;
 	vertical-align: top;
 	line-height: 46px;

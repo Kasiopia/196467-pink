@@ -1,0 +1,51 @@
+.communication-item {
+	margin-bottom: 20px;
+
+	@media ($tablet-widths)  {
+		margin-bottom: 0px;
+	}
+}
+
+.communication-item__title {
+	color: $primary-color;
+	@include style-font(18px, 1.4, 700);
+
+	@media ($desktop-widths) {
+		padding-bottom: 22px;
+	}
+}
+
+.communication-item__methods {
+	display: block;
+	width: 226px;
+	margin: auto;
+	@include style-font(24px, 32px, 300);
+	text-decoration: none;
+	color: $additional-color;
+
+	&--email {
+		@media ($tablet-widths) {
+			padding-bottom: 47px;
+		}
+
+		@media ($desktop-widths) {
+			padding-bottom: 0px;
+		}
+	}
+
+	&--email:hover {
+		text-decoration: underline;
+		color: $primary-color;
+	}
+
+	&--email:active {
+		text-decoration: none;
+		color: rgba(40, 54, 69, 0.7);
+	}
+}
+
+.communication-items .communication-item:nth-child(2n) {
+	@media ($desktop-widths) {
+		order: 2;
+	}
+}

@@ -1,0 +1,22 @@
+
+.main-nav {
+	flex: 1 1 auto;
+}
+
+.main-nav__dropdown {
+	display: flex;
+}
+
+@media (max-width: 959px) {
+	.main-nav {
+		display: none;
+	}
+
+	.main-header__inner--opened .main-nav {
+		display: block;
+	}
+
+	.main-header__inner--nojs .main-nav {
+		display: block;
+	}
+}

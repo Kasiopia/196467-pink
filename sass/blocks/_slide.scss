@@ -1,0 +1,74 @@
+.slide {
+	display: none;
+}
+
+#btn-1:checked~.slider__wrappper .slide:nth-child(1),
+#btn-2:checked~.slider__wrappper .slide:nth-child(2),
+#btn-3:checked~.slider__wrappper .slide:nth-child(3) {
+	display: block;
+
+	@media ($tablet-widths) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.slide__title {
+	margin: 10px auto 13px;
+	@include style-font(18px, 30px, 700);
+	color: #000;
+
+	@media ($tablet-widths) {
+		margin: 10px auto 1px;
+		order: 2;
+		font-size: 20px;
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(24px, 30px, 700);
+
+		&::before {
+			@include position-container(0, auto, 0, 0);
+			content: "“";
+			@include style-font(182px, 63px, bold);
+			font-family: "Georgia", sans-serif;
+			color: #efefef;
+			z-index: 20;
+			transform: translate(0%, 180%);
+		}
+	}
+}
+
+.slide__text {
+	@include style-font(14px, 30px, 400);
+	color: $primary-color;
+
+	@media ($tablet-widths) {
+		margin-bottom: 25px;
+		order: 1;
+		font-size: 18px;
+	}
+
+	@media ($desktop-widths) {
+		padding: 0 78px;
+
+		& span {
+			display: none;
+		}
+	}
+}
+
+.slide__sub-text {
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+		@include style-font(14px, 30px, 400);
+		color: $primary-color;
+		order: 3;
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(18px, 30px, 400);
+	}
+}

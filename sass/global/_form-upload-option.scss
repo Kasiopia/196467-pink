@@ -1,0 +1,18 @@
+.form-upload-option {
+	display: flex;
+
+	@media ($tablet-widths) {
+		width: 275px;
+		padding: 20px 18px 22px 0;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #dddfe0;
+		margin-bottom: 10px;
+	}
+
+	@media ($desktop-widths) {
+		width: 410px;
+		padding: 14px 0 13px;
+		margin-bottom: 2px;
+	}
+}

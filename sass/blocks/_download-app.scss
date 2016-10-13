@@ -47,23 +47,3 @@
 		@include style-font(50px, 1.2, 300);
 	}
 }
-
-.spec__link {
-	margin: auto 18px;
-}
-
-.spec__text {
-	padding-top: 25px;
-
-	@include style-font(14px, 24px, 300);
-	color: $primary-bg;
-
-	@media ($tablet-widths) {
-		padding-top: 37px;
-		font-size: 18px;
-	}
-
-	@media ($desktop-widths) {
-		padding-top: 55px;
-	}
-}

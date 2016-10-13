@@ -1,0 +1,18 @@
+.social {
+	margin: 39px auto;
+	text-align: center;
+
+	@media ($tablet-widths) {
+		margin: 0;
+		padding-right: 12px;
+	}
+
+	@media ($desktop-widths) {
+		padding-left: 12px;
+		padding-right: 0;
+	}
+
+	&--index {
+		margin: 38px auto 28px;
+	}
+}

@@ -1,65 +1,71 @@
 .main-header {
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-	background-size: cover;
+	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+	background-size: 171%;
+	background-position-y: 0px;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($tablet-widths) {
-		background: url(../img/bg-back-tablet@1x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat center bottom ;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-tablet@2x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat center bottom ;
+		background-size: 171%;
+		background-position-y: 0px;
 	}
 
 	@media ($desktop-widths) {
-		background: url(../img/bg-back-desktop@1x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat center top;
+		background-size: 213%;
 	}
 
 	@media ($desktop-widths) and (min-resolution: 144dpi),
 	($desktop-widths) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-desktop@2x.jpg) no-repeat top center;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat center top;
+		background-size: 213%;
 	}
 }
 
-.main-header--index {
-	background: url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-	background-size: cover;
+.main-header.main-header--index {
+	background: $primary-color url(../img/bg-back-mobile@1x.jpg) no-repeat center top;
+	background-size: 217%;
+	background-position: top -6px center;
 
 	@media (max-width: 699px) and (min-resolution: 144dpi),
 	(max-width: 699px) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-mobile@2x.jpg) no-repeat center bottom;
-		background-size: cover;
+		background: $primary-color url(../img/bg-back-mobile@2x.jpg) no-repeat center top;
+		background-size: 217%;
+		background-position: top -6px center;
 	}
 
 	@media ($tablet-widths) {
-		background: url(../img/bg-back-tablet@1x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-tablet@1x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($tablet-widths) and (min-resolution: 144dpi),
 	($tablet-widths) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-tablet@2x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-tablet@2x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($desktop-widths) {
-		background: url(../img/bg-back-desktop@1x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@1x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
 	@media ($desktop-widths) and (min-resolution: 144dpi),
 	($desktop-widths) and (min-resolution: 1.5dppx) {
-		background: url(../img/bg-back-desktop@2x.jpg) no-repeat top center;
+		background: $primary-color url(../img/bg-back-desktop@2x.jpg) no-repeat center top;
 		background-size: cover;
 	}
 
@@ -95,10 +101,58 @@
 		}
 	}
 }
+/**фон при клике*/
+.main-header--opened,
+.main-header--nojs {
+	background-size: 218%;
+	background-position: bottom -220px center;
+
+	@media (max-width: 699px) and (min-resolution: 144dpi),
+	(max-width: 699px) and (min-resolution: 1.5dppx) {
+		background-size: 218%;
+		background-position: bottom -220px center;
+	}
+
+	@media ($tablet-widths) {
+		background-size: 171%;
+		background-position: bottom -290px center;
+	}
+
+	@media ($tablet-widths) and (min-resolution: 144dpi),
+	($tablet-widths) and (min-resolution: 1.5dppx) {
+		background-size: 171%;
+		background-position: bottom -290px center;
+	}
+}
+
+.main-header--index.main-header--opened,
+.main-header--index.main-header--nojs {
+	background-size: 217%;
+	background-position: bottom 277px center;
+
+	@media (max-width: 699px) and (min-resolution: 144dpi),
+	(max-width: 699px) and (min-resolution: 1.5dppx) {
+		background-size: 217%;
+		background-position: bottom 277px center;
+	}
+
+	@media ($tablet-widths) {
+		background-size: 171%;
+		background-position: bottom 10px center;
+	}
+
+	@media ($tablet-widths) and (min-resolution: 144dpi),
+	($tablet-widths) and (min-resolution: 1.5dppx) {
+		background-size: 171%;
+		background-position: bottom 10px center;
+	}
+}
+
+/**/////фон при клике*/
 
 .main-header__wrapper {
 	@media ($desktop-widths) {
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.3);
 	}
 }
 
@@ -113,6 +167,7 @@
 		z-index: 10;
 		background: url(../img/iphone-hand-mobile@1x.png) no-repeat top center;
 		background-size: cover;
+		transform: translate(-12%);
 
 		@media (max-width: 699px) and (min-resolution: 144dpi),
 		(max-width: 699px) and (min-resolution: 1.5dppx) {
@@ -138,8 +193,8 @@
 		width: 100%;
 		max-width: 940px;
 		margin: 0 auto;
-		padding-right: 130px;
-		padding-left: 130px;
+		padding-right: 10px;
+		padding-left: 10px;
 		flex-direction: row;
 		justify-content: space-between;
 		background: transparent;
@@ -157,262 +212,36 @@
 
 .main-header__top {
 	display: flex;
-	max-width: 1200px;
+	max-width: 940px;
 	margin: 0 auto;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding: 22px 20px 21px;
+	align-items: center;
 	flex-direction: row;
 	justify-content: space-between;
 
 	@media ($tablet-widths) {
 		margin: 0 auto;
-		padding-right: 40px;
-		padding-left: 40px;
+
+		padding: 36px 40px 42px;
 	}
 
 	@media ($desktop-widths) {
-		width: auto;
 		margin: 0;
-		padding-right: 0;
-		padding-left: 0;
-		border: none;
-	}
-}
-
-.nav-toggle {
-	display: flex;
-	width: 50px;
-	height: 66px;
-	padding: 0;
-	border: 0;
-	cursor: pointer;
-	outline: 0;
-	background: transparent;
-
-	@media ($tablet-widths) {
-		height: 110px;
-	}
-
-	@media ($desktop-widths) {
-		display: none;
-	}
-}
-
-.main-header__inner--nojs .nav-toggle,
-.main-header__inner--opened .nav-toggle {
-	height: 69px;
-
-	@media ($tablet-widths){
-		height: 109px;
+		padding: 18px 0px 34px;
 	}
 }
 
 .main-header__inner--nojs .main-header__top,
 .main-header__inner--opened .main-header__top{
+	padding: 22px 20px 24px;
 	border-bottom: 1px solid black;
 
-	@media ($desktop-widths){
-		border: none;
-	}
-}
-
-/* состояние закрытого, крест по умолчанию*/
-.nav-toggle>span {
-	position: relative;
-	width: 50px;
-	height: 4px;
-	background: $primary-bg;
-
-	&::after,
-	&::before {
-		@include position-container(0px, auto, auto, 0);
-		top: -10px;
-		width: 100%;
-		height: 4px;
-		background: $primary-bg;
-		transform: none;
-	}
-
-	&:before {
-		top: 10px;
-	}
-}
-
-/* /состояние закрытого меню, крест по умолчанию*/
-
-/* состояние открытого меню меню, три полоски*/
-.main-header__inner--opened .nav-toggle>span {
-	background: 0 0;
-
-	&::after,
-	&::before {
-		top: 0px;
-		width: 29px;
-		background: $primary-bg;
-		transform-origin: 50% 50%;
-		transform: rotate3d(0,0,1,45deg);
-	}
-
-	&::before {
-		transform: rotate3d(0, 0, 1,-45deg);
-	}
-}
-/* /состояние открытого меню меню*/
-
-@media (max-width: 1199px) {
-	.main-nav {
-		display: none;
-	}
-
-	.main-header__inner--opened .main-nav {
-		display: block;
-	}
-
-	.main-header__inner--nojs .nav-toggle {
-		opacity: 0;
-	}
-
-	.main-header__inner--nojs .main-nav {
-		display: block;
-	}
-}
-
-.nav-toggle:hover>span,
-.nav-toggle:hover>span::after,
-.nav-toggle:hover>span::before{
-	background: $additional-color;
-}
-
-.main-header__inner--opened .nav-toggle:hover>span {
-	background: transparent;
-}
-
-.nav-toggle:active>span,
-.nav-toggle:active>span::after,
-.nav-toggle:active>span::before{
-	background: #5f3750;
-}
-
-.main-header__inner--opened .nav-toggle:active>span {
-	background: transparent;
-}
-
-.main-nav {
-	flex: 1 1 auto;
-}
-
-.main-nav__dropdown {
-	display: flex;
-}
-
-.main-menu {
-	width: 100%;
-	text-align: center;
-
-	@media ($desktop-widths) {
-		display: flex;
-		flex-wrap: wrap;
-		flex: 10 1 auto;
-		justify-content: flex-end;
-		background: transparent;
-	}
-}
-
-.main-menu__item {
-	margin: 0;
-	border: 0;
-}
-
-.main-menu__link {
-	position: relative;
-	@include a-link();
-	padding: 15px 0;
-	@include style-font(18px, 32px, 700);
-	color: $primary-bg;
-	text-transform: uppercase;
-	border-top: 1px solid #485461;
-	border-bottom: 1px solid #000001;
-	cursor: pointer;
-
-	@media ($desktop-widths) {
-		margin-left: 79px;
-		padding: 46px 0px;
-		@include style-font(18px, 18px, 400);
-		text-transform: none;
-		border: none;
-	}
-
-	&:hover {
-		color: $additional-color;
-		transition: background .3s .5s;
-
-		@media ($desktop-widths) {
-			&::after {
-				@include position-container(30px, 0, 0, 0);
-				width: 100%;
-				height: 2px;
-				background: $additional-color;
-				z-index: 20;
-			}
-		}
-	}
-
-	&:active {
-		color: #5f3750;
-		transition: background .3s .5s;
-
-		@media ($desktop-widths) {
-			color: #6b7580;
-
-			&::after {
-				@include position-container(30px, 0, 0, 0);
-				width: 100%;
-				height: 2px;
-				background: #6b7580;
-				z-index: 20;
-			}
-		}
-	}
-
-	&--active::after {
-		@media ($desktop-widths) {
-			@include position-container(30px, 0, 0, 0);
-			width: 100%;
-			height: 2px;
-			background: $primary-bg;
-			z-index: 20;
-		}
-	}
-}
-
-.main-main__link--active:hover::after {
-	background: $additional-color;
-}
-
-.main-main__link--active:active::after {
-	background: #6b7580;
-}
-
-.intro__headline {
-	padding: 29px 0 55px;
-	text-align: center;
-	color: $primary-bg;
-	@include style-font(24px, 29px, 300);
-
-	@media ($tablet-widths) {
-		max-width: 608px;
-		margin: 0 auto;
-		padding: 70px 0 80px;
-		@include style-font(50px, 60px, 300);
+	@media ($tablet-widths){
+		padding: 36px 40px 41px;
 	}
 
 	@media ($desktop-widths) {
-		padding: 64px 0 100px;
-	}
-
-	&--form {
-		@media ($desktop-widths) {
-			max-width: 747px;
-		}
+		margin: 0;
+		padding: 18px 0px 34px;
 	}
 }

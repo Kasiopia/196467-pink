@@ -1,0 +1,64 @@
+.range-controls {
+	position: relative;
+	display: none;
+
+	@media ($tablet-widths) {
+		display: block;
+	}
+
+	@media ($desktop-widths) {
+		display: block;
+		margin-right: 30px;
+	}
+}
+
+.range-controls--active {
+	@include position-container(auto, 34px, 0, 0);
+	content: none;
+	display: block;
+	z-index: 50;
+
+	@media ($tablet-widths) {
+		position: relative;
+		margin: 0;
+		bottom: 0;
+	}
+
+	@media ($desktop-widths) {
+		margin-right: 30px;
+	}
+}
+
+.range-controls__bar {
+	width: 240px;
+	height: 2px;
+	margin: 0 auto;
+	background: $primary-color;
+
+	@media ($tablet-widths) {
+		display: block;
+		width: 202px;
+	}
+
+	@media ($desktop-widths) {
+		width: 288px;
+	}
+}
+
+.range-controls__toggle {
+	content: "";
+	position: absolute;
+	top: -6px;
+	right: 35px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid $additional-color;
+	background: #f2f2f2;
+	z-index: 10;
+	cursor: pointer;
+
+	&:active {
+		background: $additional-color;
+	}
+}

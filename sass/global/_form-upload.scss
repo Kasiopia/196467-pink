@@ -1,0 +1,91 @@
+.form-upload {
+	@media ($tablet-widths) {
+		display: flex;
+		justify-content: space-between;
+		background: #f2f2f2;
+	}
+
+	@media ($desktop-widths) {
+		padding: 0px 60px 0 80px;
+	}
+}
+
+.form-upload__left-block {
+	width: 280px;
+	margin: 0 auto;
+	padding: 20px 0px 42px;
+
+	@media ($tablet-widths) {
+		width: 300px;
+		margin: 0;
+		padding: 57px 0px 54px;
+	}
+
+	@media ($desktop-widths){
+		padding: 58px 0 55px;
+	}
+}
+
+.form-upload__right-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@media ($tablet-widths) {
+		width: 275px;
+	}
+
+	@media ($desktop-widths) {
+		width: 410px;
+		padding: 46px 0 57px;
+		justify-content: space-between;
+	}
+}
+
+.form-upload__inner {
+	border-bottom: 1px solid #dddfe0;
+
+	@media ($tablet-widths) {
+		margin-bottom: 63px;
+		margin-top: -5px;
+		border-bottom: none;
+	}
+}
+
+.form-upload__options-wrapper {
+	position: relative;
+	display: flex;
+	width: 240px;
+	margin: 0 auto;
+	padding-bottom: 75px;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@media ($tablet-widths) {
+		width: 100%;
+		padding-bottom: 0;
+		justify-content: space-between;
+		border-bottom: none;
+	}
+}
+
+.form-upload__actions {
+	width: 280px;
+	margin: 0 auto;
+	padding: 38px 0 32px;
+
+	@media ($tablet-widths) {
+		width: 260px;
+		margin: 0px;
+		padding: 0;
+	}
+
+	@media ($desktop-widths) {
+		display: flex;
+		width: 100%;
+		padding: 0;
+		padding-bottom: 0;
+		justify-content: space-between;
+	}
+}

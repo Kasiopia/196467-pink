@@ -1,0 +1,35 @@
+.offer-header {
+	margin-bottom: 32px;
+
+	@media ($tablet-widths) {
+		margin-bottom: 45px;
+	}
+
+	@media ($desktop-widths) {
+		margin-bottom: 76px;
+	}
+}
+
+.offer-header__slogan {
+	margin-bottom: 26px;
+	@include style-font(22px, 1.4, 300);
+	color: $primary-color;
+
+	@media ($tablet-widths) {
+		margin-bottom: 0;
+		@include style-font(40px, 50px, 300);
+
+		&:nth-of-type(2) {
+			width: 351px;
+			margin: 0 auto 30px;
+
+			@media ($desktop-widths) {
+				width: 720px;
+			}
+		}
+	}
+
+	@media ($desktop-widths) {
+		@include style-font(50px, 1.2, 300);
+	}
+}
