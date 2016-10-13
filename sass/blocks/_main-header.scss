@@ -167,27 +167,26 @@
 
 	@media ($tablet-widths) {
 		margin: 0 auto;
-		padding: 29px 40px 30px;
+		padding: 36px 40px 34px;
 	}
 
 	@media ($desktop-widths) {
-		width: auto;
 		margin: 0;
-		padding: 0;
-		border: none;
+		padding: 18px 0px 34px;
 	}
 }
 
 .main-header__inner--nojs .main-header__top,
 .main-header__inner--opened .main-header__top{
-	padding: 22px 20px 21px;
+	padding: 22px 20px 24px;
 	border-bottom: 1px solid black;
 
 	@media ($tablet-widths){
-		padding: 29px 40px 28px;
+		padding: 36px 40px 33px;
 	}
 
-	@media ($desktop-widths){
-		border: none;
+	@media ($desktop-widths) {
+		margin: 0;
+		padding: 18px 0px 34px;
 	}
 }

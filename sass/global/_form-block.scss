@@ -135,10 +135,12 @@
 	}
 
 	@media ($tablet-widths) {
+		width: 100%;
 		display: inline-block;
+		padding-left: 17px;
 		vertical-align: top;
 		flex-shrink: 1;
-		width: 100%;
+
 	}
 }
 

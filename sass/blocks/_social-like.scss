@@ -38,6 +38,10 @@
 	vertical-align: middle;
 	background: url("../img/icon-heart.svg") no-repeat center;
 	cursor: pointer;
+
+	@media ($tablet-widths) {
+		padding: 0 5px;
+	}
 }
 
 .social-like__link {

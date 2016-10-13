@@ -1,12 +1,21 @@
 .logo {
-	flex: 0 1 auto;
 	width: 75px;
 	height: 23px;
 	overflow: hidden;
 
-	@media ($tablet-widths){
+	&--footer {
 		width: 147px;
-		height: 51px;
+		height: 40px;
+		margin: 0 auto;
+
+		@media ($tablet-widths) {
+			margin: 0;
+		}
+	}
+
+	@media ($tablet-widths) {
+		width: 147px;
+		height: 40px;
 	}
 }
 
@@ -30,11 +39,14 @@
 }
 
 .logo:hover .logo-text,
-.logo:hover .logo-star,
-.logo:hover .logo-star-pink,
 .logo:hover .logo-glasses,
 .logo:hover .logo-glasses-desktop {
 	fill: $additional-color;
+}
+
+.logo:hover .logo-star,
+.logo:hover .logo-star-pink {
+	fill: $primary-bg;
 }
 
 .logo:active .logo-text,
@@ -49,8 +61,6 @@
 @media (max-width: 659px) {
 	.logo-text {
 		display: block;
-		width: 75px;
-		height: 23px;
 		transform: translate(-72px,-17px);
 	}
 }
@@ -73,12 +83,10 @@ and (max-width: 959px) {
 	}
 }
 
-.logo--footer {
+.logo--footer .logo-text,
+.logo--footer .logo-glasses {
 	display: block;
-	margin: 0 auto;
-	padding: 0px;
-	text-align: center;
-	border-bottom: none;
+	transform: none;
 
 	@media ($tablet-widths) {
 		margin: 0;
@@ -114,9 +122,3 @@ and (max-width: 959px) {
 	fill: $additional-color;
 	opacity: 0.7;
 }
-
-// .logo:hover .logo-text,
-// .logo:hover .logo-star,
-// .logo:hover .logo-star-pink,
-// .logo:hover .logo-glasses,
-// .logo:hover .logo-glasses-desktop

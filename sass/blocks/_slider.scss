@@ -15,11 +15,15 @@
 }
 
 .slider__controls {
-	@include position-container(auto, -8px, 0, 0);
+	@include position-container(auto, -1px, 0, 0);
 	width: 120px;
 	height: 20px;
 	text-align: center;
 	z-index: 60;
+
+	@media ($tablet-widths) {
+		bottom: -8px;
+	}
 
 	@media ($desktop-widths) {
 		display: none;
@@ -107,7 +111,7 @@
 }
 
 .slider__wrappper {
-	padding-top: 32px;
+	padding-top: 31px;
 	padding-bottom: 52px;
 	text-align: center;
 

@@ -11,8 +11,13 @@
 .form-action__wrapper {
 	@media ($tablet-widths) {
 		display: flex;
+		padding-top: 2px;
 		justify-content: space-between;
 		align-items: baseline;
+	}
+
+	@media ($desktop-widths) {
+		padding-top: 0;
 	}
 }
 

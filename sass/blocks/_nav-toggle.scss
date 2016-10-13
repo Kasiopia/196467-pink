@@ -35,15 +35,10 @@
 
 	&::after,
 	&::before {
-		@include position-container(-10px, auto, 0, 0);
+		@include position-container(-10px, auto, auto, 0);
 		width: 100%;
 		height: 4px;
 		background: $primary-bg;
-
-		@media ($desktop-widths){
-			border: none;
-			@include position-container(-10px, auto, 0, 0);
-		}
 	}
 
 	&:before {
