@@ -95,12 +95,14 @@
 			height: 645px;
 			background: url(../img/iphone-hand-desktop@1x.png) no-repeat bottom center;
 			background-size: 940px auto;
+			transform: translateX(72px);
 		}
 
 		@media ($desktop-widths) and (min-resolution: 144dpi),
 		($desktop-widths) and (min-resolution: 1.5dppx) {
 			background: url(../img/iphone-hand-desktop@2x.png) no-repeat bottom center;
 			background-size: 940px auto;
+			transform: translateX(72px);
 		}
 	}
 }
